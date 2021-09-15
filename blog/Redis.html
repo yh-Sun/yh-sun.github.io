@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Redis | 小太阳</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/assets/logo-sun.png">
+    <meta name="description" content="生活还得继续">
+    <link rel="preload" href="/assets/css/0.styles.8707b1dd.css" as="style"><link rel="preload" href="/assets/js/app.7a41048e.js" as="script"><link rel="preload" href="/assets/js/2.07b944df.js" as="script"><link rel="preload" href="/assets/js/16.e082a5ee.js" as="script"><link rel="prefetch" href="/assets/js/10.68cbf342.js"><link rel="prefetch" href="/assets/js/11.626aef4a.js"><link rel="prefetch" href="/assets/js/12.d6ac6fd7.js"><link rel="prefetch" href="/assets/js/13.6764e2b4.js"><link rel="prefetch" href="/assets/js/14.211f58d6.js"><link rel="prefetch" href="/assets/js/15.d52a5a17.js"><link rel="prefetch" href="/assets/js/17.f122dbd2.js"><link rel="prefetch" href="/assets/js/18.c9092e4a.js"><link rel="prefetch" href="/assets/js/19.3173b85c.js"><link rel="prefetch" href="/assets/js/20.75bb07f3.js"><link rel="prefetch" href="/assets/js/3.a588e316.js"><link rel="prefetch" href="/assets/js/4.b6ca1f26.js"><link rel="prefetch" href="/assets/js/5.2c29a215.js"><link rel="prefetch" href="/assets/js/6.4ab43089.js"><link rel="prefetch" href="/assets/js/7.7b40a6bc.js"><link rel="prefetch" href="/assets/js/8.27f27a15.js"><link rel="prefetch" href="/assets/js/9.47203886.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8707b1dd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="ant-row"><div class="sidebar-button"><i aria-label="icon: bars" class="anticon anticon-bars"><svg viewBox="0 0 1024 1024" focusable="false" data-icon="bars" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 192H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM104 228a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0z"></path></svg></i> <span></span></div> <div class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-6 ant-col-lg-5 ant-col-xl-5 ant-col-xxl-4"><a href="/" class="router-link-active no-logo home-link"><!----> <span class="site-name">小太阳</span></a> <div class="search-box mobile-search"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div> <div class="ant-col ant-col-xs-0 ant-col-sm-0 ant-col-md-18 ant-col-lg-19 ant-col-xl-19 ant-col-xxl-20"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><ul role="menu" id="nav" class="ant-menu ant-menu-horizontal ant-menu-root ant-menu-light"><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-item"><a href="/" class="router-link-active">
+          我的
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-item ant-menu-item-selected"><a href="/blog/" class="router-link-active">
+          笔记
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="visibility:hidden;position:absolute;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li></ul> <a href="https://github.com/yh-Sun" target="_blank" rel="noopener noreferrer" class="repo-link"><i aria-label="icon: github" class="anticon anticon-github"><svg viewBox="64 64 896 896" focusable="false" data-icon="github" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></i></a></nav></div></div> <!----></header> <aside class="sidebar"><!----> <ul class="sidebar-links"><li><a href="/blog/" aria-current="page" title="👋首页" class="sidebar-link">👋首页</a></li><li><a href="/blog/Activiti.html" title="Activiti" class="sidebar-link">Activiti</a></li><li><a href="/blog/Powerdesigner.html" title="Powerdesigner" class="sidebar-link">Powerdesigner</a></li><li><a href="/blog/Vue.html" title="Vue" class="sidebar-link">Vue</a></li><li><a href="/blog/知识栈.html" title="知识栈" class="sidebar-link">知识栈</a></li><li><a href="/blog/Salt.html" title="Salt" class="sidebar-link">Salt</a></li><li><a href="/blog/Elasticsearch+Kibana.html" title="Elasticsearch Kibana" class="sidebar-link">Elasticsearch Kibana</a></li><li><a href="/blog/Grafana+Prometheus.html" title="Grafana Prometheus" class="sidebar-link">Grafana Prometheus</a></li><li><a href="/blog/Jdk.html" title="JDK" class="sidebar-link">JDK</a></li><li><a href="/blog/Jenkins.html" title="Jenkins" class="sidebar-link">Jenkins</a></li><li><a href="/blog/Mysql.html" title="Mysql" class="sidebar-link">Mysql</a></li><li><a href="/blog/Nacos.html" title="Nacos" class="sidebar-link">Nacos</a></li><li><a href="/blog/Nginx.html" title="Nginx" class="sidebar-link">Nginx</a></li><li><a href="/blog/Redis.html" aria-current="page" title="Redis" class="active sidebar-link">Redis</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Redis.html#redis部署" title="redis部署" class="sidebar-link">redis部署</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Redis.html#上传安装包" title="上传安装包" class="sidebar-link">上传安装包</a></li><li class="sidebar-sub-header"><a href="/blog/Redis.html#解压安装包" title="解压安装包" class="sidebar-link">解压安装包</a></li><li class="sidebar-sub-header"><a href="/blog/Redis.html#安装redis" title="安装redis" class="sidebar-link">安装redis</a></li><li class="sidebar-sub-header"><a href="/blog/Redis.html#配置开机启动文件" title="配置开机启动文件" class="sidebar-link">配置开机启动文件</a></li><li class="sidebar-sub-header"><a href="/blog/Redis.html#设置开机执行redis自启脚本" title="设置开机执行redis自启脚本" class="sidebar-link">设置开机执行redis自启脚本</a></li><li class="sidebar-sub-header"><a href="/blog/Redis.html#创建redis持久化文文件夹" title="创建redis持久化⽂文件夹" class="sidebar-link">创建redis持久化⽂文件夹</a></li><li class="sidebar-sub-header"><a href="/blog/Redis.html#配置" title="配置" class="sidebar-link">配置</a></li><li class="sidebar-sub-header"><a href="/blog/Redis.html#启动redis" title="启动redis" class="sidebar-link">启动redis</a></li><li class="sidebar-sub-header"><a href="/blog/Redis.html#_3-todo" title="3.* TODO：" class="sidebar-link">3.* TODO：</a></li></ul></li></ul></li><li><a href="/blog/RocketMq.html" title="RocketMq" class="sidebar-link">RocketMq</a></li></ul></aside> <main class="page"> <div class="theme-antdocs-content content__default"><h2 id="redis部署"><a href="#redis部署" class="header-anchor">#</a> redis部署</h2> <blockquote><p>https://blog.csdn.net/u010177412/article/details/81780844</p></blockquote> <h3 id="上传安装包"><a href="#上传安装包" class="header-anchor">#</a> 上传安装包</h3> <div class="language- extra-class"><pre class="language-text"><code>scp ~/Downloads/deploy/redis-5.0.4.tar.gz root@10.1.1.100:/root/
+</code></pre></div><h3 id="解压安装包"><a href="#解压安装包" class="header-anchor">#</a> 解压安装包</h3> <div class="language- extra-class"><pre class="language-text"><code>tar -xvf redis-5.0.4.tar.gz
+</code></pre></div><h3 id="安装redis"><a href="#安装redis" class="header-anchor">#</a> 安装redis</h3> <div class="language- extra-class"><pre class="language-text"><code># 进⼊目录
+cd redis
+# 编译
+make
+# 安装
+make install
+</code></pre></div><h3 id="配置开机启动文件"><a href="#配置开机启动文件" class="header-anchor">#</a> 配置开机启动文件</h3> <div class="language- extra-class"><pre class="language-text"><code>vim /etc/init.d/redis_6379
+
+---------------------------------redis_6379内容----------------------------------------
+#!/bin/sh
+#
+# Simple Redis init.d script conceived to work on Linux systems
+# chkconfig: 2345 90 10
+# description: Redis is a persistent key-value database
+# as it does use of the /proc filesystem.
+
+REDISPORT=6379
+# redis-server命令路路径
+EXEC=/usr/local/bin/redis-server
+# redis-cli命令路路径
+CLIEXEC=/usr/local/bin/redis-cli
+
+PIDFILE=/var/run/redis_${REDISPORT}.pid
+CONF=&quot;/etc/redis/${REDISPORT}.conf&quot;
+
+case &quot;$1&quot; in
+	start)
+		if [ -f $PIDFILE ]
+		then
+			echo &quot;$PIDFILE exists, process is already running or crashed&quot;
+		else
+			echo &quot;Starting Redis server...&quot;
+			$EXEC $CONF
+		fi
+		;;
+	stop)
+    	if [ ! -f $PIDFILE ]
+		then
+        	echo &quot;$PIDFILE does not exist, process is not running&quot;
+		else
+			PID=$(cat $PIDFILE)
+            echo &quot;Stopping ...&quot;
+            $CLIEXEC -p $REDISPORT shutdown
+            while [ -x /proc/${PID} ]
+            do
+				echo &quot;Waiting for Redis to shutdown ...&quot;
+				sleep 1
+            done
+            echo &quot;Redis stopped&quot;
+        fi
+        ;;
+	*)
+		echo &quot;Please use start or stop as first argument&quot;
+		;;
+	esac
+---------------------------------redis_6379内容----------------------------------------
+</code></pre></div><h3 id="设置开机执行redis自启脚本"><a href="#设置开机执行redis自启脚本" class="header-anchor">#</a> 设置开机执行redis自启脚本</h3> <div class="language- extra-class"><pre class="language-text"><code>chmod u+x /etc/init.d/redis_6479
+cd /etc/init.d/
+chkconfig redis_6379 on
+</code></pre></div><h3 id="创建redis持久化文文件夹"><a href="#创建redis持久化文文件夹" class="header-anchor">#</a> 创建redis持久化⽂文件夹</h3> <div class="language- extra-class"><pre class="language-text"><code>mkdir /var/redis/6379
+</code></pre></div><h3 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h3> <blockquote><p>cp /usr/local/src/redis-3.2.12/redis.conf /etc/redis/6379.conf</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code># 注释掉它，以便便让外⽹网访问
+# bind 127.0.0.1
+# 关闭保护模式
+protected-mode no
+# Redis默认不不是以守护进程的⽅方式运⾏行行，可以通过该配置项修改，使⽤用yes启⽤用守护进程
+# 启⽤用守护进程后， Redis会把pid写到⼀一个pidfile中，在/var/run/redis.pid
+daemonize yes
+# 当Redis以守护进程⽅方式运⾏行行时， Redis默认会把pid写⼊入/var/run/redis.pid⽂文件，可以通过pidfile指定
+pidfile /var/run/redis_6379.pid
+# 指定Redis监听端⼝口，默认端⼝口为6379
+# 如果指定0端⼝口，表示Redis不不监听TCP连接
+port 6379
+# ⼯工作⽬目录.
+# 指定本地数据库存放⽬目录，⽂文件名由上⼀一个dbfilename配置项指定
+#
+# Also the Append Only File will be created inside this directory.
+#
+# 注意，这⾥里里只能指定⼀一个⽬目录，不不能指定⽂文件名
+dir /var/redis/6379
+# 密码
+    requirepass e297b8716b6c121f671194823dd8dfb0b99a951d43874e298d863c8f89982d90
+</code></pre></div><h3 id="启动redis"><a href="#启动redis" class="header-anchor">#</a> 启动redis</h3> <div class="language- extra-class"><pre class="language-text"><code>1.service redis_6379 start
+2./usr/local/redis/bin/redis-server /usr/local/redis/etc/redis.conf
+</code></pre></div><h3 id="_3-todo"><a href="#_3-todo" class="header-anchor">#</a> 3.* TODO：</h3> <h4 id="_3-1-开机启动"><a href="#_3-1-开机启动" class="header-anchor">#</a> 3.*.1 开机启动</h4> <p>https://www.cnblogs.com/M87-A/p/11468396.html</p> <h4 id="_3-2-持久化"><a href="#_3-2-持久化" class="header-anchor">#</a> 3.*.2 持久化</h4> <p>https://www.cnblogs.com/dong-/p/10088695.html</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/blog/Nginx.html" class="prev"><i aria-label="icon: left" class="anticon anticon-left"><svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></i>
+        Nginx
+      </a></span> <span class="next"><a href="/blog/RocketMq.html">
+        RocketMq
+        <i aria-label="icon: right" class="anticon anticon-right"><svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path></svg></i></a></span></p></div> </main> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7a41048e.js" defer></script><script src="/assets/js/2.07b944df.js" defer></script><script src="/assets/js/16.e082a5ee.js" defer></script>
+  </body>
+</html>

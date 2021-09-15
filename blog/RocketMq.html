@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>RocketMq | 小太阳</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/assets/logo-sun.png">
+    <meta name="description" content="生活还得继续">
+    <link rel="preload" href="/assets/css/0.styles.8707b1dd.css" as="style"><link rel="preload" href="/assets/js/app.7a41048e.js" as="script"><link rel="preload" href="/assets/js/2.07b944df.js" as="script"><link rel="preload" href="/assets/js/17.f122dbd2.js" as="script"><link rel="prefetch" href="/assets/js/10.68cbf342.js"><link rel="prefetch" href="/assets/js/11.626aef4a.js"><link rel="prefetch" href="/assets/js/12.d6ac6fd7.js"><link rel="prefetch" href="/assets/js/13.6764e2b4.js"><link rel="prefetch" href="/assets/js/14.211f58d6.js"><link rel="prefetch" href="/assets/js/15.d52a5a17.js"><link rel="prefetch" href="/assets/js/16.e082a5ee.js"><link rel="prefetch" href="/assets/js/18.c9092e4a.js"><link rel="prefetch" href="/assets/js/19.3173b85c.js"><link rel="prefetch" href="/assets/js/20.75bb07f3.js"><link rel="prefetch" href="/assets/js/3.a588e316.js"><link rel="prefetch" href="/assets/js/4.b6ca1f26.js"><link rel="prefetch" href="/assets/js/5.2c29a215.js"><link rel="prefetch" href="/assets/js/6.4ab43089.js"><link rel="prefetch" href="/assets/js/7.7b40a6bc.js"><link rel="prefetch" href="/assets/js/8.27f27a15.js"><link rel="prefetch" href="/assets/js/9.47203886.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8707b1dd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="ant-row"><div class="sidebar-button"><i aria-label="icon: bars" class="anticon anticon-bars"><svg viewBox="0 0 1024 1024" focusable="false" data-icon="bars" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 192H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM104 228a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0z"></path></svg></i> <span></span></div> <div class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-6 ant-col-lg-5 ant-col-xl-5 ant-col-xxl-4"><a href="/" class="router-link-active no-logo home-link"><!----> <span class="site-name">小太阳</span></a> <div class="search-box mobile-search"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div> <div class="ant-col ant-col-xs-0 ant-col-sm-0 ant-col-md-18 ant-col-lg-19 ant-col-xl-19 ant-col-xxl-20"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><ul role="menu" id="nav" class="ant-menu ant-menu-horizontal ant-menu-root ant-menu-light"><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-item"><a href="/" class="router-link-active">
+          我的
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-item ant-menu-item-selected"><a href="/blog/" class="router-link-active">
+          笔记
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="visibility:hidden;position:absolute;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li></ul> <a href="https://github.com/yh-Sun" target="_blank" rel="noopener noreferrer" class="repo-link"><i aria-label="icon: github" class="anticon anticon-github"><svg viewBox="64 64 896 896" focusable="false" data-icon="github" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></i></a></nav></div></div> <!----></header> <aside class="sidebar"><!----> <ul class="sidebar-links"><li><a href="/blog/" aria-current="page" title="👋首页" class="sidebar-link">👋首页</a></li><li><a href="/blog/Activiti.html" title="Activiti" class="sidebar-link">Activiti</a></li><li><a href="/blog/Powerdesigner.html" title="Powerdesigner" class="sidebar-link">Powerdesigner</a></li><li><a href="/blog/Vue.html" title="Vue" class="sidebar-link">Vue</a></li><li><a href="/blog/知识栈.html" title="知识栈" class="sidebar-link">知识栈</a></li><li><a href="/blog/Salt.html" title="Salt" class="sidebar-link">Salt</a></li><li><a href="/blog/Elasticsearch+Kibana.html" title="Elasticsearch Kibana" class="sidebar-link">Elasticsearch Kibana</a></li><li><a href="/blog/Grafana+Prometheus.html" title="Grafana Prometheus" class="sidebar-link">Grafana Prometheus</a></li><li><a href="/blog/Jdk.html" title="JDK" class="sidebar-link">JDK</a></li><li><a href="/blog/Jenkins.html" title="Jenkins" class="sidebar-link">Jenkins</a></li><li><a href="/blog/Mysql.html" title="Mysql" class="sidebar-link">Mysql</a></li><li><a href="/blog/Nacos.html" title="Nacos" class="sidebar-link">Nacos</a></li><li><a href="/blog/Nginx.html" title="Nginx" class="sidebar-link">Nginx</a></li><li><a href="/blog/Redis.html" title="Redis" class="sidebar-link">Redis</a></li><li><a href="/blog/RocketMq.html" aria-current="page" title="RocketMq" class="active sidebar-link">RocketMq</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/RocketMq.html#rocketmq部署、运行" title="RocketMQ部署、运行" class="sidebar-link">RocketMQ部署、运行</a></li><li class="sidebar-sub-header"><a href="/blog/RocketMq.html#使用" title="使用" class="sidebar-link">使用</a></li></ul></li></ul></aside> <main class="page"> <div class="theme-antdocs-content content__default"><h2 id="rocketmq部署、运行"><a href="#rocketmq部署、运行" class="header-anchor">#</a> RocketMQ部署、运行</h2> <blockquote><p>本次采用在10.1.1.100，部署RocketMQ，想适用的小伙伴请自行链接VPN</p></blockquote> <ul><li>下载RocketMQ</li></ul> <div class="language-ruby extra-class"><pre class="language-ruby"><code>rocketMQ执行包（二进制文件即可，不用再次编译）：
+	直接去apache rocketmq官网下即可，本次选择：rocketmq<span class="token operator">-</span>all<span class="token operator">-</span><span class="token number">4.7</span><span class="token number">.1</span><span class="token operator">-</span>bin<span class="token operator">-</span>release<span class="token punctuation">.</span>zip
+rocketMQ控制台：
+	git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>apache<span class="token operator">/</span>rocketmq<span class="token operator">-</span>externals
+</code></pre></div><ul><li>运行RocketMQ程序：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>cd bin
+
+vim runserver.sh 、vim runbroker.sh
+
+# 找到如下配置
+JAVA_OPT=&quot;${JAVA_OPT} -server -Xms8g -Xmx8g -Xmn4g&quot;
+# 修改成你可以接受的范围
+JAVA_OPT=&quot;${JAVA_OPT} -server -Xms512m -Xmx521m -Xmn256m -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=320m&quot;
+
+# 由于kscd账户配置的环境变量在~/.bash_profile，默认无法识别，所以需要手动指定jdk路径
+1.首先注释掉，以下三行
+# [ ! -e &quot;$JAVA_HOME/bin/java&quot; ] &amp;&amp; JAVA_HOME=$HOME/jdk/java
+# [ ! -e &quot;$JAVA_HOME/bin/java&quot; ] &amp;&amp; JAVA_HOME=/usr/java
+# [ ! -e &quot;$JAVA_HOME/bin/java&quot; ] &amp;&amp; error_exit &quot;Please set the JAVA_HOME variable in your environment, We need java(x64)!&quot;
+2.手动配置JDK路径
+export JAVA_HOME=/home/kscd/jdk1.8
+</code></pre></div><ul><li>配置环境变量</li></ul> <div class="language- extra-class"><pre class="language-text"><code>vi ~/.bash_profile
+
+# 将如下配置加到最后一行
+export NAMESRV_ADDR=127.0.0.1:9876
+
+source ~/.bash_profile
+</code></pre></div><ul><li>启动Name Server</li></ul> <div class="language- extra-class"><pre class="language-text"><code>cd /home/kscd/RocketMQ/rocketmq/bin
+
+nohup sh mqnamesrv &gt; /home/kscd/RocketMQ/logs/server.log &amp;
+
+# 检测是否启动成功
+[kscd@localhost bin]$ tail -f /home/kscd/RocketMQ/logs/server.log
+Java HotSpot(TM) 64-Bit Server VM warning: Using the DefNew young collector with the CMS collector is deprecated and will likely be removed in a future release
+Java HotSpot(TM) 64-Bit Server VM warning: UseCMSCompactAtFullCollection is deprecated and will likely be removed in a future release.
+The Name Server boot success. serializeType=JSON
+
+
+
+# 顺便说下停止命令
+[kscd@localhost bin]$ sh mqshutdown namesrv
+The mqnamesrv(36838) is running...
+Send shutdown request to mqnamesrv(36838) OK
+</code></pre></div><ul><li>启动Broker</li></ul> <div class="language-ruby extra-class"><pre class="language-ruby"><code>cd <span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span><span class="token constant">RocketMQ</span><span class="token operator">/</span>rocketmq<span class="token operator">/</span>bin
+
+nohup sh mqbroker <span class="token operator">-</span>n localhost<span class="token punctuation">:</span><span class="token number">9876</span> autoCreateTopicEnable<span class="token operator">=</span><span class="token boolean">true</span> <span class="token operator">&gt;</span><span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span><span class="token constant">RocketMQ</span><span class="token operator">/</span>logs<span class="token operator">/</span>broker<span class="token punctuation">.</span>log <span class="token operator">&amp;</span>
+
+<span class="token comment"># 检测是否启动成功</span>
+<span class="token punctuation">[</span>kscd<span class="token variable">@localhost</span> bin<span class="token punctuation">]</span>$ tail <span class="token operator">-</span>f <span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span><span class="token constant">RocketMQ</span><span class="token operator">/</span>logs<span class="token operator">/</span>broker<span class="token punctuation">.</span>log
+<span class="token constant">The</span> broker<span class="token punctuation">[</span>localhost<span class="token punctuation">.</span>localdomain<span class="token punctuation">,</span> <span class="token number">10.1</span><span class="token number">.4</span><span class="token number">.194</span><span class="token punctuation">:</span><span class="token number">10911</span><span class="token punctuation">]</span> boot success<span class="token punctuation">.</span> serializeType<span class="token operator">=</span><span class="token constant">JSON</span> <span class="token keyword">and</span> name server is localhost<span class="token punctuation">:</span><span class="token number">9876</span>
+
+
+
+<span class="token comment"># 顺便说下停止命令</span>
+<span class="token punctuation">[</span>kscd<span class="token variable">@localhost</span> bin<span class="token punctuation">]</span>$ sh mqshutdown broker
+</code></pre></div><ul><li>启动控制台</li></ul> <div class="language-ruby extra-class"><pre class="language-ruby"><code><span class="token comment"># 由于本次采用的是git clone打包的启动方式，还是要啰嗦一句：“修改的两处配置文件”</span>
+cd <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>rocketmq<span class="token operator">/</span>rocketmq<span class="token operator">-</span>externals<span class="token operator">/</span>rocketmq<span class="token operator">-</span>console<span class="token operator">/</span>src<span class="token operator">/</span>main<span class="token operator">/</span>resources
+
+vim application<span class="token punctuation">.</span>properties
+
+<span class="token comment"># 修改如下配置</span>
+server<span class="token punctuation">.</span>port<span class="token operator">=</span><span class="token number">8080</span> <span class="token operator">/</span><span class="token operator">/</span> 服务端口号
+rocketmq<span class="token punctuation">.</span>config<span class="token punctuation">.</span>namesrvAddr<span class="token operator">=</span><span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">:</span><span class="token number">9876</span> <span class="token operator">/</span><span class="token operator">/</span> 配置服务地址
+
+rocketmq<span class="token punctuation">.</span>config<span class="token punctuation">.</span>dataPath<span class="token operator">=</span><span class="token operator">/</span>tmp<span class="token operator">/</span>rocketmq<span class="token operator">-</span>console<span class="token operator">/</span>data <span class="token operator">/</span><span class="token operator">/</span> mq数据路径，可以自己修改
+
+cd <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>rocketmq<span class="token operator">/</span>rocketmq<span class="token operator">-</span>externals<span class="token operator">/</span>rocketmq<span class="token operator">-</span>console
+
+mvn clean package <span class="token operator">-</span><span class="token constant">Dmaven</span><span class="token punctuation">.</span>test<span class="token punctuation">.</span>skip<span class="token operator">=</span><span class="token boolean">true</span>
+
+nohup java <span class="token operator">-</span>jar rocketmq<span class="token operator">-</span>console<span class="token operator">-</span>ng<span class="token operator">-</span><span class="token number">1.0</span><span class="token number">.1</span><span class="token punctuation">.</span>jar <span class="token operator">--</span>server<span class="token punctuation">.</span>port<span class="token operator">=</span><span class="token number">8080</span> <span class="token operator">--</span>rocketmq<span class="token punctuation">.</span>config<span class="token punctuation">.</span>namesrvAddr<span class="token operator">=</span><span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">:</span><span class="token number">9876</span> <span class="token operator">&amp;</span>
+
+<span class="token comment"># 日志默认位置：</span>
+<span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span><span class="token constant">RocketMQ</span><span class="token operator">/</span>nohup<span class="token punctuation">.</span>out
+</code></pre></div><h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <ul><li>运行</li> <li>笔者记录</li></ul> <blockquote><p>控制台：http://10.1.1.100:8080/</p></blockquote> <blockquote><p>兄弟姐妹们，欢迎一起踩坑：<a href="https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/rocketmq-example/readme-zh.md" target="_blank" rel="noopener noreferrer">RocketMQ Example<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <hr> <hr> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">rocketmq-producer</span><span class="token punctuation">:</span>
+    <span class="token key atrule">output1</span><span class="token punctuation">:</span>
+    	<span class="token key atrule">destination</span><span class="token punctuation">:</span> test<span class="token punctuation">-</span>topic1
+    <span class="token comment"># java(MessageBuilder.setHeader(TAGS, &quot;tabObj&quot;))</span>
+<span class="token key atrule">rocketmq-consumer</span><span class="token punctuation">:</span>
+	<span class="token key atrule">rocketmq.bindings</span><span class="token punctuation">:</span>
+		<span class="token key atrule">input3</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token key atrule">consumer.tags</span><span class="token punctuation">:</span> tagObj<span class="token punctuation">}</span>   <span class="token comment">#订阅 带tag值为tabObj的字符串</span>
+	<span class="token key atrule">bindings</span><span class="token punctuation">:</span>
+		<span class="token key atrule">destination</span><span class="token punctuation">:</span> test<span class="token punctuation">-</span>topic1
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/blog/Redis.html" class="prev"><i aria-label="icon: left" class="anticon anticon-left"><svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></i>
+        Redis
+      </a></span> <!----></p></div> </main> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7a41048e.js" defer></script><script src="/assets/js/2.07b944df.js" defer></script><script src="/assets/js/17.f122dbd2.js" defer></script>
+  </body>
+</html>

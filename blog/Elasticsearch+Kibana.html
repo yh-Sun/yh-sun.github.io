@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Elasticsearch Kibana | 小太阳</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/assets/logo-sun.png">
+    <meta name="description" content="生活还得继续">
+    <link rel="preload" href="/assets/css/0.styles.8707b1dd.css" as="style"><link rel="preload" href="/assets/js/app.7a41048e.js" as="script"><link rel="preload" href="/assets/js/2.07b944df.js" as="script"><link rel="preload" href="/assets/js/7.7b40a6bc.js" as="script"><link rel="prefetch" href="/assets/js/10.68cbf342.js"><link rel="prefetch" href="/assets/js/11.626aef4a.js"><link rel="prefetch" href="/assets/js/12.d6ac6fd7.js"><link rel="prefetch" href="/assets/js/13.6764e2b4.js"><link rel="prefetch" href="/assets/js/14.211f58d6.js"><link rel="prefetch" href="/assets/js/15.d52a5a17.js"><link rel="prefetch" href="/assets/js/16.e082a5ee.js"><link rel="prefetch" href="/assets/js/17.f122dbd2.js"><link rel="prefetch" href="/assets/js/18.c9092e4a.js"><link rel="prefetch" href="/assets/js/19.3173b85c.js"><link rel="prefetch" href="/assets/js/20.75bb07f3.js"><link rel="prefetch" href="/assets/js/3.a588e316.js"><link rel="prefetch" href="/assets/js/4.b6ca1f26.js"><link rel="prefetch" href="/assets/js/5.2c29a215.js"><link rel="prefetch" href="/assets/js/6.4ab43089.js"><link rel="prefetch" href="/assets/js/8.27f27a15.js"><link rel="prefetch" href="/assets/js/9.47203886.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8707b1dd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="ant-row"><div class="sidebar-button"><i aria-label="icon: bars" class="anticon anticon-bars"><svg viewBox="0 0 1024 1024" focusable="false" data-icon="bars" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 192H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM104 228a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0z"></path></svg></i> <span></span></div> <div class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-6 ant-col-lg-5 ant-col-xl-5 ant-col-xxl-4"><a href="/" class="router-link-active no-logo home-link"><!----> <span class="site-name">小太阳</span></a> <div class="search-box mobile-search"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div> <div class="ant-col ant-col-xs-0 ant-col-sm-0 ant-col-md-18 ant-col-lg-19 ant-col-xl-19 ant-col-xxl-20"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><ul role="menu" id="nav" class="ant-menu ant-menu-horizontal ant-menu-root ant-menu-light"><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-item"><a href="/" class="router-link-active">
+          我的
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-item ant-menu-item-selected"><a href="/blog/" class="router-link-active">
+          笔记
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="visibility:hidden;position:absolute;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li></ul> <a href="https://github.com/yh-Sun" target="_blank" rel="noopener noreferrer" class="repo-link"><i aria-label="icon: github" class="anticon anticon-github"><svg viewBox="64 64 896 896" focusable="false" data-icon="github" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></i></a></nav></div></div> <!----></header> <aside class="sidebar"><!----> <ul class="sidebar-links"><li><a href="/blog/" aria-current="page" title="👋首页" class="sidebar-link">👋首页</a></li><li><a href="/blog/Activiti.html" title="Activiti" class="sidebar-link">Activiti</a></li><li><a href="/blog/Powerdesigner.html" title="Powerdesigner" class="sidebar-link">Powerdesigner</a></li><li><a href="/blog/Vue.html" title="Vue" class="sidebar-link">Vue</a></li><li><a href="/blog/知识栈.html" title="知识栈" class="sidebar-link">知识栈</a></li><li><a href="/blog/Salt.html" title="Salt" class="sidebar-link">Salt</a></li><li><a href="/blog/Elasticsearch+Kibana.html" aria-current="page" title="Elasticsearch Kibana" class="active sidebar-link">Elasticsearch Kibana</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Elasticsearch+Kibana.html#es、es-head、kibana部署" title="ES、ES HEAD、kibana部署" class="sidebar-link">ES、ES HEAD、kibana部署</a></li><li class="sidebar-sub-header"><a href="/blog/Elasticsearch+Kibana.html#_194服务器目录介绍" title="194服务器目录介绍：" class="sidebar-link">194服务器目录介绍：</a></li><li class="sidebar-sub-header"><a href="/blog/Elasticsearch+Kibana.html#安装步骤" title="安装步骤" class="sidebar-link">安装步骤</a></li><li class="sidebar-sub-header"><a href="/blog/Elasticsearch+Kibana.html#常用脚本" title="常用脚本" class="sidebar-link">常用脚本</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Elasticsearch+Kibana.html#索引-testindex" title="索引：testindex" class="sidebar-link">索引：testindex</a></li><li class="sidebar-sub-header"><a href="/blog/Elasticsearch+Kibana.html#索引-es-order" title="索引：es_order" class="sidebar-link">索引：es_order</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Elasticsearch+Kibana.html#保司2首页统计es" title="保司2首页统计ES" class="sidebar-link">保司2首页统计ES</a></li></ul></li><li><a href="/blog/Grafana+Prometheus.html" title="Grafana Prometheus" class="sidebar-link">Grafana Prometheus</a></li><li><a href="/blog/Jdk.html" title="JDK" class="sidebar-link">JDK</a></li><li><a href="/blog/Jenkins.html" title="Jenkins" class="sidebar-link">Jenkins</a></li><li><a href="/blog/Mysql.html" title="Mysql" class="sidebar-link">Mysql</a></li><li><a href="/blog/Nacos.html" title="Nacos" class="sidebar-link">Nacos</a></li><li><a href="/blog/Nginx.html" title="Nginx" class="sidebar-link">Nginx</a></li><li><a href="/blog/Redis.html" title="Redis" class="sidebar-link">Redis</a></li><li><a href="/blog/RocketMq.html" title="RocketMq" class="sidebar-link">RocketMq</a></li></ul></aside> <main class="page"> <div class="theme-antdocs-content content__default"><h1 id="安装部署"><a href="#安装部署" class="header-anchor">#</a> 安装部署</h1> <h2 id="es、es-head、kibana部署"><a href="#es、es-head、kibana部署" class="header-anchor">#</a> ES、ES HEAD、kibana部署</h2> <h2 id="_194服务器目录介绍"><a href="#_194服务器目录介绍" class="header-anchor">#</a> 194服务器目录介绍：</h2> <ul><li>/home/kscd/
+<ul><li>/deploy
+<ul><li>elk
+<ul><li>elasticsearch-7.6.0</li> <li>elasticsearch-7.6.0-linux-x86_64.tar.gz</li> <li>elasticsearch-head</li> <li>elasticsearch-head.tar.gz</li> <li>kibana-7.6.0-linux-x86_64</li> <li>kibana-7.6.0-linux-x86_64.tar.gz</li> <li>node-v12.16.1-linux-x64</li> <li>node-v12.16.1-linux-x64.tar.xz</li></ul></li> <li>jdk</li></ul></li> <li>/es
+<ul><li>data</li> <li>logs</li></ul></li> <li>/jdk</li></ul></li></ul> <h2 id="安装步骤"><a href="#安装步骤" class="header-anchor">#</a> 安装步骤</h2> <p>1.上传包到/home/kscd/elk/目录下</p> <div class="language-react extra-class"><pre class="language-text"><code>scp elasticsearch-7.6.0-linux-x86_64.tar.gz kscd@10.1.10.100:/home/kscd/deploy/elk
+scp kibana-7.6.0-linux-x86_64.tar.gz kscd@10.1.10.100:/home/kscd/deploy/elk
+scp elasticsearch-head.tar.gz kscd@10.1.10.100:/home/kscd/deploy/elk
+scp node-v12.16.1-linux-x64.tar.xz kscd@10.1.10.100:/home/kscd/deploy/elk
+</code></pre></div><p>2.解压</p> <p>3.安装elasticsearch</p> <div class="language-react extra-class"><pre class="language-text"><code>1.进入elasticsearch目录下，修改config下的elasticsearch.yml
+cd elasticsearch-7.6.0/config
+vi elasticsearch.yml
+
+2.具体修改项，如下：
+cluster.name: kscd
+node.name: node-1
+path.data: /home/kscd/es/data
+path.logs: /home/kscd/es/logs
+network.host: 10.1.10.100
+http.port: 9200
+http.cors.enabled: true
+http.cors.allow-origin: &quot;*&quot;
+discovery.seed_hosts: [&quot;10.1.10.100&quot;, &quot;[::1]&quot;]
+cluster.initial_master_nodes: [&quot;node-1&quot;]
+
+3.需要root修改几处配置文件
+详情：https://www.jianshu.com/p/2285f1f8ec21
+vi /etc/security/limits.conf
+    * soft nofile 65536
+    * hard nofile 65536
+    * soft nproc 4096
+    * hard nproc 4096
+
+vi /etc/sysctl.conf
+	vm.max_map_count=262144
+sysctl -p
+
+
+4.进入bin目录下启动elasticsearch
+	正常启动：./elasticsearch
+	后台启动：./elasticsearch -d -p pid
+
+5.访问：http://10.1.10.100:9200/
+
+</code></pre></div><p>4.安装kibana</p> <div class="language- extra-class"><pre class="language-text"><code>1.进入kibana配置文件config目录
+cd /home/kscd/deploy/elk/kibana-7.6.0-linux-x86_64/config
+vi kibana.yml
+
+2.具体修改项，如下：
+server.port: 5601
+server.host: &quot;10.1.10.100&quot;
+elasticsearch.hosts: [&quot;http://10.1.10.100:9200&quot;]
+
+3.进入bin目录下启动kibana
+	正常启动：./kibana
+	后台启动：nohup ./kibana &amp;
+
+4.访问：http://10.1.10.100:5601/
+
+</code></pre></div><p>5.安装node+head</p> <div class="language-react extra-class"><pre class="language-text"><code>1.es-head需要安装node，所以需要解压node，并配置环境变量
+vi ~/.bash_profile
+	NODEHOME=/home/kscd/deploy/elk/node-v12.16.1-linux-x64/bin
+source ~/.bash_profile
+
+2.查看node是否安装成功
+    [kscd@localhost ~]$ node -v
+    v12.16.1
+    [kscd@localhost ~]$ npm -v
+    6.13.4
+
+3.安装head
+cd /home/kscd/deploy/elk/elasticsearch-head
+cat package.json
+看到是start，所以执行：npm run start安装
+
+4.vi Gruntfile.js
+connect: {
+    server: {
+        options: {
+            port: 9110,
+            base: '.',
+            keepalive: true
+        }
+    }
+}
+修改为：
+connect: {
+    server: {
+        options: {
+        	hostname: '0.0.0.0',
+            port: 9110,
+            base: '.',
+            keepalive: true
+        }
+    }
+}
+
+5.重新启动一下，后台启动
+nohup npm run start &amp;
+
+6.完成
+http://10.1.10.100:9110/
+	搜索框输入：http://10.1.10.100:9200/
+
+</code></pre></div><p><img src="https://yh-sun.github.io/note-cloud/image-20200624181126376.png" alt="enter description here"></p> <h1 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h1> <h2 id="常用脚本"><a href="#常用脚本" class="header-anchor">#</a> 常用脚本</h2> <h3 id="索引-testindex"><a href="#索引-testindex" class="header-anchor">#</a> 索引：testindex</h3> <div class="language-json extra-class"><pre class="language-json"><code># cardinality去重
+GET /testindex/_search
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;size&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;bool&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;must&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;range&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;sold&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+              <span class="token property">&quot;gte&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-09-18 00:00:00||-5y&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;lte&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-09-18 00:00:00||-1y&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+  <span class="token property">&quot;aggs&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;salll&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;cardinality&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;color.keyword&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;salll22&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;terms&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;color.keyword&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+# 折线图
+GET /testindex/_search
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;size&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;bool&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;must&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;range&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;sold&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+              <span class="token property">&quot;gte&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-09-18 00:00:00||-5y&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;lte&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-09-18 00:00:00||-1y&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+  <span class="token property">&quot;aggs&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;salll&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;terms&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;color.keyword&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;aggs&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;tddddd&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;terms&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;make.keyword&quot;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;aggs&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;ssssss&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+              <span class="token property">&quot;date_histogram&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;sold&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;interval&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2d&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;format&quot;</span><span class="token operator">:</span> <span class="token string">&quot;yyyy-MM-dd&quot;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;aggs&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;hgggggggggggg&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                  <span class="token property">&quot;max&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;price&quot;</span>
+                  <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+# 查询 *~昨天，查询总数
+GET testindex/_search
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;aggs&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;gd1af&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;date_range&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;sold&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;ranges&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            <span class="token property">&quot;to&quot;</span><span class="token operator">:</span> <span class="token string">&quot;now-1d&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+       <span class="token property">&quot;aggs&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;gdaf&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;date_histogram&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;sold&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;interval&quot;</span><span class="token operator">:</span> <span class="token string">&quot;day&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;format&quot;</span><span class="token operator">:</span> <span class="token string">&quot;yyyy-MM-dd&quot;</span>
+          <span class="token punctuation">}</span>
+          
+          
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+# 查询 时间间隔内，按周总数(<span class="token number">1</span>)
+GET testindex/_search
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;size&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;bool&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;must&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;range&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;sold&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+              <span class="token property">&quot;gte&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-09-18 00:00:00||-5w&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;lte&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-09-18 00:00:00||-1w&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;match_phrase&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;color&quot;</span><span class="token operator">:</span> <span class="token string">&quot;黄色&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;aggs&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;gdaf&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;date_histogram&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;sold&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;interval&quot;</span><span class="token operator">:</span> <span class="token string">&quot;week&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;format&quot;</span><span class="token operator">:</span> <span class="token string">&quot;yyyy-MM-dd&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;genders&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;terms&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;color.keyword&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      
+      <span class="token property">&quot;aggs&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;stats_follower111&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;max&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;price&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        
+        <span class="token punctuation">,</span>
+        
+        <span class="token property">&quot;stats_follower1133&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;min&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;price&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        
+        <span class="token punctuation">,</span>
+        
+        <span class="token property">&quot;stats_followe33333&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;sum&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;price&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;max_id&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;sum&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;price&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+# 查询 时间间隔内，按周总数(<span class="token number">2</span>)
+GET testindex/_search
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;size&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;aggs&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;gd1af&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;filter&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;range&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;sold&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;gte&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-09-18 00:00:00||-5w&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;lte&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-09-18 00:00:00||-1w&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;aggs&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;gdaf&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;date_histogram&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;sold&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;interval&quot;</span><span class="token operator">:</span> <span class="token string">&quot;week&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;format&quot;</span><span class="token operator">:</span> <span class="token string">&quot;yyyy-MM-dd&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;genders&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;terms&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;color.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+
+
+GET /testindex/_mapping
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;properties&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;color&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;fields&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;keyword&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;ignore_above&quot;</span><span class="token operator">:</span> <span class="token number">256</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;make&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;fields&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;keyword&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;ignore_above&quot;</span><span class="token operator">:</span> <span class="token number">256</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;long&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;sold&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;date&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;format&quot;</span><span class="token operator">:</span> <span class="token string">&quot;yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+GET /testindex/_search
+
+POST /testindex/_bulk
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">10000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;红色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;汉兰达&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-17 10:10:10&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">20000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;红色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;汉兰达&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-17 10:10:10&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">30000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;绿色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;福特&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-18 10:10:10&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">15000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;蓝色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;丰田&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-18 10:10:10&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">12000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;绿色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;丰田&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-18 10:10:10&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">20000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;红色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;汉兰达&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-16 10:10:10&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">80000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;红色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;宝马&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-16 10:10:10&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">25000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;蓝色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;福特&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-12 10:10:10&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">10000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;红色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;汉兰达&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-11 10:10:10&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">20000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;红色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;汉兰达&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-10 10:10:10&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">30000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;绿色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;福特&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-10 10:10:10&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">15000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;蓝色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;丰田&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-09 10:10:10&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">12000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;绿色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;丰田&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-05 10:10:10&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">20000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;红色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;汉兰达&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-09 10:10:10&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">80000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;红色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;宝马&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-17 10:10:10&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">25000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;蓝色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;福特&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2020-09-14 10:10:10&quot;</span> <span class="token punctuation">}</span>
+
+
+
+
+
+
+
+POST /testindex/_bulk
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">10000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;红色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;汉兰达&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2014-10-28&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">20000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;红色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;汉兰达&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2014-11-05&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">30000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;绿色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;福特&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2014-05-18&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">15000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;蓝色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;丰田&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2014-07-02&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">12000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;绿色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;丰田&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2014-08-19&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">20000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;红色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;汉兰达&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2014-11-05&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">80000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;红色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;宝马&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2014-01-01&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;price&quot;</span> <span class="token operator">:</span> <span class="token number">25000</span><span class="token punctuation">,</span> <span class="token property">&quot;color&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;蓝色&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;make&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;福特&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;sold&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;2014-02-12&quot;</span> <span class="token punctuation">}</span>
+
+
+
+POST /testindex/_delete_by_query
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> 
+    <span class="token property">&quot;match_all&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre></div><h3 id="索引-es-order"><a href="#索引-es-order" class="header-anchor">#</a> 索引：es_order</h3> <div class="language-ruleslanguage extra-class"><pre class="language-text"><code>DELETE /es_order
+</code></pre></div><h4 id="创建es-order索引"><a href="#创建es-order索引" class="header-anchor">#</a> 创建es_order索引</h4> <div class="language-gams extra-class"><pre class="language-text"><code>PUT /es_order
+</code></pre></div><h4 id="查看kscd-dev的mapping"><a href="#查看kscd-dev的mapping" class="header-anchor">#</a> 查看kscd_dev的mapping</h4> <div class="language-vbscript extra-class"><pre class="language-text"><code>GET /es_order/_mapping
+</code></pre></div><h4 id="创建es-order的mapping"><a href="#创建es-order的mapping" class="header-anchor">#</a> 创建es_order的mapping</h4> <div class="language-xquery extra-class"><pre class="language-xquery"><code>PUT <span class="token punctuation">/</span>es_order<span class="token punctuation">/</span>_mapping
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;properties&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;orderNo&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;fields&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;ignore_above&quot;</span><span class="token punctuation">:</span> <span class="token number">32</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;dptRelCde&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;fields&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;ignore_above&quot;</span><span class="token punctuation">:</span> <span class="token number">48</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;combinedProductCode&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;fields&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;ignore_above&quot;</span><span class="token punctuation">:</span> <span class="token number">8</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;underWriteCompany&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;fields&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;ignore_above&quot;</span><span class="token punctuation">:</span> <span class="token number">16</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;proposalTime&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;date&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;format&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis&quot;</span>
+      
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;operatorCode&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;fields&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;ignore_above&quot;</span><span class="token punctuation">:</span> <span class="token number">32</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;mark&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;fields&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;ignore_above&quot;</span><span class="token punctuation">:</span> <span class="token number">4</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;totalPremium&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;long&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;jqPremium&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;long&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;syPremium&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;long&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;plateNo&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;fields&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;ignore_above&quot;</span><span class="token punctuation">:</span> <span class="token number">32</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;vin&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;fields&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;ignore_above&quot;</span><span class="token punctuation">:</span> <span class="token number">32</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="查询es-order内容-总条目数"><a href="#查询es-order内容-总条目数" class="header-anchor">#</a> 查询es_order内容(总条目数)</h4> <div class="language-xquery extra-class"><pre class="language-xquery"><code>GET <span class="token punctuation">/</span>es_order<span class="token punctuation">/</span>_search
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;aggs&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;sssss&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;value_count&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;orderNo.keyword&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="查询每个结构下去重的车辆数"><a href="#查询每个结构下去重的车辆数" class="header-anchor">#</a> 查询每个结构下去重的车辆数</h4> <div class="language-xquery extra-class"><pre class="language-xquery"><code>GET <span class="token punctuation">/</span>es_order<span class="token punctuation">/</span>_search
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;size&quot;</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;aggs&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;dsfsadf&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;terms&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;dptRelCde.keyword&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;aggs&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;ssssddd&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;cardinality&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;plateNo.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="like-查询某一机构dptrelcde下的数据-00-03-0301-030100012"><a href="#like-查询某一机构dptrelcde下的数据-00-03-0301-030100012" class="header-anchor">#</a> LIKE:查询某一机构dptRelCde下的数据&quot;00;03;0301;030100012&quot;</h4> <div class="language-xquery extra-class"><pre class="language-xquery"><code>GET <span class="token punctuation">/</span>es_order<span class="token punctuation">/</span>_search
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;size&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> 
+  <span class="token string">&quot;query&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;bool&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;must&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token string">&quot;prefix&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;dptRelCde&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;00;01;0115;0115&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;aggs&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;count1111&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;value_count&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;orderNo.keyword&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="需求-折线图"><a href="#需求-折线图" class="header-anchor">#</a> 需求：折线图</h4> <div class="language-xquery extra-class"><pre class="language-xquery"><code>GET <span class="token punctuation">/</span>es_order<span class="token punctuation">/</span>_search
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;size&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;query&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;bool&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;must&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token string">&quot;range&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;proposalTime&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+              <span class="token string">&quot;gte&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;2020-09-01 00:00:00&quot;</span><span class="token punctuation">,</span>
+              <span class="token string">&quot;lte&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;2020-10-13 00:00:00&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token string">&quot;prefix&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;dptRelCde&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;00&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;aggs&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;总数&quot;</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+      <span class="token string">&quot;value_count&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;_id&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    
+    <span class="token string">&quot;日聚合&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;date_histogram&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;proposalTime&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;interval&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;day&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;format&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;yyyy-MM-dd&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;aggs&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;订单量&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;value_count&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;orderNo.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;保费&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;sum&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;totalPremium&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;车辆数&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;cardinality&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;plateNo.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    
+    <span class="token string">&quot;周聚合&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;date_histogram&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;proposalTime&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;interval&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;week&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;format&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;yyyy-MM-dd&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;aggs&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;订单量&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;value_count&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;orderNo.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;保费&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;sum&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;totalPremium&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;车辆数&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;cardinality&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;plateNo.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    
+    <span class="token string">&quot;月聚合&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;date_histogram&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;proposalTime&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;interval&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;month&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;format&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;yyyy-MM-dd&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;aggs&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;订单量&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;value_count&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;orderNo.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;保费&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;sum&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;totalPremium&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;车辆数&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;cardinality&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;plateNo.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    
+    <span class="token string">&quot;年聚合&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;date_histogram&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;proposalTime&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;interval&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;year&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;format&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;yyyy-MM-dd&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;aggs&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;订单量&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;value_count&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;orderNo.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;保费&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;sum&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;totalPremium&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;交强保费&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;sum&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;jqPremium&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;商业保费&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;sum&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;syPremium&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;车辆数&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;cardinality&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;plateNo.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="测试的-插入数据-根据id查询数据"><a href="#测试的-插入数据-根据id查询数据" class="header-anchor">#</a> 测试的，插入数据，根据id查询数据</h4> <div class="language-xquery extra-class"><pre class="language-xquery"><code>POST <span class="token punctuation">/</span>es_order<span class="token punctuation">/</span>_bulk
+<span class="token punctuation">{</span><span class="token string">&quot;index&quot;</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&quot;orderNo&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;1308340143911141301&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;dptRelCde&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;00;01;0115;01150001&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;plateNo&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;黑B0145&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;proposalTime&quot;</span><span class="token punctuation">:</span><span class="token number">1573527804000</span><span class="token punctuation">,</span><span class="token string">&quot;jqPremium&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;94403&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;totalPremium&quot;</span><span class="token punctuation">:</span><span class="token number">118517.1231</span><span class="token punctuation">,</span><span class="token string">&quot;underWriteCompany&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;00&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;operatorCode&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;000066&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;combinedProductCode&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;1370&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;mark&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">}</span>
+
+ GET <span class="token punctuation">/</span>es_order<span class="token punctuation">/</span>_search
+ <span class="token punctuation">{</span>
+   <span class="token string">&quot;query&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+     <span class="token string">&quot;match_phrase&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+       <span class="token string">&quot;orderNo&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;1308340143911141301&quot;</span>
+     <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+</code></pre></div><h4 id="首页统计-矩阵"><a href="#首页统计-矩阵" class="header-anchor">#</a> 首页统计-矩阵</h4> <div class="language-xquery extra-class"><pre class="language-xquery"><code>GET <span class="token punctuation">/</span>es_order<span class="token punctuation">/</span>_search
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;size&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;query&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;bool&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;must&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token string">&quot;range&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;proposalTime&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+              <span class="token string">&quot;gte&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;2020-10-10 11:03:24&quot;</span><span class="token punctuation">,</span>
+              <span class="token string">&quot;lte&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;2020-10-13 11:03:24&quot;</span><span class="token punctuation">,</span>
+              <span class="token string">&quot;time_zone&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;+08:00&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;aggs&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;组合产品代码&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;terms&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;combinedProductCode.keyword&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;aggs&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;订单量&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;value_count&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;orderNo.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;保费&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;sum&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;totalPremium&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;车辆数&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;cardinality&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;plateNo.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;其他的车辆数，防止重复&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;filter&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;terms&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;combinedProductCode.keyword&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token string">&quot;1369&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;1373&quot;</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;aggs&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;订单量&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;value_count&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;orderNo.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;保费&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;sum&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;totalPremium&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;车辆数&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;cardinality&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;vin.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    
+    <span class="token string">&quot;订单量&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;value_count&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;orderNo.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;保费&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;sum&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;totalPremium&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;车辆数&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;cardinality&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;field&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;plateNo.keyword&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="保司2首页统计es"><a href="#保司2首页统计es" class="header-anchor">#</a> 保司2首页统计ES</h2> <blockquote><p>需求：折线图
+GET /es_order/_search</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;size&quot;: 1,
+  &quot;query&quot;: {
+    &quot;bool&quot;: {
+      &quot;must&quot;: [
+        {
+          &quot;range&quot;: {
+            &quot;proposalTime&quot;: {
+              &quot;gte&quot;: &quot;2020-09-01 00:00:00&quot;,
+              &quot;lte&quot;: &quot;2020-09-22 00:00:00&quot;
+            }
+          }
+        },
+        {
+          &quot;prefix&quot;: {
+            &quot;dptRelCde&quot;: &quot;00&quot;
+          }
+        }
+      ]
+    }
+  },
+  &quot;aggs&quot;: {
+    &quot;总数&quot;:{
+      &quot;value_count&quot;: {
+        &quot;field&quot;: &quot;_id&quot;
+      }
+    },
+    
+    &quot;日聚合&quot;: {
+      &quot;date_histogram&quot;: {
+        &quot;field&quot;: &quot;proposalTime&quot;,
+        &quot;interval&quot;: &quot;day&quot;,
+        &quot;format&quot;: &quot;yyyy-MM-dd&quot;
+      },
+      &quot;aggs&quot;: {
+        &quot;订单量&quot;: {
+          &quot;value_count&quot;: {
+            &quot;field&quot;: &quot;orderNo.keyword&quot;
+          }
+        },
+        &quot;保费&quot;: {
+          &quot;sum&quot;: {
+            &quot;field&quot;: &quot;totalPremium&quot;
+          }
+        },
+        &quot;车辆数&quot;: {
+          &quot;cardinality&quot;: {
+            &quot;field&quot;: &quot;plateNo.keyword&quot;
+          }
+        }
+      }
+    },
+    
+    &quot;周聚合&quot;: {
+      &quot;date_histogram&quot;: {
+        &quot;field&quot;: &quot;proposalTime&quot;,
+        &quot;interval&quot;: &quot;week&quot;,
+        &quot;format&quot;: &quot;yyyy-MM-dd&quot;
+      },
+      &quot;aggs&quot;: {
+        &quot;订单量&quot;: {
+          &quot;value_count&quot;: {
+            &quot;field&quot;: &quot;orderNo.keyword&quot;
+          }
+        },
+        &quot;保费&quot;: {
+          &quot;sum&quot;: {
+            &quot;field&quot;: &quot;totalPremium&quot;
+          }
+        },
+        &quot;车辆数&quot;: {
+          &quot;cardinality&quot;: {
+            &quot;field&quot;: &quot;plateNo.keyword&quot;
+          }
+        }
+      }
+    },
+    
+    &quot;月聚合&quot;: {
+      &quot;date_histogram&quot;: {
+        &quot;field&quot;: &quot;proposalTime&quot;,
+        &quot;interval&quot;: &quot;month&quot;,
+        &quot;format&quot;: &quot;yyyy-MM-dd&quot;
+      },
+      &quot;aggs&quot;: {
+        &quot;订单量&quot;: {
+          &quot;value_count&quot;: {
+            &quot;field&quot;: &quot;orderNo.keyword&quot;
+          }
+        },
+        &quot;保费&quot;: {
+          &quot;sum&quot;: {
+            &quot;field&quot;: &quot;totalPremium&quot;
+          }
+        },
+        &quot;车辆数&quot;: {
+          &quot;cardinality&quot;: {
+            &quot;field&quot;: &quot;plateNo.keyword&quot;
+          }
+        }
+      }
+    },
+    
+    &quot;年聚合&quot;: {
+      &quot;date_histogram&quot;: {
+        &quot;field&quot;: &quot;proposalTime&quot;,
+        &quot;interval&quot;: &quot;year&quot;,
+        &quot;format&quot;: &quot;yyyy-MM-dd&quot;
+      },
+      &quot;aggs&quot;: {
+        &quot;订单量&quot;: {
+          &quot;value_count&quot;: {
+            &quot;field&quot;: &quot;orderNo.keyword&quot;
+          }
+        },
+        &quot;保费&quot;: {
+          &quot;sum&quot;: {
+            &quot;field&quot;: &quot;totalPremium&quot;
+          }
+        },
+        &quot;交强保费&quot;: {
+          &quot;sum&quot;: {
+            &quot;field&quot;: &quot;jqPremium&quot;
+          }
+        },
+        &quot;商业保费&quot;: {
+          &quot;sum&quot;: {
+            &quot;field&quot;: &quot;syPremium&quot;
+          }
+        },
+        &quot;车辆数&quot;: {
+          &quot;cardinality&quot;: {
+            &quot;field&quot;: &quot;plateNo.keyword&quot;
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre></div><blockquote><p>首页统计-矩阵
+GET /es_order/_searchh</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;size&quot;: 1,
+  &quot;query&quot;: {
+    &quot;bool&quot;: {
+      &quot;must&quot;: [
+        {
+          &quot;range&quot;: {
+            &quot;proposalTime&quot;: {
+              &quot;gte&quot;: &quot;2019-11-12 11:03:24&quot;,
+              &quot;lte&quot;: &quot;2019-11-12 11:03:24&quot;,
+              &quot;time_zone&quot;: &quot;+08:00&quot;
+            }
+          }
+        }
+      ]
+    }
+  },
+  &quot;aggs&quot;: {
+    &quot;组合产品代码&quot;: {
+      &quot;terms&quot;: {
+        &quot;field&quot;: &quot;combinedProductCode.keyword&quot;
+      },
+      &quot;aggs&quot;: {
+        &quot;订单量&quot;: {
+          &quot;value_count&quot;: {
+            &quot;field&quot;: &quot;orderNo.keyword&quot;
+          }
+        },
+        &quot;保费&quot;: {
+          &quot;sum&quot;: {
+            &quot;field&quot;: &quot;totalPremium&quot;
+          }
+        },
+        &quot;车辆数&quot;: {
+          &quot;cardinality&quot;: {
+            &quot;field&quot;: &quot;plateNo.keyword&quot;
+          }
+        }
+      }
+    },
+    &quot;其他的车辆数，防止重复&quot;: {
+      &quot;filter&quot;: {
+        &quot;terms&quot;: {
+          &quot;combinedProductCode.keyword&quot;: [
+            &quot;1369&quot;,
+            &quot;1373&quot;
+          ]
+        }
+      },
+      &quot;aggs&quot;: {
+        &quot;订单量&quot;: {
+          &quot;value_count&quot;: {
+            &quot;field&quot;: &quot;orderNo.keyword&quot;
+          }
+        },
+        &quot;保费&quot;: {
+          &quot;sum&quot;: {
+            &quot;field&quot;: &quot;totalPremium&quot;
+          }
+        },
+        &quot;车辆数&quot;: {
+          &quot;cardinality&quot;: {
+            &quot;field&quot;: &quot;vin.keyword&quot;
+          }
+        }
+      }
+    }
+  }
+}
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/blog/Salt.html" class="prev"><i aria-label="icon: left" class="anticon anticon-left"><svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></i>
+        Salt
+      </a></span> <span class="next"><a href="/blog/Grafana+Prometheus.html">
+        Grafana Prometheus
+        <i aria-label="icon: right" class="anticon anticon-right"><svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path></svg></i></a></span></p></div> </main> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7a41048e.js" defer></script><script src="/assets/js/2.07b944df.js" defer></script><script src="/assets/js/7.7b40a6bc.js" defer></script>
+  </body>
+</html>

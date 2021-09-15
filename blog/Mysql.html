@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Mysql | 小太阳</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/assets/logo-sun.png">
+    <meta name="description" content="生活还得继续">
+    <link rel="preload" href="/assets/css/0.styles.8707b1dd.css" as="style"><link rel="preload" href="/assets/js/app.7a41048e.js" as="script"><link rel="preload" href="/assets/js/2.07b944df.js" as="script"><link rel="preload" href="/assets/js/11.626aef4a.js" as="script"><link rel="prefetch" href="/assets/js/10.68cbf342.js"><link rel="prefetch" href="/assets/js/12.d6ac6fd7.js"><link rel="prefetch" href="/assets/js/13.6764e2b4.js"><link rel="prefetch" href="/assets/js/14.211f58d6.js"><link rel="prefetch" href="/assets/js/15.d52a5a17.js"><link rel="prefetch" href="/assets/js/16.e082a5ee.js"><link rel="prefetch" href="/assets/js/17.f122dbd2.js"><link rel="prefetch" href="/assets/js/18.c9092e4a.js"><link rel="prefetch" href="/assets/js/19.3173b85c.js"><link rel="prefetch" href="/assets/js/20.75bb07f3.js"><link rel="prefetch" href="/assets/js/3.a588e316.js"><link rel="prefetch" href="/assets/js/4.b6ca1f26.js"><link rel="prefetch" href="/assets/js/5.2c29a215.js"><link rel="prefetch" href="/assets/js/6.4ab43089.js"><link rel="prefetch" href="/assets/js/7.7b40a6bc.js"><link rel="prefetch" href="/assets/js/8.27f27a15.js"><link rel="prefetch" href="/assets/js/9.47203886.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8707b1dd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="ant-row"><div class="sidebar-button"><i aria-label="icon: bars" class="anticon anticon-bars"><svg viewBox="0 0 1024 1024" focusable="false" data-icon="bars" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 192H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM104 228a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0z"></path></svg></i> <span></span></div> <div class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-6 ant-col-lg-5 ant-col-xl-5 ant-col-xxl-4"><a href="/" class="router-link-active no-logo home-link"><!----> <span class="site-name">小太阳</span></a> <div class="search-box mobile-search"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div> <div class="ant-col ant-col-xs-0 ant-col-sm-0 ant-col-md-18 ant-col-lg-19 ant-col-xl-19 ant-col-xxl-20"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><ul role="menu" id="nav" class="ant-menu ant-menu-horizontal ant-menu-root ant-menu-light"><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-item"><a href="/" class="router-link-active">
+          我的
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-item ant-menu-item-selected"><a href="/blog/" class="router-link-active">
+          笔记
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="visibility:hidden;position:absolute;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li></ul> <a href="https://github.com/yh-Sun" target="_blank" rel="noopener noreferrer" class="repo-link"><i aria-label="icon: github" class="anticon anticon-github"><svg viewBox="64 64 896 896" focusable="false" data-icon="github" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></i></a></nav></div></div> <!----></header> <aside class="sidebar"><!----> <ul class="sidebar-links"><li><a href="/blog/" aria-current="page" title="👋首页" class="sidebar-link">👋首页</a></li><li><a href="/blog/Activiti.html" title="Activiti" class="sidebar-link">Activiti</a></li><li><a href="/blog/Powerdesigner.html" title="Powerdesigner" class="sidebar-link">Powerdesigner</a></li><li><a href="/blog/Vue.html" title="Vue" class="sidebar-link">Vue</a></li><li><a href="/blog/知识栈.html" title="知识栈" class="sidebar-link">知识栈</a></li><li><a href="/blog/Salt.html" title="Salt" class="sidebar-link">Salt</a></li><li><a href="/blog/Elasticsearch+Kibana.html" title="Elasticsearch Kibana" class="sidebar-link">Elasticsearch Kibana</a></li><li><a href="/blog/Grafana+Prometheus.html" title="Grafana Prometheus" class="sidebar-link">Grafana Prometheus</a></li><li><a href="/blog/Jdk.html" title="JDK" class="sidebar-link">JDK</a></li><li><a href="/blog/Jenkins.html" title="Jenkins" class="sidebar-link">Jenkins</a></li><li><a href="/blog/Mysql.html" aria-current="page" title="Mysql" class="active sidebar-link">Mysql</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Mysql.html#mysql部署" title="mysql部署" class="sidebar-link">mysql部署</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Mysql.html#libaio安装" title="libaio安装" class="sidebar-link">libaio安装</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#mysql包的安装" title="MySql包的安装" class="sidebar-link">MySql包的安装</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#初始化msql" title="初始化msql" class="sidebar-link">初始化msql</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#查看初始化的root用户密码" title="查看初始化的root用户密码" class="sidebar-link">查看初始化的root用户密码</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#修改-var-lib-mysql的权限一边启动mysql" title="修改/var/lib/mysql的权限一边启动mysql" class="sidebar-link">修改/var/lib/mysql的权限一边启动mysql</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#启动mysql" title="启动mysql" class="sidebar-link">启动mysql</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#修改密码" title="修改密码" class="sidebar-link">修改密码</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#授权bbw-b2b用户拥有对数据库的操作权限" title="授权bbw_b2b用户拥有对数据库的操作权限" class="sidebar-link">授权bbw_b2b用户拥有对数据库的操作权限</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#创建用户" title="创建用户" class="sidebar-link">创建用户</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#账号密码" title="账号密码" class="sidebar-link">账号密码</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#卸载mysql" title="卸载MySql" class="sidebar-link">卸载MySql</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#mysql非root用户离线安装" title="Mysql非root用户离线安装" class="sidebar-link">Mysql非root用户离线安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Mysql.html#下载安装包" title="下载安装包" class="sidebar-link">下载安装包</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#解压及编写配置文件" title="解压及编写配置文件" class="sidebar-link">解压及编写配置文件</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#安装mysql" title="安装MySql" class="sidebar-link">安装MySql</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#启动mysql-2" title="启动MySql" class="sidebar-link">启动MySql</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#登录mysql" title="登录MySql" class="sidebar-link">登录MySql</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#自己的想法" title="自己的想法" class="sidebar-link">自己的想法</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#保司2保险快速出单-mysql数据库主从配置" title="保司2保险快速出单-mysql数据库主从配置" class="sidebar-link">保司2保险快速出单-mysql数据库主从配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Mysql.html#主从环境准备" title="主从环境准备：" class="sidebar-link">主从环境准备：</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#配置" title="配置：" class="sidebar-link">配置：</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#使用" title="使用：" class="sidebar-link">使用：</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#附录" title="附录：" class="sidebar-link">附录：</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#shardingsphere-proxy" title="shardingsphere-proxy" class="sidebar-link">shardingsphere-proxy</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Mysql.html#下载sharding-proxy" title="下载sharding-proxy" class="sidebar-link">下载sharding-proxy</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#下载mysql连接驱动" title="下载mysql连接驱动" class="sidebar-link">下载mysql连接驱动</a></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#使用-2" title="使用" class="sidebar-link">使用</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/Mysql.html#shardingsphere-jdbc" title="shardingsphere-jdbc" class="sidebar-link">shardingsphere-jdbc</a></li></ul></li><li><a href="/blog/Nacos.html" title="Nacos" class="sidebar-link">Nacos</a></li><li><a href="/blog/Nginx.html" title="Nginx" class="sidebar-link">Nginx</a></li><li><a href="/blog/Redis.html" title="Redis" class="sidebar-link">Redis</a></li><li><a href="/blog/RocketMq.html" title="RocketMq" class="sidebar-link">RocketMq</a></li></ul></aside> <main class="page"> <div class="theme-antdocs-content content__default"><h2 id="mysql部署"><a href="#mysql部署" class="header-anchor">#</a> mysql部署</h2> <h3 id="libaio安装"><a href="#libaio安装" class="header-anchor">#</a> libaio安装</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>sudo rpm <span class="token operator">-</span>ivh <span class="token operator">--</span>prefix<span class="token operator">=</span><span class="token operator">~</span><span class="token operator">/</span>mysql<span class="token operator">/</span>libaio libaio<span class="token operator">-</span><span class="token number">0.3</span><span class="token number">.107</span><span class="token operator">-</span><span class="token number">10.</span>el6<span class="token punctuation">.</span>x86_64<span class="token punctuation">.</span>rpm <span class="token operator">--</span>force <span class="token operator">--</span>nodeps
+sudo rpm <span class="token operator">-</span>ivh  libaio<span class="token operator">-</span><span class="token number">0.3</span><span class="token number">.107</span><span class="token operator">-</span><span class="token number">10.</span>el6<span class="token punctuation">.</span>x86_64<span class="token punctuation">.</span>rpm <span class="token operator">--</span>force <span class="token operator">--</span>nodeps
+
+# libaio安装
+<span class="token number">2</span> rpm <span class="token operator">-</span>ivh libaio<span class="token operator">-</span><span class="token number">0.3</span><span class="token number">.107</span><span class="token operator">-</span><span class="token number">10.</span>el6<span class="token punctuation">.</span>x86_64<span class="token punctuation">.</span>rpm
+</code></pre></div><h3 id="mysql包的安装"><a href="#mysql包的安装" class="header-anchor">#</a> MySql包的安装</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>common安装
+rpm <span class="token operator">-</span>ivh mysql<span class="token operator">-</span>community<span class="token operator">-</span>common<span class="token operator">-</span><span class="token number">5.7</span><span class="token number">.26</span><span class="token operator">-</span><span class="token number">1.</span>el7<span class="token punctuation">.</span>x86_64<span class="token punctuation">.</span>rpm
+# libs安装
+rpm <span class="token operator">-</span>ivh mysql<span class="token operator">-</span>community<span class="token operator">-</span>libs<span class="token operator">-</span><span class="token number">5.7</span><span class="token number">.26</span><span class="token operator">-</span><span class="token number">1.</span>el7<span class="token punctuation">.</span>x86_64<span class="token punctuation">.</span>rpm
+# libs<span class="token operator">-</span>compat安装
+rpm <span class="token operator">-</span>ivh mysql<span class="token operator">-</span>community<span class="token operator">-</span>libs<span class="token operator">-</span>compat<span class="token operator">-</span><span class="token number">5.7</span><span class="token number">.26</span><span class="token operator">-</span><span class="token number">1.</span>el7<span class="token punctuation">.</span>x86_64<span class="token punctuation">.</span>rpm
+# Client安装
+rpm <span class="token operator">-</span>ivh mysql<span class="token operator">-</span>community<span class="token operator">-</span>client<span class="token operator">-</span><span class="token number">5.7</span><span class="token number">.26</span><span class="token operator">-</span><span class="token number">1.</span>el7<span class="token punctuation">.</span>x86_64<span class="token punctuation">.</span>rpm
+# Server安装
+rpm <span class="token operator">-</span>ivh mysql<span class="token operator">-</span>community<span class="token operator">-</span>server<span class="token operator">-</span><span class="token number">5.7</span><span class="token number">.26</span><span class="token operator">-</span><span class="token number">1.</span>el7<span class="token punctuation">.</span>x86_64<span class="token punctuation">.</span>rpm
+# Devel安装
+rpm <span class="token operator">-</span>ivh mysql<span class="token operator">-</span>community<span class="token operator">-</span>devel<span class="token operator">-</span><span class="token number">5.7</span><span class="token number">.26</span><span class="token operator">-</span><span class="token number">1.</span>el7<span class="token punctuation">.</span>x86_64<span class="token punctuation">.</span>rpm  
+</code></pre></div><h3 id="初始化msql"><a href="#初始化msql" class="header-anchor">#</a> 初始化msql</h3> <div class="language-html extra-class"><pre class="language-html"><code>mysqld --initialize
+mysqld --initialize  --lower-case-table-names=1
+
+# 8版本后，不能在配置文件中修改<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>忽略大小写</span><span class="token punctuation">&gt;</span></span>，一个方法就是在初始化时，直接忽略；
+https://www.cnblogs.com/niceyoo/p/11545196.html
+    
+vim /etc/my.conf
+    # 忽略略⼤大⼩小写
+    lower——case_table_name=1
+    # sql模式去掉ONLY_FULL_GROUP_BY
+    sql-mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,
+    NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'
+
+详细：
+# 查看是否忽略大小写
+show Variables like '%table_names'
+
+# 忽略略⼤大⼩小写
+lower——case_table_name=1
+
+# sql模式去掉ONLY_FULL_GROUP_BY
+sql-mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,
+NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'
+</code></pre></div><h3 id="查看初始化的root用户密码"><a href="#查看初始化的root用户密码" class="header-anchor">#</a> 查看初始化的root用户密码</h3> <div class="language- extra-class"><pre class="language-text"><code>grep 'temporary password' /var/log/mysqld.log
+
+2020-06-23T01:57:33.093785Z 1 [Note] A temporary password is generated for root@localhost: ChBya?ymX9*/
+</code></pre></div><h3 id="修改-var-lib-mysql的权限一边启动mysql"><a href="#修改-var-lib-mysql的权限一边启动mysql" class="header-anchor">#</a> 修改/var/lib/mysql的权限一边启动mysql</h3> <div class="language- extra-class"><pre class="language-text"><code>chown mysql:mysql -R /var/lib/mysql
+</code></pre></div><h3 id="启动mysql"><a href="#启动mysql" class="header-anchor">#</a> 启动mysql</h3> <div class="language- extra-class"><pre class="language-text"><code>systemctl start mysqld
+
+查看mysql启动状态
+systemctl status mysqld
+
+设置开机自启
+systemctl enable mysqld
+
+重启mysql 
+service mysqld restart
+</code></pre></div><h3 id="修改密码"><a href="#修改密码" class="header-anchor">#</a> 修改密码</h3> <div class="language- extra-class"><pre class="language-text"><code>1.开始使用此种方式，没有生效，所以采用其他方法：
+mysqladmin -u root -p password [新密码]
+	-&gt;会提示输⼊入旧密码，输⼊入4.4打印出的密码
+	
+2.思路：
+# 修改my.conf，root跳过密码校验登录；
+
+# 登录成功后，修改user表root用户的密码；
+update user set authentication_string=password('root') where user='root' and host='localhost';
+
+# 重新修改my.conf，重新加入密码验证；
+</code></pre></div><h3 id="授权bbw-b2b用户拥有对数据库的操作权限"><a href="#授权bbw-b2b用户拥有对数据库的操作权限" class="header-anchor">#</a> 授权bbw_b2b用户拥有对数据库的操作权限</h3> <div class="language- extra-class"><pre class="language-text"><code>生产环境
+grant all privileges on kscd_dev.* to kscd_dev@'%'  identified by 'Kscd_dev@123'; 
+grant all privileges on kscd_prod.* to kscd_prod@'%'  identified by 'Kscd_prod@123'; 
+
+刷新系统权限
+flush privileges;
+</code></pre></div><h3 id="创建用户"><a href="#创建用户" class="header-anchor">#</a> 创建用户</h3> <div class="language- extra-class"><pre class="language-text"><code>查看多少数据库
+show databases;
+
+创建用户：
+CREATE USER 'kscd_dev'@'%' IDENTIFIED BY 'Kscd_dev@123';
+CREATE USER 'kscd_prod'@'%' IDENTIFIED BY 'Kscd_prod@123';
+
+创建数据库：
+create database kscd_dev;
+
+mysql创建数据库并设置字符集编码
+create database `kscd_prod` character set utf8mb4 collate utf8mb4_general_ci;
+</code></pre></div><h3 id="账号密码"><a href="#账号密码" class="header-anchor">#</a> 账号密码</h3> <blockquote><p>root账号密码：root root</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>kscd_dev
+Kscd_dev@123
+CREATE USER 'kscd_dev'@'%' IDENTIFIED BY 'Kscd_dev@123';
+
+kscd_dev
+create database kscd_dev;
+</code></pre></div><h3 id="卸载mysql"><a href="#卸载mysql" class="header-anchor">#</a> 卸载MySql</h3> <div class="language- extra-class"><pre class="language-text"><code>https://www.cnblogs.com/nicknailo/articles/8563456.html
+rpm -qa|grep -i mysql
+
+rpm -ev mysql-community-common-5.7.26-1.el7.x86_64 --nodeps
+rpm -ev mysql-community-libs-compat-5.7.26-1.el7.x86_64 --nodeps
+rpm -ev mysql-community-server-5.7.26-1.el7.x86_64 --nodeps
+rpm -ev mysql-community-libs-5.7.26-1.el7.x86_64 --nodeps
+rpm -ev mysql-community-client-5.7.26-1.el7.x86_64 --nodeps
+rpm -ev mysql-community-devel-5.7.26-1.el7.x86_64 --nodeps
+</code></pre></div><h2 id="mysql非root用户离线安装"><a href="#mysql非root用户离线安装" class="header-anchor">#</a> Mysql非root用户离线安装</h2> <blockquote><p>Linux非root用户安装及配置MySql，摘抄至：https://cloud.tencent.com/developer/article/1583129</p></blockquote> <ul><li>一、下载安装包</li> <li>二、解压及编写配置文件
+<ul><li>1、解压文件</li> <li>2、编写配置文件</li></ul></li> <li>三、安装MySql</li> <li>四、启动MySql</li> <li>五、登录MySql
+<ul><li>1、获取root用户密码</li> <li>2、登录MySql 查看报错</li> <li>3、增加sock路径进行启动</li> <li>4、修改初始密码</li> <li>5、查看MySql进程状态</li></ul></li> <li>六、参考文献</li> <li>七、离线安装包</li></ul> <h3 id="下载安装包"><a href="#下载安装包" class="header-anchor">#</a> 下载安装包</h3> <p>镜像站网址（极力推荐，下载速度贼快）：<code>http://mirrors.ustc.edu.cn/</code></p> <p>我用的经镜像站：<code>http://mirrors.ustc.edu.cn/mysql-ftp/Downloads/MySQL-5.7/</code> 选用版本为：<code>mysql-5.7.29-linux-glibc2.12-x86_64.tar.gz</code>（文章时间是最新的版本）</p> <p>安装包下载过程非常简单。上传到服务器内也是非常简单，这里就不细写了！</p> <h3 id="解压及编写配置文件"><a href="#解压及编写配置文件" class="header-anchor">#</a> 解压及编写配置文件</h3> <h4 id="解压文件"><a href="#解压文件" class="header-anchor">#</a> 解压文件</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code>tar <span class="token operator">-</span>zxvf mysql<span class="token operator">-</span><span class="token number">5.7</span><span class="token number">.29</span><span class="token operator">-</span>linux<span class="token operator">-</span>glibc2<span class="token punctuation">.</span><span class="token number">12</span><span class="token operator">-</span>x86_64<span class="token punctuation">.</span>tar<span class="token punctuation">.</span>gz
+mv mysql<span class="token operator">-</span><span class="token number">5.7</span><span class="token number">.29</span><span class="token operator">-</span>linux<span class="token operator">-</span>glibc2<span class="token punctuation">.</span><span class="token number">12</span><span class="token operator">-</span>x86_64<span class="token punctuation">.</span>tar<span class="token punctuation">.</span>gz mysql
+cd mysql
+</code></pre></div><p>以上三条命令，按照顺序依次执行即可。（后面的文件名，根据实时的下载，自行替换）</p> <h4 id="编写配置文件"><a href="#编写配置文件" class="header-anchor">#</a> 编写配置文件</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code>vim my<span class="token punctuation">.</span>cnf
+</code></pre></div><p>将如下代码直接复制进去。 说明：oper为 用户名称  mysql 是上一步我们mv重命名的文件名</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">[</span>client<span class="token punctuation">]</span>   
+port<span class="token operator">=</span><span class="token number">3336</span>  
+socket<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>oper<span class="token operator">/</span>mysql<span class="token operator">/</span>mysql<span class="token punctuation">.</span>sock  
+
+<span class="token punctuation">[</span>mysqld<span class="token punctuation">]</span>
+port<span class="token operator">=</span><span class="token number">3336</span>
+basedir<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>oper<span class="token operator">/</span>mysql
+datadir<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>oper<span class="token operator">/</span>mysql<span class="token operator">/</span>data
+pid<span class="token operator">-</span>file<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>oper<span class="token operator">/</span>mysql<span class="token operator">/</span>mysql<span class="token punctuation">.</span>pid
+socket<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>oper<span class="token operator">/</span>mysql<span class="token operator">/</span>mysql<span class="token punctuation">.</span>sock
+log_error<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>oper<span class="token operator">/</span>mysql<span class="token operator">/</span>error<span class="token punctuation">.</span>log
+server<span class="token operator">-</span>id<span class="token operator">=</span><span class="token number">100</span>
+</code></pre></div><h3 id="安装mysql"><a href="#安装mysql" class="header-anchor">#</a> 安装MySql</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>bin<span class="token operator">/</span>mysqld \
+<span class="token operator">--</span>defaults<span class="token operator">-</span>file<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span>mysql<span class="token operator">/</span>my<span class="token punctuation">.</span>cnf \
+<span class="token operator">--</span>initialize \
+<span class="token operator">--</span>user<span class="token operator">=</span>kscd \
+<span class="token operator">--</span>basedir<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span>mysql \
+<span class="token operator">--</span>datadir<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span>mysql<span class="token operator">/</span>data
+</code></pre></div><p>以上命令，挨行依次复制，然后按回车，输入完最后一行回车。如果成功无任何返回结果，如出现任何返回结果即为失败。</p> <h3 id="启动mysql-2"><a href="#启动mysql-2" class="header-anchor">#</a> 启动MySql</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>bin<span class="token operator">/</span>mysqld_safe <span class="token operator">--</span>defaults<span class="token operator">-</span>file<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span>mysql<span class="token operator">/</span>my<span class="token punctuation">.</span>cnf <span class="token operator">--</span>user<span class="token operator">=</span>root <span class="token operator">&amp;</span>
+
+bin<span class="token operator">/</span>mysqld_safe <span class="token operator">--</span>defaults<span class="token operator">-</span>file<span class="token operator">=</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">etc</span><span class="token regex-delimiter">/</span><span class="token regex-flags">my</span></span><span class="token punctuation">.</span>cnf <span class="token operator">--</span>user<span class="token operator">=</span>root <span class="token operator">&amp;</span>
+</code></pre></div><p>这里是可以成功执行的。继续下一步。</p> <h3 id="登录mysql"><a href="#登录mysql" class="header-anchor">#</a> 登录MySql</h3> <h4 id="获取root用户密码"><a href="#获取root用户密码" class="header-anchor">#</a> 获取root用户密码</h4> <p>初始密码在error.log文件中，输入如下命令：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>cat error<span class="token punctuation">.</span>log <span class="token operator">|</span> grep root@localhost
+</code></pre></div><h4 id="登录mysql-查看报错"><a href="#登录mysql-查看报错" class="header-anchor">#</a> 登录MySql 查看报错</h4> <p>这里因为是非oper用户，所以正常登录命令应该是：<code>bin/mysql -u root -p</code>，但是即使你这样输入了，一样报错。会给你报如下错误代码。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token constant">ERROR</span> <span class="token number">2002</span> <span class="token punctuation">(</span><span class="token constant">HY000</span><span class="token punctuation">)</span><span class="token operator">:</span> Can<span class="token string">'t connect to local MySQL server through socket '</span><span class="token operator">/</span>tmp<span class="token operator">/</span>mysql<span class="token punctuation">.</span>sock' <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre></div><h4 id="增加sock路径进行启动"><a href="#增加sock路径进行启动" class="header-anchor">#</a> 增加sock路径进行启动</h4> <p>所以直接加sock的启动命令：(有点笨重，但是能实现)（更好的办法我也没找到）</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>bin<span class="token operator">/</span>mysql <span class="token operator">-</span>u root <span class="token operator">-</span>p <span class="token operator">-</span><span class="token constant">S</span> <span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span>mysql<span class="token operator">/</span>mysql<span class="token punctuation">.</span>sock
+</code></pre></div><h4 id="修改初始密码"><a href="#修改初始密码" class="header-anchor">#</a> 修改初始密码</h4> <p>登录成功之后，进行初始密码的修改</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token constant">SET</span> <span class="token constant">PASSWORD</span> <span class="token constant">FOR</span> <span class="token string">'root'</span>@<span class="token string">'localhost'</span> <span class="token operator">=</span> <span class="token constant">PASSWORD</span><span class="token punctuation">(</span><span class="token string">'oper'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+flush privileges<span class="token punctuation">;</span>
+</code></pre></div><div class="language-shell extra-class"><pre class="language-shell"><code>mysql -uroot -p
+mysql<span class="token operator">&gt;</span> SET PASSWORD FOR <span class="token string">'root'</span>@<span class="token string">'localhost'</span> <span class="token operator">=</span> PASSWORD<span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+mysql<span class="token operator">&gt;</span> update user <span class="token builtin class-name">set</span> <span class="token assign-left variable">host</span><span class="token operator">=</span><span class="token string">'%'</span> where user <span class="token operator">=</span> <span class="token string">'root'</span><span class="token punctuation">;</span>
+mysql<span class="token operator">&gt;</span>  flush privileges<span class="token punctuation">;</span>
+</code></pre></div><h4 id="查看mysql进程状态"><a href="#查看mysql进程状态" class="header-anchor">#</a> 查看MySql进程状态</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code>ps <span class="token operator">-</span>ef<span class="token operator">|</span>grep mysql
+</code></pre></div><p>输入如上命令，即可查看到MySql的进程状态。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>oper       <span class="token number">8133</span>   <span class="token number">7553</span>  <span class="token number">0</span> <span class="token number">23</span><span class="token operator">:</span><span class="token number">24</span> pts<span class="token operator">/</span><span class="token number">0</span>    <span class="token number">00</span><span class="token operator">:</span><span class="token number">00</span><span class="token operator">:</span><span class="token number">00</span> <span class="token operator">/</span>bin<span class="token operator">/</span>sh bin<span class="token operator">/</span>mysqld_safe <span class="token operator">--</span>defaults<span class="token operator">-</span>file<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>opermysql<span class="token operator">/</span>my<span class="token punctuation">.</span>cnf <span class="token operator">--</span>user<span class="token operator">=</span>oper
+oper       <span class="token number">8298</span>   <span class="token number">8133</span>  <span class="token number">0</span> <span class="token number">23</span><span class="token operator">:</span><span class="token number">24</span> pts<span class="token operator">/</span><span class="token number">0</span>    <span class="token number">00</span><span class="token operator">:</span><span class="token number">00</span><span class="token operator">:</span><span class="token number">00</span> <span class="token operator">/</span>home<span class="token operator">/</span>oper<span class="token operator">/</span>mysql<span class="token operator">/</span>bin<span class="token operator">/</span>mysqld <span class="token operator">--</span>defaults<span class="token operator">-</span>file<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>oper<span class="token operator">/</span>mysql<span class="token operator">/</span>my<span class="token punctuation">.</span>cnf <span class="token operator">--</span>basedir<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>oper<span class="token operator">/</span>mysql <span class="token operator">--</span>datadir<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>oper<span class="token operator">/</span>mysql<span class="token operator">/</span>data <span class="token operator">--</span>plugin<span class="token operator">-</span>dir<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>oper<span class="token operator">/</span>mysql<span class="token operator">/</span>lib<span class="token operator">/</span>plugin <span class="token operator">--</span>log<span class="token operator">-</span>error<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>oper<span class="token operator">/</span>mysql<span class="token operator">/</span>error<span class="token punctuation">.</span>log <span class="token operator">--</span>pid<span class="token operator">-</span>file<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>oper<span class="token operator">/</span>mysql<span class="token operator">/</span>mysql<span class="token punctuation">.</span>pid <span class="token operator">--</span>socket<span class="token operator">=</span><span class="token operator">/</span>home<span class="token operator">/</span>oper<span class="token operator">/</span>mysql<span class="token operator">/</span>mysql<span class="token punctuation">.</span>sock <span class="token operator">--</span>port<span class="token operator">=</span><span class="token number">3336</span>
+oper       <span class="token number">9138</span>   <span class="token number">8343</span>  <span class="token number">0</span> <span class="token number">23</span><span class="token operator">:</span><span class="token number">39</span> pts<span class="token operator">/</span><span class="token number">1</span>    <span class="token number">00</span><span class="token operator">:</span><span class="token number">00</span><span class="token operator">:</span><span class="token number">00</span> grep <span class="token operator">--</span>color<span class="token operator">=</span>auto mysql
+</code></pre></div><h3 id="自己的想法"><a href="#自己的想法" class="header-anchor">#</a> 自己的想法</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>sun@localhost mysql<span class="token punctuation">]</span>$ bin/mysqld --defaults-file<span class="token operator">=</span>/home/sun/mysql/my.cnf --initialize --user<span class="token operator">=</span>sun --basedir<span class="token operator">=</span>/home/sun/mysql --datadir<span class="token operator">=</span>/home/sun/mysql/data
+
+<span class="token punctuation">[</span>sun@localhost mysql<span class="token punctuation">]</span>$ bin/mysqld_safe --defaults-file<span class="token operator">=</span>/home/sun/mysql/my.cnf --user<span class="token operator">=</span>sun <span class="token operator">&amp;</span>
+</code></pre></div><h4 id="环境变量"><a href="#环境变量" class="header-anchor">#</a> 环境变量</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">vi</span> ~/.bash_profile
+
+<span class="token assign-left variable">MYSQL_HOME</span><span class="token operator">=</span>/home/sun/mysql
+<span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span><span class="token environment constant">$HOME</span>/.local/bin:<span class="token environment constant">$HOME</span>/bin:<span class="token variable">$MYSQL_HOME</span>/bin
+<span class="token builtin class-name">export</span> <span class="token environment constant">PATH</span>
+
+<span class="token builtin class-name">source</span> ~/.bash_profile
+</code></pre></div><h4 id="创建软引用解决"><a href="#创建软引用解决" class="header-anchor">#</a> 创建软引用解决：</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 创建前：报错，必须制定 对应的sock地址：mysql -uroot -p -S /home/sun/mysql/mysql.sock</span>
+<span class="token punctuation">[</span>sun@localhost ~<span class="token punctuation">]</span>$ mysql -uroot -p
+Enter password: 
+ERROR <span class="token number">2002</span> <span class="token punctuation">(</span>HY000<span class="token punctuation">)</span>: Can<span class="token string">'t connect to local MySQL server through socket '</span>/tmp/mysql.sock' <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建软引用</span>
+<span class="token punctuation">[</span>sun@localhost ~<span class="token punctuation">]</span>$ <span class="token function">ln</span> -s /home/sun/mysql/mysql.sock /tmp
+								  <span class="token function">ln</span> -s /home/kscd/mysql/mysql.sock /tmp
+
+<span class="token comment"># 可直接登录</span>
+<span class="token punctuation">[</span>sun@localhost ~<span class="token punctuation">]</span>$ mysql -uroot -p
+Enter password: 
+<span class="token operator">&gt;</span> mysql:
+</code></pre></div><h4 id="数据库创建用户"><a href="#数据库创建用户" class="header-anchor">#</a> 数据库创建用户：</h4> <div class="language-shell extra-class"><pre class="language-shell"><code>创建数据库：
+create database ts_kscd_dev<span class="token punctuation">;</span>
+create database nacos_prod<span class="token punctuation">;</span>
+
+创建用户
+CREATE <span class="token environment constant">USER</span> <span class="token string">'kscd_dev'</span>@<span class="token string">'%'</span> IDENTIFIED BY <span class="token string">'Kscd_dev@123'</span><span class="token punctuation">;</span>
+
+为用户赋予ts_kscd_dev权限
+grant all privileges on ts_kscd_dev.* to kscd_dev@<span class="token string">'%'</span>  identified by <span class="token string">'Kscd_dev@123'</span><span class="token punctuation">;</span> 
+grant all privileges on nacos_prod.* to kscd_prod@<span class="token string">'%'</span>  identified by <span class="token string">'Kscd_prod@123'</span><span class="token punctuation">;</span> 
+
+刷新系统权限
+flush privileges<span class="token punctuation">;</span>
+</code></pre></div><h2 id="保司2保险快速出单-mysql数据库主从配置"><a href="#保司2保险快速出单-mysql数据库主从配置" class="header-anchor">#</a> 保司2保险快速出单-mysql数据库主从配置</h2> <h3 id="主从环境准备"><a href="#主从环境准备" class="header-anchor">#</a> 主从环境准备：</h3> <table><thead><tr><th>名称</th> <th>IP</th> <th>服务器账号</th> <th>数据库账号</th></tr></thead> <tbody><tr><td>msyql-master（主库）</td> <td>10.10.10.1</td> <td>root/root</td> <td>root/@mima18<br>kscd/mima2018@</td></tr> <tr><td>mysql-slave（从库）</td> <td>10.10.10.2</td> <td>root/root</td> <td>root/@mima18</td></tr></tbody></table> <blockquote><p><strong>kscd：应用层使用的数据库账号</strong></p></blockquote> <h3 id="配置"><a href="#配置" class="header-anchor">#</a> 配置：</h3> <p><strong>（1）配置主库</strong></p> <ul><li>修改my.cnf文件：</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@ecs-afea ~<span class="token punctuation">]</span><span class="token comment"># vi /etc/my.cnf</span>
+ 
+ <span class="token comment"># 服务的唯一编号</span>
+ server-id<span class="token operator">=</span><span class="token number">1</span>
+ 
+ <span class="token comment"># 开启mysql binlog功能</span>
+ log-bin<span class="token operator">=</span>mysql-bin
+ 
+ <span class="token comment"># binlog记录内容的方式，记录被操作的每一行</span>
+ <span class="token assign-left variable">binlog_format</span><span class="token operator">=</span>ROW
+ 
+ <span class="token comment"># 减少记录日志的内容，只记录受影响的列</span>
+ <span class="token assign-left variable">binlog_row_image</span><span class="token operator">=</span>minimal
+ 
+ <span class="token comment"># 指定需要复制的数据库名为ts_kscd_dev，如果复制多个数据库，则另起一行再配置一个binlog-do-db</span>
+ binlog-do-db<span class="token operator">=</span>ts_kscd_dev
+ 
+ <span class="token comment"># slave_skip_errors选项有四个可用值，分别为：off，all，ErorCode，ddl_exist_errors；</span>
+ <span class="token comment"># 保司1线上配置的是ddl_exist_errors，此次我们配置all，更多见【附录1】</span>
+ slave_skip_errors <span class="token operator">=</span> all
+</code></pre></div><ul><li>修改好配置文件，重启mysql服务</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 以下两种方式：</span>
+<span class="token number">1</span>.service mysqld restart
+<span class="token number">2</span>.systemctl restart mysqld
+</code></pre></div><p>**注意：**下面命令是在mysql的终端执行的。</p> <ul><li>创建从库同步数据的账号</li></ul> <div class="language-mysql extra-class"><pre class="language-text"><code># 在主服务器给某一用户赋予slave权限，可以是java应用采用的用户；并替换成从服务器的IP即可。
+mysql&gt; grant replication slave on *.* to 'kscd'@'10.1.10.100' identified by 'mima2018@';
+
+grant replication slave on *.* to 'kscd_prod'@'10.1.10.101' identified by 'Kscd_prod@123';
+</code></pre></div><blockquote><p>查看主库的状态，如下所示主库配置完成</p></blockquote> <div class="language-mysql extra-class"><pre class="language-text"><code>mysql&gt; show master status\G
+*************************** 1. row ***************************
+             File: mysql-bin.000003
+         Position: 138430
+     Binlog_Do_DB: ts_kscd_dev
+ Binlog_Ignore_DB: 
+Executed_Gtid_Set: 
+1 row in set (0.00 sec)
+</code></pre></div><p><strong>（2）配置从库</strong></p> <ul><li>修改my.cnf文件：</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 服务的唯一编号，主从编号不能相同</span>
+server-id<span class="token operator">=</span><span class="token number">2</span>
+
+<span class="token comment">## 剩余配置同【主】</span>
+</code></pre></div><ul><li>修改好配置文件，重启mysql服务</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 以下两种方式：</span>
+<span class="token number">1</span>.service mysqld restart
+<span class="token number">2</span>.systemctl restart mysqld
+</code></pre></div><p>**注意：**下面命令是在mysql的终端执行的。</p> <ul><li>执行同步命令：</li></ul> <div class="language-mysql extra-class"><pre class="language-text"><code># 设置主服务器ip，同步账号密码，同步位置
+mysql&gt; change master to master_host='10.1.1.200',master_user='kscd',master_password='mima2018@',master_log_file='mysql-bin.000004',master_log_pos=27318;
+
+change master to master_host='10.1.1.201',master_user='kscd_dev',master_password='Kscd_dev@123',master_log_file='mysql-bin.000003',master_log_pos=900474829;
+
+change master to master_host='10.1.1.202',master_user='kscd',master_password='mima2018@',master_log_file='mysql-bin.000003',master_log_pos=900474829;
+
+# 开启同步功能
+mysql&gt; start slave;
+
+# 关闭
+mysql&gt; stop slave;
+</code></pre></div><blockquote><p>查看从库的状态</p></blockquote> <div class="language-mysql extra-class"><pre class="language-text"><code>mysql&gt; show slave status\G
+*************************** 1. row ***************************
+               Slave_IO_State: Waiting for master to send event
+                  Master_Host: 10.10.10.1
+                  Master_User: kscd
+                  Master_Port: 3306
+                Connect_Retry: 60
+              Master_Log_File: mysql-bin.000003
+          Read_Master_Log_Pos: 138430
+               Relay_Log_File: VM_0_16_centos-relay-bin.000009
+                Relay_Log_Pos: 138643
+        Relay_Master_Log_File: mysql-bin.000003
+             Slave_IO_Running: Yes
+            Slave_SQL_Running: Yes
+              Replicate_Do_DB: 
+          Replicate_Ignore_DB: 
+           Replicate_Do_Table: 
+       Replicate_Ignore_Table: 
+      Replicate_Wild_Do_Table: 
+  Replicate_Wild_Ignore_Table: 
+                   Last_Errno: 0
+                   Last_Error: 
+                 Skip_Counter: 0
+          Exec_Master_Log_Pos: 138430
+              Relay_Log_Space: 139025
+              Until_Condition: None
+               Until_Log_File: 
+                Until_Log_Pos: 0
+           Master_SSL_Allowed: No
+           Master_SSL_CA_File: 
+           Master_SSL_CA_Path: 
+              Master_SSL_Cert: 
+            Master_SSL_Cipher: 
+               Master_SSL_Key: 
+        Seconds_Behind_Master: 0
+Master_SSL_Verify_Server_Cert: No
+                Last_IO_Errno: 0
+                Last_IO_Error: 
+               Last_SQL_Errno: 0
+               Last_SQL_Error: 
+  Replicate_Ignore_Server_Ids: 
+             Master_Server_Id: 1
+                  Master_UUID: 58ee127b-bb73-11ea-ba28-fa163e70bf10
+             Master_Info_File: /var/lib/mysql/master.info
+                    SQL_Delay: 0
+          SQL_Remaining_Delay: NULL
+      Slave_SQL_Running_State: Slave has read all relay log; waiting for more updates
+           Master_Retry_Count: 86400
+                  Master_Bind: 
+      Last_IO_Error_Timestamp: 
+     Last_SQL_Error_Timestamp: 
+               Master_SSL_Crl: 
+           Master_SSL_Crlpath: 
+           Retrieved_Gtid_Set: 
+            Executed_Gtid_Set: fa2b2c8a-e4b4-11e8-9827-525400caee62:1-5124366
+                Auto_Position: 0
+         Replicate_Rewrite_DB: 
+                 Channel_Name: 
+           Master_TLS_Version: 
+1 row in set (0.00 sec)
+
+</code></pre></div><p><img src="https://yh-sun.github.io/note-cloud/1602729031800.png" alt="enter description here"></p> <p>**注意：**Slave_IO_Running和Slave_SQL_Running的状态都为Yes时，说明从库配置成功。</p> <h3 id="使用"><a href="#使用" class="header-anchor">#</a> 使用：</h3> <div class="language-mysql extra-class"><pre class="language-text"><code># 使用kscd账号登录mysql
+mysql -ukscd -p******
+
+# 切换到配置主动的库
+mysql&gt; use ts_kscd_dev;
+
+mysql&gt; #尽情的增删改吧。
+</code></pre></div><h3 id="附录"><a href="#附录" class="header-anchor">#</a> 附录：</h3> <h4 id="slave-skip-errors"><a href="#slave-skip-errors" class="header-anchor">#</a> slave_skip_errors</h4> <ul><li>ddl_exist_errors是MySql5.6增加的参数，更适合实际的应用</li> <li>如下的这些码值，在从库终端中执行以下命令：show slave status\G;
+<ul><li>Last_Errno: 1062</li> <li>Last_Error: Error 'Duplicate entry '3' for key '<strong>PRIMARY</strong>'' <strong>on</strong> query. <strong>Default</strong> <strong>database</strong>: 'test'. Query: 'insert into replication values (3, 'test3')'</li> <li>如果我们在my.cnf中加入[slave_skip_errors=1062 ]，则可跳过此错误，数据同步继续进行。</li></ul></li></ul> <p><img src="https://yh-sun.github.io/note-cloud/1602729147519.png" alt="enter description here"></p> <ul><li>必须注意的是，启动这个参数，如果处理不当，很可能造成主从数据库的数据不同步，在应用中需要根据实际情况，如果对数据完整性要求不是很严格，那么这个选项确实可以减轻维护的成本</li></ul> <h4 id="初次设置主从的数据同步"><a href="#初次设置主从的数据同步" class="header-anchor">#</a> 初次设置主从的数据同步</h4> <blockquote><p>初次使用：主库=&gt;从库</p></blockquote> <div class="language-mysql extra-class"><pre class="language-text"><code># 1.主服务器：执行以下命令锁定数据库以防止写入数据
+mysql&gt; FLUSH TABLES WITH READ LOCK;
+
+# 退出mysql命令行，导出数据库
+mysqldump -u root -p123456 --all-databases  --lock-tables=false  -- &gt; /root/all.sql
+# 导出某些库
+mysqldump -uusername -ppassword --databases db1 db2 &gt; db1db2.sql
+# 导出某些库的表
+mysqldump -uroot -p  ts_kscd_uat order_vehicle &gt; /home/kscd/uat_order_vehicle.sql
+
+# 使用scp命令传输数据库文件all.sql到从服务器
+scp /root/all.sql root@www.example.com:/root
+
+# 解锁数据表
+mysql&gt; UNLOCK TABLES;
+
+
+# 2.从服务器：导入主服务器的数据库,vi一下这个sql，use ts_kscd_dev
+mysql -u root -p123456 &lt; /root/all.sql
+</code></pre></div><h5 id="同步数据"><a href="#同步数据" class="header-anchor">#</a> 同步数据：</h5> <div class="language-shell extra-class"><pre class="language-shell"><code>同步数据：
+<span class="token punctuation">[</span>root@ecs-c6-xlarge-4-linux-20200825085913 home<span class="token punctuation">]</span><span class="token comment"># mysqldump -uroot -p --databases ts_kscd_dev &gt; /home/ts_kscd_dev.sql    </span>
+Enter password: 
+<span class="token punctuation">[</span>root@ecs-c6-xlarge-4-linux-20200825085913 home<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">288280</span>
+drwxr-xr-x  <span class="token number">3</span> root root      <span class="token number">4096</span> Sep <span class="token number">12</span> <span class="token number">15</span>:54 app_store
+drwxr-xr-x <span class="token number">10</span> root root      <span class="token number">4096</span> Sep <span class="token number">14</span> <span class="token number">10</span>:58 mysql
+-rw-r--r--  <span class="token number">1</span> root root <span class="token number">295186794</span> Sep <span class="token number">14</span> <span class="token number">12</span>:05 ts_kscd_dev.sql
+</code></pre></div><h4 id="expire-logs-days"><a href="#expire-logs-days" class="header-anchor">#</a> expire_logs_days</h4> <div class="language-c++ extra-class"><pre class="language-text"><code>MySQL bin-log相关参数：expire_logs_days
+参数：expire_logs_days
+说明：二进制日志自动删除/过期的天数。默认值为0,表示“没有自动删除”
+例如：expire_logs_days = 5 //表示日志保留5天,超过5天则设置为过期的
+
+PS：关于过期日志自动删除补充：
+Q：在什么时间会删除过期日志？
+A：每次进行 LOG flush的时会自动删除过期的日志。
+
+Q：什么时间才能触发log flush，手册上的解释为：
+A：1. 重启；
+　   2. BINLOG文件大小达到参数max_binlog_size限制；
+　   3. 手工执行命令。
+</code></pre></div><h4 id="binlog-rows-query-log-events"><a href="#binlog-rows-query-log-events" class="header-anchor">#</a> binlog_rows_query_log_events</h4> <div class="language-html extra-class"><pre class="language-html"><code>binlog_rows_query_log_events = 1
+在row模式下开启该参数,将把sql语句打印到binlog日志里面.默认是0(off);
+
+详：https://www.cnblogs.com/olinux/p/6755193.html
+</code></pre></div><p><img src="https://yh-sun.github.io/note-cloud/1602729184127.png" alt="enter description here"></p> <h4 id="log-slave-updates"><a href="#log-slave-updates" class="header-anchor">#</a> log-slave-updates</h4> <blockquote><p>这个参数，目前没有配置，还未研究透。</p> <p>帖子结论：从库做为其他从库的主库时需要在配置文件中添加log-slave-updates参数</p> <p>有兴趣的请见：https://www.cnblogs.com/lit10050528/p/4156755.html</p></blockquote> <p><img src="https://yh-sun.github.io/note-cloud/1602729197455.png" alt="enter description here"></p> <h4 id="保司2快出的主从配置"><a href="#保司2快出的主从配置" class="header-anchor">#</a> 保司2快出的主从配置</h4> <p>my.cnf</p> <div class="language- extra-class"><pre class="language-text"><code>[client]
+port=3306
+
+default-character-set=utf8mb4
+
+socket=/home/mysql/mysql.sock
+
+[mysqld]
+port=3306
+
+# character
+character-set-server=utf8mb4
+collation-server=utf8mb4_general_ci
+
+# work dir
+basedir=/home/mysql
+datadir=/home/mysql/data
+pid-file=/home/mysql/mysql.pid
+socket=/home/mysql/mysql.sock
+log_error=/home/mysql/error.log
+
+# common config
+lower_case_table_names=1
+# sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'
+
+
+# mysql read write config
+server-id=2
+log-bin=mysql-bin
+binlog_format=ROW
+binlog_row_image=minimal
+
+binlog-do-db=ts_kscd_dev
+binlog-do-db=shard_test0
+binlog-do-db=shard_test1
+
+slave_skip_errors = all
+
+</code></pre></div><p>安装</p> <div class="language- extra-class"><pre class="language-text"><code>bin/mysqld \
+--defaults-file=/home/kscd/mysql/my.cnf \
+--initialize \
+--user=kscd \
+--basedir=/home/kscd/mysql \
+--datadir=/home/kscd/mysql/data
+</code></pre></div><p>启动</p> <div class="language- extra-class"><pre class="language-text"><code>bin/mysqld_safe \
+--defaults-file=/home/kscd/mysql/my.cnf \
+--user=kscd &amp;
+
+</code></pre></div><h4 id="保司1快出主从配置"><a href="#保司1快出主从配置" class="header-anchor">#</a> 保司1快出主从配置</h4> <blockquote><p>供保司1参考：由于小作者没有copy的习惯，很多参数都需要研究后再加上。希望后续小伙伴可以将剩余的参数定义到附录中；</p> <p>如果写的不对，还请大家批评指正呀呀呀~么么哒</p></blockquote> <ul><li><strong>my-master.cnf</strong></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>
+<span class="token punctuation">[</span>mysql<span class="token punctuation">]</span>
+prompt <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">\</span><span class="token punctuation">\</span>u@<span class="token punctuation">\</span><span class="token punctuation">\</span>h<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">\</span><span class="token punctuation">\</span>d<span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">\</span>_
+
+<span class="token punctuation">[</span>client<span class="token punctuation">]</span>
+<span class="token assign-left variable">user</span><span class="token operator">=</span>root
+<span class="token assign-left variable">password</span><span class="token operator">=</span><span class="token string">&quot;mysql#123&quot;</span>
+socket <span class="token operator">=</span> /data/db/mysql/3306/mysql.sock
+
+<span class="token punctuation">[</span>mysqld<span class="token punctuation">]</span>
+<span class="token comment"># basic settings #</span>
+server-id <span class="token operator">=</span> <span class="token number">11</span>
+port <span class="token operator">=</span> <span class="token number">3306</span>
+bind_address <span class="token operator">=</span> <span class="token number">0.0</span>.0.0
+user <span class="token operator">=</span> mysql
+sql_mode <span class="token operator">=</span> <span class="token string">&quot;STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER&quot;</span>
+autocommit <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token assign-left variable">character_set_server</span><span class="token operator">=</span>utf8mb4
+transaction_isolation <span class="token operator">=</span> READ-COMMITTED
+explicit_defaults_for_timestamp <span class="token operator">=</span> <span class="token number">1</span>
+max_allowed_packet <span class="token operator">=</span> <span class="token number">16777216</span>
+datadir <span class="token operator">=</span>  /data/db/mysql/3306
+innodb_log_group_home_dir <span class="token operator">=</span> /data/db/mysql/3306
+innodb_undo_directory <span class="token operator">=</span> /data/db/mysql/3306 
+socket <span class="token operator">=</span> /data/db/mysql/3306/mysql.sock
+
+<span class="token assign-left variable">query_cache_type</span><span class="token operator">=</span><span class="token number">0</span> 
+<span class="token assign-left variable">query_cache_size</span><span class="token operator">=</span><span class="token number">0</span> 
+event_scheduler <span class="token operator">=</span> <span class="token number">1</span>
+log_bin_trust_function_creators <span class="token operator">=</span> <span class="token number">1</span>
+lower_case_table_names <span class="token operator">=</span> <span class="token number">1</span>
+
+relay_log_purge <span class="token operator">=</span> <span class="token number">0</span>
+read_only <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token comment"># connection #</span>
+interactive_timeout <span class="token operator">=</span> <span class="token number">1800</span>
+wait_timeout <span class="token operator">=</span> <span class="token number">1800</span>
+lock_wait_timeout <span class="token operator">=</span> <span class="token number">1800</span>
+skip_name_resolve <span class="token operator">=</span> <span class="token number">1</span>
+max_connections <span class="token operator">=</span> <span class="token number">500</span>
+max_connect_errors <span class="token operator">=</span> <span class="token number">1000000</span>
+
+<span class="token comment"># table cache performance settings</span>
+table_open_cache <span class="token operator">=</span> <span class="token number">4096</span>
+table_definition_cache <span class="token operator">=</span> <span class="token number">4096</span>
+table_open_cache_instances <span class="token operator">=</span> <span class="token number">128</span>
+
+<span class="token comment"># session memory settings #</span>
+read_buffer_size <span class="token operator">=</span> 16M
+read_rnd_buffer_size <span class="token operator">=</span> 32M
+sort_buffer_size <span class="token operator">=</span> 32M
+tmp_table_size <span class="token operator">=</span> 64M
+join_buffer_size <span class="token operator">=</span> 128M
+thread_cache_size <span class="token operator">=</span> <span class="token number">64</span>
+
+<span class="token comment"># log settings #</span>
+log_error <span class="token operator">=</span> error.log
+slow_query_log <span class="token operator">=</span> <span class="token number">1</span>
+slow_query_log_file <span class="token operator">=</span> slow.log
+log_queries_not_using_indexes <span class="token operator">=</span> <span class="token number">1</span>
+log_slow_admin_statements <span class="token operator">=</span> <span class="token number">1</span>
+log_slow_slave_statements <span class="token operator">=</span> <span class="token number">1</span>
+log_throttle_queries_not_using_indexes <span class="token operator">=</span> <span class="token number">10</span>
+expire_logs_days <span class="token operator">=</span> <span class="token number">3</span>
+long_query_time <span class="token operator">=</span> <span class="token number">2</span>
+min_examined_row_limit <span class="token operator">=</span> <span class="token number">100</span>
+binlog-rows-query-log-events <span class="token operator">=</span> <span class="token number">1</span>
+log-bin-trust-function-creators <span class="token operator">=</span> <span class="token number">1</span>
+log-slave-updates <span class="token operator">=</span> <span class="token number">1</span>
+
+<span class="token comment"># innodb settings #</span>
+innodb_page_size <span class="token operator">=</span> <span class="token number">16384</span>
+innodb_buffer_pool_size <span class="token operator">=</span> 20G
+innodb_buffer_pool_instances <span class="token operator">=</span> <span class="token number">16</span>
+innodb_buffer_pool_load_at_startup <span class="token operator">=</span> <span class="token number">1</span>
+innodb_buffer_pool_dump_at_shutdown <span class="token operator">=</span> <span class="token number">1</span>
+innodb_lru_scan_depth <span class="token operator">=</span> <span class="token number">2048</span>
+innodb_lock_wait_timeout <span class="token operator">=</span> <span class="token number">5</span>
+innodb_io_capacity <span class="token operator">=</span> <span class="token number">4000</span>
+innodb_io_capacity_max <span class="token operator">=</span> <span class="token number">8000</span>
+innodb_flush_method <span class="token operator">=</span> O_DIRECT
+innodb_file_format <span class="token operator">=</span> Barracuda
+innodb_file_format_max <span class="token operator">=</span> Barracuda
+innodb_undo_logs <span class="token operator">=</span> <span class="token number">128</span>
+innodb_undo_tablespaces <span class="token operator">=</span> <span class="token number">3</span>
+innodb_flush_neighbors <span class="token operator">=</span> <span class="token number">0</span>
+innodb_log_file_size <span class="token operator">=</span> 1024M
+innodb_log_files_in_group <span class="token operator">=</span> <span class="token number">2</span>
+innodb_log_buffer_size <span class="token operator">=</span> <span class="token number">16777216</span>
+innodb_purge_threads <span class="token operator">=</span> <span class="token number">4</span>
+innodb_large_prefix <span class="token operator">=</span> <span class="token number">1</span>
+innodb_thread_concurrency <span class="token operator">=</span> <span class="token number">64</span>
+innodb_print_all_deadlocks <span class="token operator">=</span> <span class="token number">1</span>
+innodb_strict_mode <span class="token operator">=</span> <span class="token number">1</span>
+innodb_sort_buffer_size <span class="token operator">=</span> <span class="token number">67108864</span>
+innodb_write_io_threads <span class="token operator">=</span> <span class="token number">16</span>
+innodb_read_io_threads <span class="token operator">=</span> <span class="token number">16</span> 
+innodb_file_per_table <span class="token operator">=</span> <span class="token number">1</span>
+innodb_stats_persistent_sample_pages <span class="token operator">=</span> <span class="token number">64</span>
+innodb_autoinc_lock_mode <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token assign-left variable">innodb_online_alter_log_max_size</span><span class="token operator">=</span>1G
+<span class="token assign-left variable">innodb_open_files</span><span class="token operator">=</span><span class="token number">4096</span>
+
+<span class="token comment"># replication settings #</span>
+master_info_repository <span class="token operator">=</span> TABLE
+relay_log_info_repository <span class="token operator">=</span> TABLE
+log_bin <span class="token operator">=</span> binlog
+sync_binlog <span class="token operator">=</span> <span class="token number">1</span>
+gtid_mode <span class="token operator">=</span> on
+enforce_gtid_consistency <span class="token operator">=</span> <span class="token number">1</span>
+log_slave_updates
+binlog_format <span class="token operator">=</span> ROW
+binlog_rows_query_log_events <span class="token operator">=</span> <span class="token number">1</span>
+relay_log <span class="token operator">=</span> relay.log
+relay_log_recovery <span class="token operator">=</span> <span class="token number">1</span>
+slave_skip_errors <span class="token operator">=</span> ddl_exist_errors
+slave-rows-search-algorithms <span class="token operator">=</span> <span class="token string">'INDEX_SCAN,HASH_SCAN'</span>
+
+<span class="token comment"># semi sync replication settings #</span>
+plugin_load <span class="token operator">=</span> <span class="token string">&quot;validate_password.so;rpl_semi_sync_master=semisync_master.so;rpl_semi_sync_slave=semisync_slave.so&quot;</span>
+rpl_semi_sync_master_enabled <span class="token operator">=</span> <span class="token number">1</span>
+rpl_semi_sync_master_timeout <span class="token operator">=</span> <span class="token number">3000</span>
+rpl_semi_sync_slave_enabled <span class="token operator">=</span> <span class="token number">1</span>
+
+<span class="token comment"># password plugin #</span>
+<span class="token assign-left variable">validate_password_policy</span><span class="token operator">=</span>STRONG
+validate-password<span class="token operator">=</span>FORCE_PLUS_PERMANENT
+
+<span class="token punctuation">[</span>mysqld-5.6<span class="token punctuation">]</span>
+<span class="token comment"># metalock performance settings</span>
+<span class="token assign-left variable">metadata_locks_hash_instances</span><span class="token operator">=</span><span class="token number">64</span>
+
+<span class="token punctuation">[</span>mysqld-5.7<span class="token punctuation">]</span>
+<span class="token comment"># new innodb settings #</span>
+<span class="token assign-left variable">loose_innodb_numa_interleave</span><span class="token operator">=</span><span class="token number">1</span>
+innodb_buffer_pool_dump_pct <span class="token operator">=</span> <span class="token number">40</span>
+innodb_page_cleaners <span class="token operator">=</span> <span class="token number">16</span>
+innodb_undo_log_truncate <span class="token operator">=</span> <span class="token number">1</span>
+innodb_max_undo_log_size <span class="token operator">=</span> 2G
+innodb_purge_rseg_truncate_frequency <span class="token operator">=</span> <span class="token number">128</span>
+<span class="token comment"># new replication settings #</span>
+slave-parallel-type <span class="token operator">=</span> LOGICAL_CLOCK
+slave-parallel-workers <span class="token operator">=</span> <span class="token number">16</span>
+<span class="token assign-left variable">slave_preserve_commit_order</span><span class="token operator">=</span><span class="token number">1</span>
+<span class="token assign-left variable">slave_transaction_retries</span><span class="token operator">=</span><span class="token number">128</span>
+<span class="token comment"># other change settings #</span>
+<span class="token assign-left variable">binlog_gtid_simple_recovery</span><span class="token operator">=</span><span class="token number">1</span>
+<span class="token assign-left variable">log_timestamps</span><span class="token operator">=</span>system
+<span class="token assign-left variable">show_compatibility_56</span><span class="token operator">=</span>on
+</code></pre></div><ul><li><strong>my-slave.cnf</strong></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>
+<span class="token punctuation">[</span>mysql<span class="token punctuation">]</span>
+prompt <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">\</span><span class="token punctuation">\</span>u@<span class="token punctuation">\</span><span class="token punctuation">\</span>h<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">\</span><span class="token punctuation">\</span>d<span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">\</span><span class="token punctuation">\</span>_
+
+<span class="token punctuation">[</span>client<span class="token punctuation">]</span>
+<span class="token assign-left variable">user</span><span class="token operator">=</span>root
+<span class="token assign-left variable">password</span><span class="token operator">=</span><span class="token string">&quot;mysql#123&quot;</span>
+socket <span class="token operator">=</span> /data/db/mysql/3306/mysql.sock
+
+<span class="token punctuation">[</span>mysqld<span class="token punctuation">]</span>
+<span class="token comment"># basic settings #</span>
+server-id <span class="token operator">=</span> <span class="token number">12</span>
+port <span class="token operator">=</span> <span class="token number">3306</span>
+bind_address <span class="token operator">=</span> <span class="token number">0.0</span>.0.0
+user <span class="token operator">=</span> mysql
+sql_mode <span class="token operator">=</span> <span class="token string">&quot;STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER&quot;</span>
+autocommit <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token assign-left variable">character_set_server</span><span class="token operator">=</span>utf8mb4
+transaction_isolation <span class="token operator">=</span> READ-COMMITTED
+explicit_defaults_for_timestamp <span class="token operator">=</span> <span class="token number">1</span>
+max_allowed_packet <span class="token operator">=</span> <span class="token number">16777216</span>
+datadir <span class="token operator">=</span>  /data/db/mysql/3306
+innodb_log_group_home_dir <span class="token operator">=</span> /data/db/mysql/3306
+innodb_undo_directory <span class="token operator">=</span> /data/db/mysql/3306 
+socket <span class="token operator">=</span> /data/db/mysql/3306/mysql.sock
+
+<span class="token assign-left variable">query_cache_type</span><span class="token operator">=</span><span class="token number">0</span> 
+<span class="token assign-left variable">query_cache_size</span><span class="token operator">=</span><span class="token number">0</span> 
+event_scheduler <span class="token operator">=</span> <span class="token number">1</span>
+log_bin_trust_function_creators <span class="token operator">=</span> <span class="token number">1</span>
+lower_case_table_names <span class="token operator">=</span> <span class="token number">1</span>
+
+relay_log_purge <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token comment"># connection #</span>
+interactive_timeout <span class="token operator">=</span> <span class="token number">1800</span>
+wait_timeout <span class="token operator">=</span> <span class="token number">1800</span>
+lock_wait_timeout <span class="token operator">=</span> <span class="token number">1800</span>
+skip_name_resolve <span class="token operator">=</span> <span class="token number">1</span>
+max_connections <span class="token operator">=</span> <span class="token number">500</span>
+max_connect_errors <span class="token operator">=</span> <span class="token number">1000000</span>
+
+<span class="token comment"># table cache performance settings</span>
+table_open_cache <span class="token operator">=</span> <span class="token number">4096</span>
+table_definition_cache <span class="token operator">=</span> <span class="token number">4096</span>
+table_open_cache_instances <span class="token operator">=</span> <span class="token number">128</span>
+
+<span class="token comment"># session memory settings #</span>
+read_buffer_size <span class="token operator">=</span> 16M
+read_rnd_buffer_size <span class="token operator">=</span> 32M
+sort_buffer_size <span class="token operator">=</span> 1G
+tmp_table_size <span class="token operator">=</span> 1G
+join_buffer_size <span class="token operator">=</span> 128M
+thread_cache_size <span class="token operator">=</span> <span class="token number">64</span>
+
+<span class="token comment"># log settings #</span>
+log_error <span class="token operator">=</span> error.log
+slow_query_log <span class="token operator">=</span> <span class="token number">1</span>
+slow_query_log_file <span class="token operator">=</span> slow.log
+log_queries_not_using_indexes <span class="token operator">=</span> <span class="token number">1</span>
+log_slow_admin_statements <span class="token operator">=</span> <span class="token number">1</span>
+log_slow_slave_statements <span class="token operator">=</span> <span class="token number">1</span>
+log_throttle_queries_not_using_indexes <span class="token operator">=</span> <span class="token number">10</span>
+expire_logs_days <span class="token operator">=</span> <span class="token number">3</span>
+long_query_time <span class="token operator">=</span> <span class="token number">2</span>
+min_examined_row_limit <span class="token operator">=</span> <span class="token number">100</span>
+binlog-rows-query-log-events <span class="token operator">=</span> <span class="token number">1</span>
+log-bin-trust-function-creators <span class="token operator">=</span> <span class="token number">1</span>
+log-slave-updates <span class="token operator">=</span> <span class="token number">1</span>
+
+<span class="token comment"># innodb settings #</span>
+innodb_page_size <span class="token operator">=</span> <span class="token number">16384</span>
+innodb_buffer_pool_size <span class="token operator">=</span> 16G
+innodb_buffer_pool_instances <span class="token operator">=</span> <span class="token number">16</span>
+innodb_buffer_pool_load_at_startup <span class="token operator">=</span> <span class="token number">1</span>
+innodb_buffer_pool_dump_at_shutdown <span class="token operator">=</span> <span class="token number">1</span>
+innodb_lru_scan_depth <span class="token operator">=</span> <span class="token number">2048</span>
+innodb_lock_wait_timeout <span class="token operator">=</span> <span class="token number">5</span>
+innodb_io_capacity <span class="token operator">=</span> <span class="token number">4000</span>
+innodb_io_capacity_max <span class="token operator">=</span> <span class="token number">8000</span>
+innodb_flush_method <span class="token operator">=</span> O_DIRECT
+innodb_file_format <span class="token operator">=</span> Barracuda
+innodb_file_format_max <span class="token operator">=</span> Barracuda
+innodb_undo_logs <span class="token operator">=</span> <span class="token number">128</span>
+innodb_undo_tablespaces <span class="token operator">=</span> <span class="token number">3</span>
+innodb_flush_neighbors <span class="token operator">=</span> <span class="token number">0</span>
+innodb_log_file_size <span class="token operator">=</span> 1024M
+innodb_log_files_in_group <span class="token operator">=</span> <span class="token number">2</span>
+innodb_log_buffer_size <span class="token operator">=</span> <span class="token number">16777216</span>
+innodb_purge_threads <span class="token operator">=</span> <span class="token number">4</span>
+innodb_large_prefix <span class="token operator">=</span> <span class="token number">1</span>
+innodb_thread_concurrency <span class="token operator">=</span> <span class="token number">64</span>
+innodb_print_all_deadlocks <span class="token operator">=</span> <span class="token number">1</span>
+innodb_strict_mode <span class="token operator">=</span> <span class="token number">1</span>
+innodb_sort_buffer_size <span class="token operator">=</span> <span class="token number">67108864</span>
+innodb_write_io_threads <span class="token operator">=</span> <span class="token number">16</span>
+innodb_read_io_threads <span class="token operator">=</span> <span class="token number">16</span> 
+innodb_file_per_table <span class="token operator">=</span> <span class="token number">1</span>
+innodb_stats_persistent_sample_pages <span class="token operator">=</span> <span class="token number">64</span>
+innodb_autoinc_lock_mode <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token assign-left variable">innodb_online_alter_log_max_size</span><span class="token operator">=</span>1G
+<span class="token assign-left variable">innodb_open_files</span><span class="token operator">=</span><span class="token number">4096</span>
+
+<span class="token comment"># replication settings #</span>
+master_info_repository <span class="token operator">=</span> TABLE
+relay_log_info_repository <span class="token operator">=</span> TABLE
+log_bin <span class="token operator">=</span> binlog
+sync_binlog <span class="token operator">=</span> <span class="token number">1</span>
+gtid_mode <span class="token operator">=</span> on
+enforce_gtid_consistency <span class="token operator">=</span> <span class="token number">1</span>
+log_slave_updates
+binlog_format <span class="token operator">=</span> ROW
+binlog_rows_query_log_events <span class="token operator">=</span> <span class="token number">1</span>
+relay_log <span class="token operator">=</span> relay.log
+relay_log_recovery <span class="token operator">=</span> <span class="token number">1</span>
+slave_skip_errors <span class="token operator">=</span> ddl_exist_errors
+slave-rows-search-algorithms <span class="token operator">=</span> <span class="token string">'INDEX_SCAN,HASH_SCAN'</span>
+
+<span class="token comment"># semi sync replication settings #</span>
+plugin_load <span class="token operator">=</span> <span class="token string">&quot;validate_password.so;rpl_semi_sync_master=semisync_master.so;rpl_semi_sync_slave=semisync_slave.so&quot;</span>
+rpl_semi_sync_master_enabled <span class="token operator">=</span> <span class="token number">1</span>
+rpl_semi_sync_master_timeout <span class="token operator">=</span> <span class="token number">3000</span>
+rpl_semi_sync_slave_enabled <span class="token operator">=</span> <span class="token number">1</span>
+
+read_only <span class="token operator">=</span> <span class="token number">1</span>
+
+<span class="token comment"># password plugin #</span>
+<span class="token assign-left variable">validate_password_policy</span><span class="token operator">=</span>STRONG
+validate-password<span class="token operator">=</span>FORCE_PLUS_PERMANENT
+
+<span class="token punctuation">[</span>mysqld-5.6<span class="token punctuation">]</span>
+<span class="token comment"># metalock performance settings</span>
+<span class="token assign-left variable">metadata_locks_hash_instances</span><span class="token operator">=</span><span class="token number">64</span>
+
+<span class="token punctuation">[</span>mysqld-5.7<span class="token punctuation">]</span>
+<span class="token comment"># new innodb settings #</span>
+<span class="token assign-left variable">loose_innodb_numa_interleave</span><span class="token operator">=</span><span class="token number">1</span>
+innodb_buffer_pool_dump_pct <span class="token operator">=</span> <span class="token number">40</span>
+innodb_page_cleaners <span class="token operator">=</span> <span class="token number">16</span>
+innodb_undo_log_truncate <span class="token operator">=</span> <span class="token number">1</span>
+innodb_max_undo_log_size <span class="token operator">=</span> 2G
+innodb_purge_rseg_truncate_frequency <span class="token operator">=</span> <span class="token number">128</span>
+<span class="token comment"># new replication settings #</span>
+slave-parallel-type <span class="token operator">=</span> LOGICAL_CLOCK
+slave-parallel-workers <span class="token operator">=</span> <span class="token number">16</span>
+<span class="token assign-left variable">slave_preserve_commit_order</span><span class="token operator">=</span><span class="token number">1</span>
+<span class="token assign-left variable">slave_transaction_retries</span><span class="token operator">=</span><span class="token number">128</span>
+<span class="token comment"># other change settings #</span>
+<span class="token assign-left variable">binlog_gtid_simple_recovery</span><span class="token operator">=</span><span class="token number">1</span>
+<span class="token assign-left variable">log_timestamps</span><span class="token operator">=</span>system
+<span class="token assign-left variable">show_compatibility_56</span><span class="token operator">=</span>on
+</code></pre></div><h4 id="mysql主从复制-启动slave时-出现下面报错-slave-failed-to-initialize-relay-log-info-structure-from-the-repository"><a href="#mysql主从复制-启动slave时-出现下面报错-slave-failed-to-initialize-relay-log-info-structure-from-the-repository" class="header-anchor">#</a> MySQL主从复制，启动slave时，出现下面报错：Slave failed to initialize relay log info structure from the repository</h4> <div class="language-crmsh extra-class"><pre class="language-text"><code>MySQL主从复制，启动slave时，出现下面报错：
+mysql&gt; start slave;
+ERROR 1872 (HY000): Slave failed to initialize relay log info structure from the repository
+
+解决办法：查看日志，
+这里写图片描述
+可以看到报错，原来是找不到./server246-relay-bin.index文件，找到原因所在了，由于我使用的是冷备份文件恢复的实例，在mysql库中的slave_relay_log_info表中依然保留之前relay_log的信息，所以导致启动slave报错。
+mysql提供了工具用来删除记录：slave reset；
+slave reset执行候做了这样几件事：
+1、删除slave_master_info ，slave_relay_log_info两个表中数据；
+2、删除所有relay log文件，并重新创建新的relay log文件；
+3、不会改变gtid_executed 或者 gtid_purged的值
+
+mysql&gt; reset slave;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql&gt; change master to ......
+
+mysql&gt; start slave;
+Query OK, 0 rows affected (0.00 sec)
+1
+2
+3
+4
+5
+6
+7
+8
+这样slave 就可以启动了。
+</code></pre></div><h2 id="shardingsphere-proxy"><a href="#shardingsphere-proxy" class="header-anchor">#</a> shardingsphere-proxy</h2> <h3 id="下载sharding-proxy"><a href="#下载sharding-proxy" class="header-anchor">#</a> 下载sharding-proxy</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 本次部署在：10.10.10.1的/home/shardingsphere，与主库在一台机器</span>
+<span class="token comment"># 镜像站网址，下载的快</span>
+<span class="token function">wget</span> https://mirrors.tuna.tsinghua.edu.cn/apache/shardingsphere/4.1.0/apache-shardingsphere-4.1.0-sharding-proxy-bin.tar.gz
+
+<span class="token comment"># 解压</span>
+<span class="token function">tar</span> -xf apache-shardingsphere-4.1.0-sharding-proxy-bin.tar.gz
+</code></pre></div><ul><li><strong>vim server.yaml</strong></li></ul> <blockquote><p>shardingsphere-proxy的服务配置</p></blockquote> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment"># 认证信息</span>
+<span class="token key atrule">authentication</span><span class="token punctuation">:</span>
+  <span class="token key atrule">users</span><span class="token punctuation">:</span>
+    <span class="token key atrule">root</span><span class="token punctuation">:</span>
+      <span class="token key atrule">password</span><span class="token punctuation">:</span> root
+    <span class="token key atrule">sharding</span><span class="token punctuation">:</span>
+      <span class="token key atrule">password</span><span class="token punctuation">:</span> sharding
+      <span class="token key atrule">authorizedSchemas</span><span class="token punctuation">:</span> sharding_db
+
+<span class="token comment"># 公用属性</span>
+<span class="token key atrule">props</span><span class="token punctuation">:</span>
+  <span class="token key atrule">max.connections.size.per.query</span><span class="token punctuation">:</span> <span class="token number">1</span>
+  <span class="token key atrule">acceptor.size</span><span class="token punctuation">:</span> <span class="token number">16</span>  <span class="token comment"># The default value is available processors count * 2.</span>
+  <span class="token key atrule">executor.size</span><span class="token punctuation">:</span> <span class="token number">16</span>  <span class="token comment"># Infinite by default.</span>
+  <span class="token key atrule">proxy.frontend.flush.threshold</span><span class="token punctuation">:</span> <span class="token number">128</span>  <span class="token comment"># The default value is 128.</span>
+    <span class="token comment"># LOCAL: Proxy will run with LOCAL transaction.</span>
+    <span class="token comment"># XA: Proxy will run with XA transaction.</span>
+    <span class="token comment"># BASE: Proxy will run with B.A.S.E transaction.</span>
+  <span class="token key atrule">proxy.transaction.type</span><span class="token punctuation">:</span> LOCAL
+  <span class="token key atrule">proxy.opentracing.enabled</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">proxy.hint.enabled</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">query.with.cipher.column</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">sql.show</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">allow.range.query.with.inline.sharding</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+</code></pre></div><ul><li><strong>vim config-master_slave.yaml</strong></li></ul> <blockquote><p>读写分离的配置</p></blockquote> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">schemaName</span><span class="token punctuation">:</span> sharding_db
+
+<span class="token key atrule">dataSources</span><span class="token punctuation">:</span>
+  <span class="token comment"># 主库地址</span>
+  <span class="token key atrule">master_ds</span><span class="token punctuation">:</span>
+    <span class="token key atrule">url</span><span class="token punctuation">:</span> jdbc<span class="token punctuation">:</span>mysql<span class="token punctuation">:</span>//10.10.10.1<span class="token punctuation">:</span>3306/ts_kscd_dev<span class="token punctuation">?</span>useUnicode=true<span class="token important">&amp;characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=GMT%2B8</span>
+    <span class="token key atrule">username</span><span class="token punctuation">:</span> kscd
+    <span class="token key atrule">password</span><span class="token punctuation">:</span> <span class="token string">'mima2018@'</span>
+    <span class="token key atrule">connectionTimeoutMilliseconds</span><span class="token punctuation">:</span> <span class="token number">30000</span>
+    <span class="token key atrule">idleTimeoutMilliseconds</span><span class="token punctuation">:</span> <span class="token number">60000</span>
+    <span class="token key atrule">maxLifetimeMilliseconds</span><span class="token punctuation">:</span> <span class="token number">1800000</span>
+    <span class="token key atrule">maxPoolSize</span><span class="token punctuation">:</span> <span class="token number">50</span>
+  <span class="token comment"># 从库地址</span>
+  <span class="token key atrule">slave_ds_0</span><span class="token punctuation">:</span>
+    <span class="token key atrule">url</span><span class="token punctuation">:</span> jdbc<span class="token punctuation">:</span>mysql<span class="token punctuation">:</span>//10.10.10.2<span class="token punctuation">:</span>3306/ts_kscd_dev<span class="token punctuation">?</span>useUnicode=true<span class="token important">&amp;characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=GMT%2B8</span>
+    <span class="token key atrule">username</span><span class="token punctuation">:</span> root
+    <span class="token key atrule">password</span><span class="token punctuation">:</span> <span class="token string">'@mima18'</span>
+    <span class="token key atrule">connectionTimeoutMilliseconds</span><span class="token punctuation">:</span> <span class="token number">30000</span>
+    <span class="token key atrule">idleTimeoutMilliseconds</span><span class="token punctuation">:</span> <span class="token number">60000</span>
+    <span class="token key atrule">maxLifetimeMilliseconds</span><span class="token punctuation">:</span> <span class="token number">1800000</span>
+    <span class="token key atrule">maxPoolSize</span><span class="token punctuation">:</span> <span class="token number">50</span>
+
+<span class="token comment"># 读写分离配置</span>
+<span class="token key atrule">masterSlaveRule</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ms_ds
+  <span class="token key atrule">masterDataSourceName</span><span class="token punctuation">:</span> master_ds
+  <span class="token key atrule">slaveDataSourceNames</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> slave_ds_0
+</code></pre></div><h3 id="下载mysql连接驱动"><a href="#下载mysql连接驱动" class="header-anchor">#</a> 下载mysql连接驱动</h3> <blockquote><p>由于没有提供自带的mysql连接驱动，需要我们手动下载放入lib包下，很简单</p></blockquote> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 解压后放到lib目录下</span>
+<span class="token function">wget</span> https://cdn.mysql.com//Downloads/Connector-J/mysql-connector-java-5.1.49.tar.gz
+</code></pre></div><h3 id="使用-2"><a href="#使用-2" class="header-anchor">#</a> 使用</h3> <h4 id="启动proxy"><a href="#启动proxy" class="header-anchor">#</a> 启动proxy：</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># proxy默认端口是3307,但可能由于端口冲突，所以本次暂拟定8884</span>
+<span class="token function">sh</span> bin/start.sh <span class="token number">8884</span>
+
+<span class="token comment"># 日志目录</span>
+<span class="token function">tail</span> -f ~/logs/stdout.log
+</code></pre></div><h4 id="navicat连接proxy代理数据源"><a href="#navicat连接proxy代理数据源" class="header-anchor">#</a> Navicat连接proxy代理数据源</h4> <blockquote><p>如图1，【测试连接】通过后即可；千万不要连，小作者找到了官网的一句话，见图2。</p></blockquote> <p><img src="https://yh-sun.github.io/note-cloud/1602729298930.png" alt="enter description here"> <img src="https://yh-sun.github.io/note-cloud/1602729309009.png" alt="enter description here"></p> <h4 id="使用idea连接-查看数据"><a href="#使用idea连接-查看数据" class="header-anchor">#</a> 使用IDEA连接，查看数据</h4> <p><img src="https://yh-sun.github.io/note-cloud/1602729317049.png" alt="enter description here"></p> <h4 id="后续"><a href="#后续" class="header-anchor">#</a> 后续</h4> <p><img src="https://yh-sun.github.io/note-cloud/1602729331396.png" alt="enter description here"></p> <blockquote><p>后续发现，proxy方式还存在很多问题，故而文章先到此为止。</p> <blockquote><p>1.如果一条数据中2+个字段为NULL时，查询sql会报数组角标越界；</p> <p>2.中文编码问题；</p> <p>3.连接池使用是否有效、规范；</p></blockquote></blockquote> <hr> <h2 id="shardingsphere-jdbc"><a href="#shardingsphere-jdbc" class="header-anchor">#</a> shardingsphere-jdbc</h2> <blockquote><p>由于proxy资料较少，可控性不强。在初步阶段选择采用原始jdbc方式。</p></blockquote> <ul><li><strong>POM依赖引入</strong></li></ul> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token comment">&lt;!--sharding-jdbc读写分离等配置--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.apache.shardingsphere<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>sharding-jdbc-spring-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>4.0.0-RC1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+    
+    <span class="token comment">&lt;!--要把guava隔离，因为swagger也引入了此包造成冲突，随便删除一个低版本就可以；这里是真的坑0=0--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclusions</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclusion</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.google.guava<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>guava<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclusion</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclusions</span><span class="token punctuation">&gt;</span></span>
+    
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ul><li><strong>配置</strong></li></ul> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment"># 仅以读写分离为例；</span>
+<span class="token key atrule">spring</span><span class="token punctuation">:</span>
+    <span class="token key atrule">shardingsphere</span><span class="token punctuation">:</span>
+        <span class="token key atrule">datasource</span><span class="token punctuation">:</span>
+          <span class="token key atrule">names</span><span class="token punctuation">:</span> master<span class="token punctuation">,</span>slave
+          
+          <span class="token comment"># 主库，不要使用_命名，会出现解析失败</span>
+          <span class="token key atrule">master</span><span class="token punctuation">:</span>
+            <span class="token key atrule">type</span><span class="token punctuation">:</span> com.zaxxer.hikari.HikariDataSource
+            <span class="token key atrule">driver-class-name</span><span class="token punctuation">:</span> com.mysql.jdbc.Driver
+            <span class="token key atrule">jdbc-url</span><span class="token punctuation">:</span> jdbc<span class="token punctuation">:</span>mysql<span class="token punctuation">:</span>//10.10.10.1<span class="token punctuation">:</span>3306/ts_kscd_dev<span class="token punctuation">?</span>serverTimezone=UTC<span class="token important">&amp;useSSL=false</span>
+            <span class="token key atrule">username</span><span class="token punctuation">:</span> kscd
+            <span class="token key atrule">password</span><span class="token punctuation">:</span> <span class="token string">'mima2018@'</span>
+          <span class="token comment"># 从库</span>
+          <span class="token key atrule">slave</span><span class="token punctuation">:</span>
+            <span class="token key atrule">type</span><span class="token punctuation">:</span> com.zaxxer.hikari.HikariDataSource
+            <span class="token key atrule">driver-class-name</span><span class="token punctuation">:</span> com.mysql.jdbc.Driver
+            <span class="token key atrule">jdbc-url</span><span class="token punctuation">:</span> jdbc<span class="token punctuation">:</span>mysql<span class="token punctuation">:</span>//10.10.10.2<span class="token punctuation">:</span>3306/ts_kscd_dev<span class="token punctuation">?</span>serverTimezone=UTC<span class="token important">&amp;useSSL=false</span>
+            <span class="token key atrule">username</span><span class="token punctuation">:</span> root
+            <span class="token key atrule">password</span><span class="token punctuation">:</span> <span class="token string">'@mima18'</span>
+            
+        <span class="token comment"># 配置读写分离master、slave</span>
+        <span class="token key atrule">masterslave</span><span class="token punctuation">:</span>
+          <span class="token key atrule">name</span><span class="token punctuation">:</span> ds_ms
+          <span class="token key atrule">master-data-source-name</span><span class="token punctuation">:</span> master
+          <span class="token key atrule">slave-data-source-names</span><span class="token punctuation">:</span> slave
+        
+        <span class="token comment"># 打印sql，方便查找问题</span>
+        <span class="token key atrule">props</span><span class="token punctuation">:</span>
+          <span class="token key atrule">sql.show</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre></div><ul><li><em>读写分离已完成，后续加入分片规则</em></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/blog/Jenkins.html" class="prev"><i aria-label="icon: left" class="anticon anticon-left"><svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></i>
+        Jenkins
+      </a></span> <span class="next"><a href="/blog/Nacos.html">
+        Nacos
+        <i aria-label="icon: right" class="anticon anticon-right"><svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path></svg></i></a></span></p></div> </main> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7a41048e.js" defer></script><script src="/assets/js/2.07b944df.js" defer></script><script src="/assets/js/11.626aef4a.js" defer></script>
+  </body>
+</html>

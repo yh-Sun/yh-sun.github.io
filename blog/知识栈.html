@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>知识栈 | 小太阳</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/assets/logo-sun.png">
+    <meta name="description" content="生活还得继续">
+    <link rel="preload" href="/assets/css/0.styles.8707b1dd.css" as="style"><link rel="preload" href="/assets/js/app.7a41048e.js" as="script"><link rel="preload" href="/assets/js/2.07b944df.js" as="script"><link rel="preload" href="/assets/js/20.75bb07f3.js" as="script"><link rel="prefetch" href="/assets/js/10.68cbf342.js"><link rel="prefetch" href="/assets/js/11.626aef4a.js"><link rel="prefetch" href="/assets/js/12.d6ac6fd7.js"><link rel="prefetch" href="/assets/js/13.6764e2b4.js"><link rel="prefetch" href="/assets/js/14.211f58d6.js"><link rel="prefetch" href="/assets/js/15.d52a5a17.js"><link rel="prefetch" href="/assets/js/16.e082a5ee.js"><link rel="prefetch" href="/assets/js/17.f122dbd2.js"><link rel="prefetch" href="/assets/js/18.c9092e4a.js"><link rel="prefetch" href="/assets/js/19.3173b85c.js"><link rel="prefetch" href="/assets/js/3.a588e316.js"><link rel="prefetch" href="/assets/js/4.b6ca1f26.js"><link rel="prefetch" href="/assets/js/5.2c29a215.js"><link rel="prefetch" href="/assets/js/6.4ab43089.js"><link rel="prefetch" href="/assets/js/7.7b40a6bc.js"><link rel="prefetch" href="/assets/js/8.27f27a15.js"><link rel="prefetch" href="/assets/js/9.47203886.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8707b1dd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="ant-row"><div class="sidebar-button"><i aria-label="icon: bars" class="anticon anticon-bars"><svg viewBox="0 0 1024 1024" focusable="false" data-icon="bars" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 192H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM104 228a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0z"></path></svg></i> <span></span></div> <div class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-6 ant-col-lg-5 ant-col-xl-5 ant-col-xxl-4"><a href="/" class="router-link-active no-logo home-link"><!----> <span class="site-name">小太阳</span></a> <div class="search-box mobile-search"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div> <div class="ant-col ant-col-xs-0 ant-col-sm-0 ant-col-md-18 ant-col-lg-19 ant-col-xl-19 ant-col-xxl-20"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><ul role="menu" id="nav" class="ant-menu ant-menu-horizontal ant-menu-root ant-menu-light"><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-item"><a href="/" class="router-link-active">
+          我的
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" class="ant-menu-item ant-menu-item-selected"><a href="/blog/" class="router-link-active">
+          笔记
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="visibility:hidden;position:absolute;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li></ul> <a href="https://github.com/yh-Sun" target="_blank" rel="noopener noreferrer" class="repo-link"><i aria-label="icon: github" class="anticon anticon-github"><svg viewBox="64 64 896 896" focusable="false" data-icon="github" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></i></a></nav></div></div> <!----></header> <aside class="sidebar"><!----> <ul class="sidebar-links"><li><a href="/blog/" aria-current="page" title="👋首页" class="sidebar-link">👋首页</a></li><li><a href="/blog/Activiti.html" title="Activiti" class="sidebar-link">Activiti</a></li><li><a href="/blog/Powerdesigner.html" title="Powerdesigner" class="sidebar-link">Powerdesigner</a></li><li><a href="/blog/Vue.html" title="Vue" class="sidebar-link">Vue</a></li><li><a href="/blog/知识栈.html" title="知识栈" class="active sidebar-link">知识栈</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/知识栈.html#redis" title="Redis" class="sidebar-link">Redis</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/知识栈.html#redis的单线程" title="Redis的单线程" class="sidebar-link">Redis的单线程</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#数据结构" title="数据结构" class="sidebar-link">数据结构</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#redis内存回收机制" title="Redis内存回收机制" class="sidebar-link">Redis内存回收机制</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#持久化" title="持久化" class="sidebar-link">持久化</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#redis集群" title="Redis集群" class="sidebar-link">Redis集群</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#同步机制" title="同步机制" class="sidebar-link">同步机制</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#缓存击穿、缓存穿透、缓存雪崩" title="缓存击穿、缓存穿透、缓存雪崩" class="sidebar-link">缓存击穿、缓存穿透、缓存雪崩</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#mysql" title="MySql" class="sidebar-link">MySql</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/知识栈.html#sql执行" title="sql执行" class="sidebar-link">sql执行</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#innodb与myisam对比" title="InnoDB与MyISAM对比" class="sidebar-link">InnoDB与MyISAM对比</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#innodb内存结构、磁盘结构" title="InnoDB内存结构、磁盘结构" class="sidebar-link">InnoDB内存结构、磁盘结构</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#innodb的后台线程" title="InnoDB的后台线程" class="sidebar-link">InnoDB的后台线程</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#innodb的存储结构" title="InnoDB的存储结构" class="sidebar-link">InnoDB的存储结构</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#mysql性能优化" title="MySql性能优化" class="sidebar-link">MySql性能优化</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#i-o" title="I/O" class="sidebar-link">I/O</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/知识栈.html#有哪些常见的-io-模型" title="有哪些常见的 IO 模型?" class="sidebar-link">有哪些常见的 IO 模型?</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#java中常见的io模型" title="Java中常见的IO模型" class="sidebar-link">Java中常见的IO模型</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#设计模式" title="设计模式" class="sidebar-link">设计模式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/知识栈.html#工厂方法" title="工厂方法" class="sidebar-link">工厂方法</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#抽象工厂" title="抽象工厂" class="sidebar-link">抽象工厂</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#生成器" title="生成器" class="sidebar-link">生成器</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#原型" title="原型" class="sidebar-link">原型</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#单例" title="单例" class="sidebar-link">单例</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#适配器" title="适配器" class="sidebar-link">适配器</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#桥接" title="桥接" class="sidebar-link">桥接</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#组合" title="组合" class="sidebar-link">组合</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#装饰" title="装饰" class="sidebar-link">装饰</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#外观" title="外观" class="sidebar-link">外观</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#享元" title="享元" class="sidebar-link">享元</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#代理" title="代理" class="sidebar-link">代理</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#责任链" title="责任链" class="sidebar-link">责任链</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#命令" title="命令" class="sidebar-link">命令</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#迭代器" title="迭代器" class="sidebar-link">迭代器</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#中介者" title="中介者" class="sidebar-link">中介者</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#备忘录" title="备忘录" class="sidebar-link">备忘录</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#观察者" title="观察者" class="sidebar-link">观察者</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#状态" title="状态" class="sidebar-link">状态</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#策略" title="策略" class="sidebar-link">策略</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#模板方法" title="模板方法" class="sidebar-link">模板方法</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#多线程并发" title="多线程并发" class="sidebar-link">多线程并发</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/知识栈.html#线程创建方式" title="线程创建方式" class="sidebar-link">线程创建方式</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#线程池-newworkstealingpool" title="线程池(newWorkStealingPool)" class="sidebar-link">线程池(newWorkStealingPool)</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#线程生命周期" title="线程生命周期" class="sidebar-link">线程生命周期</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#终止线程的4种方式" title="终止线程的4种方式" class="sidebar-link">终止线程的4种方式</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#阻塞队列" title="阻塞队列" class="sidebar-link">阻塞队列</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#synchronized同步锁" title="Synchronized同步锁" class="sidebar-link">Synchronized同步锁</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#reentrantlock、读写锁、读写锁降级" title="ReentrantLock、读写锁、读写锁降级" class="sidebar-link">ReentrantLock、读写锁、读写锁降级</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#condition-awiat-singal-singalall、object-wait-notify-notifyall" title="Condition awiat singal singalAll、Object wait notify notifyAll" class="sidebar-link">Condition awiat singal singalAll、Object wait notify notifyAll</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#countdownlatch、cyclicbarrier、phaser、semaphore" title="CountDownLatch、Cyclicbarrier、Phaser、Semaphore" class="sidebar-link">CountDownLatch、Cyclicbarrier、Phaser、Semaphore</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#volatile" title="volatile" class="sidebar-link">volatile</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#atomicinteger、longadder、atomicstampedreference" title="AtomicInteger、LongAdder、AtomicStampedReference" class="sidebar-link">AtomicInteger、LongAdder、AtomicStampedReference</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#乐观锁、悲观锁、自旋锁" title="乐观锁、悲观锁、自旋锁" class="sidebar-link">乐观锁、悲观锁、自旋锁</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#可重入锁-广义上" title="可重入锁（广义上）" class="sidebar-link">可重入锁（广义上）</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#公平锁、非公平锁" title="公平锁、非公平锁" class="sidebar-link">公平锁、非公平锁</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#共享锁、独占锁" title="共享锁、独占锁" class="sidebar-link">共享锁、独占锁</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#无锁、偏向锁、轻量级锁、重量级锁" title="无锁、偏向锁、轻量级锁、重量级锁" class="sidebar-link">无锁、偏向锁、轻量级锁、重量级锁</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#分段锁" title="分段锁" class="sidebar-link">分段锁</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#锁优化" title="锁优化" class="sidebar-link">锁优化</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#threadlocal" title="ThreadLocal" class="sidebar-link">ThreadLocal</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#concurrenthashmap" title="ConcurrentHashMap" class="sidebar-link">ConcurrentHashMap</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#线程调度算法、进程调度算法" title="线程调度算法、进程调度算法" class="sidebar-link">线程调度算法、进程调度算法</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#cas" title="CAS" class="sidebar-link">CAS</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#aqs" title="AQS" class="sidebar-link">AQS</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#jmm" title="JMM" class="sidebar-link">JMM</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#原子性、可见性、有序性" title="原子性、可见性、有序性" class="sidebar-link">原子性、可见性、有序性</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#final可以保证可见性吗" title="final可以保证可见性吗？" class="sidebar-link">final可以保证可见性吗？</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#锁消除是什么" title="锁消除是什么？" class="sidebar-link">锁消除是什么？</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#锁粗化是什么" title="锁粗化是什么？" class="sidebar-link">锁粗化是什么？</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#什么是守护线程" title="什么是守护线程" class="sidebar-link">什么是守护线程</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#分布式锁" title="分布式锁" class="sidebar-link">分布式锁</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#talk-is-cheap-show-me-the-code" title="Talk is cheap. Show me the code." class="sidebar-link">Talk is cheap. Show me the code.</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/知识栈.html#java-8" title="Java 8" class="sidebar-link">Java 8</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#代码规范" title="代码规范" class="sidebar-link">代码规范</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#java开发规范、笔记" title="java开发规范、笔记" class="sidebar-link">java开发规范、笔记</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#各层命名规约" title="各层命名规约：" class="sidebar-link">各层命名规约：</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#红花和绿叶-个性和共性" title="红花和绿叶，个性和共性" class="sidebar-link">红花和绿叶，个性和共性</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#五笔常用" title="五笔常用：" class="sidebar-link">五笔常用：</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#反射" title="反射：" class="sidebar-link">反射：</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#javabean-xml" title="JavaBean -&gt; XML：" class="sidebar-link">JavaBean -&gt; XML：</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#方便快速切换bookmark" title="方便快速切换bookmark：" class="sidebar-link">方便快速切换bookmark：</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#apimodel-value不能重复" title="@ApiModel value不能重复：" class="sidebar-link">@ApiModel value不能重复：</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#不规则时间转date转规则字符串" title="不规则时间转Date转规则字符串：" class="sidebar-link">不规则时间转Date转规则字符串：</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#一个索引通常会划分多个type-逻辑上对index有些许不同的几类数据进行分类" title="一个索引通常会划分多个type，逻辑上对index有些许不同的几类数据进行分类：" class="sidebar-link">一个索引通常会划分多个type，逻辑上对index有些许不同的几类数据进行分类：</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#es6以后不再支持mapping下多个type-7-0后更会删除type" title="es6以后不再支持mapping下多个type，7.0后更会删除type：" class="sidebar-link">es6以后不再支持mapping下多个type，7.0后更会删除type：</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#详解logback-xml与logback-spring-xml的区别及联系" title="详解logback.xml与logback-spring.xml的区别及联系" class="sidebar-link">详解logback.xml与logback-spring.xml的区别及联系</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#取消idea保存文件-默认删除行尾空格" title="取消IDEA保存文件，默认删除行尾空格" class="sidebar-link">取消IDEA保存文件，默认删除行尾空格</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#lombok-accessors用法" title="lombok @Accessors用法" class="sidebar-link">lombok @Accessors用法</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#java知识点" title="JAVA知识点：" class="sidebar-link">JAVA知识点：</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#mysql-java实体互转" title="MySql =&gt; Java实体互转：" class="sidebar-link">MySql =&gt; Java实体互转：</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#white-jotter" title="White Jotter" class="sidebar-link">White Jotter</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#idea注释快捷键" title="IDEA注释快捷键：" class="sidebar-link">IDEA注释快捷键：</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#idea打开类结构图" title="idea打开类结构图" class="sidebar-link">idea打开类结构图</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#java自定义注解-interface" title="Java自定义注解@interface" class="sidebar-link">Java自定义注解@interface</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#git更换仓库-保留分支" title="git更换仓库，保留分支" class="sidebar-link">git更换仓库，保留分支</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#spring-security-oauth2-登录过程详解" title="spring security oauth2 登录过程详解" class="sidebar-link">spring security oauth2 登录过程详解</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#oauth实现验证码登录-项目地址" title="oauth实现验证码登录：项目地址：" class="sidebar-link">oauth实现验证码登录：项目地址：</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#服务器常见目录" title="服务器常见目录" class="sidebar-link">服务器常见目录</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/知识栈.html#jenkins工作空间" title="jenkins工作空间" class="sidebar-link">jenkins工作空间</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#nginx配置" title="nginx配置" class="sidebar-link">nginx配置</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#前端部署的路径" title="前端部署的路径" class="sidebar-link">前端部署的路径</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#后端部署的路径" title="后端部署的路径" class="sidebar-link">后端部署的路径</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#常用linux命令" title="常用linux命令" class="sidebar-link">常用linux命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/知识栈.html#netstat-lntp" title="netstat -lntp" class="sidebar-link">netstat -lntp</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#日志检索" title="日志检索" class="sidebar-link">日志检索</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#开通端口、关闭防火墙-百度即可" title="开通端口、关闭防火墙（百度即可）" class="sidebar-link">开通端口、关闭防火墙（百度即可）</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#查看软件是否安装" title="查看软件是否安装" class="sidebar-link">查看软件是否安装</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#列出软件安装包安装的文件" title="列出软件安装包安装的文件" class="sidebar-link">列出软件安装包安装的文件</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#查看mysql所有安装包的文件存储位置" title="查看mysql所有安装包的文件存储位置" class="sidebar-link">查看mysql所有安装包的文件存储位置</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#通过find去查找某个文件" title="通过find去查找某个文件" class="sidebar-link">通过find去查找某个文件</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#which查找命令" title="which查找命令" class="sidebar-link">which查找命令</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#创建文件的引用" title="创建文件的引用" class="sidebar-link">创建文件的引用</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#查找一个符合搜索条件的文件" title="查找一个符合搜索条件的文件" class="sidebar-link">查找一个符合搜索条件的文件</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#查看占用端口的进程id" title="查看占用端口的进程id" class="sidebar-link">查看占用端口的进程id</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#上传文件" title="上传文件" class="sidebar-link">上传文件</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#kibana重启" title="kibana重启" class="sidebar-link">kibana重启</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#git仓库间推送" title="git仓库间推送" class="sidebar-link">git仓库间推送</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#【git教程】如何清除git仓库的所有提交记录-成为一个新的干净仓库" title="【Git教程】如何清除git仓库的所有提交记录，成为一个新的干净仓库" class="sidebar-link">【Git教程】如何清除git仓库的所有提交记录，成为一个新的干净仓库</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#查看linux是x86还是x64" title="查看Linux是x86还是x64" class="sidebar-link">查看Linux是x86还是x64</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#查看环境变量" title="查看环境变量" class="sidebar-link">查看环境变量</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#rpm-qa-grep-xxxx" title="rpm -qa | grep xxxx" class="sidebar-link">rpm -qa | grep xxxx</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#查看linux操作系统是centos还是red-hat" title="查看linux操作系统是centos还是red hat" class="sidebar-link">查看linux操作系统是centos还是red hat</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#tar常用命令" title="tar常用命令" class="sidebar-link">tar常用命令</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#linux查看redis安装目录" title="linux查看redis安装目录" class="sidebar-link">linux查看redis安装目录</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#spring" title="Spring" class="sidebar-link">Spring</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#spring-cloud-alibaba搭建保司微服务项目时使用的相关组件" title="spring cloud alibaba搭建保司微服务项目时使用的相关组件" class="sidebar-link">spring cloud alibaba搭建保司微服务项目时使用的相关组件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/知识栈.html#_1-nacos" title="1.Nacos" class="sidebar-link">1.Nacos</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#_2-spring-cloud-alibaba-sentinel-网关流量控制台" title="2.Spring Cloud Alibaba Sentinel 网关流量控制台" class="sidebar-link">2.Spring Cloud Alibaba Sentinel 网关流量控制台</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#_3-关于spring-cloud-gateway的现阶段配置" title="3.关于Spring Cloud GateWay的现阶段配置" class="sidebar-link">3.关于Spring Cloud GateWay的现阶段配置</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#_4-关于鉴权" title="4.关于鉴权：" class="sidebar-link">4.关于鉴权：</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#_5-rocketmq" title="5.RocketMQ：" class="sidebar-link">5.RocketMQ：</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#时间复杂度" title="时间复杂度" class="sidebar-link">时间复杂度</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#socket" title="Socket" class="sidebar-link">Socket</a></li><li class="sidebar-sub-header"><a href="/blog/知识栈.html#学习计划" title="学习计划" class="sidebar-link">学习计划</a></li></ul></li><li><a href="/blog/Salt.html" title="Salt" class="sidebar-link">Salt</a></li><li><a href="/blog/Elasticsearch+Kibana.html" title="Elasticsearch Kibana" class="sidebar-link">Elasticsearch Kibana</a></li><li><a href="/blog/Grafana+Prometheus.html" title="Grafana Prometheus" class="sidebar-link">Grafana Prometheus</a></li><li><a href="/blog/Jdk.html" title="JDK" class="sidebar-link">JDK</a></li><li><a href="/blog/Jenkins.html" title="Jenkins" class="sidebar-link">Jenkins</a></li><li><a href="/blog/Mysql.html" title="Mysql" class="sidebar-link">Mysql</a></li><li><a href="/blog/Nacos.html" title="Nacos" class="sidebar-link">Nacos</a></li><li><a href="/blog/Nginx.html" title="Nginx" class="sidebar-link">Nginx</a></li><li><a href="/blog/Redis.html" title="Redis" class="sidebar-link">Redis</a></li><li><a href="/blog/RocketMq.html" title="RocketMq" class="sidebar-link">RocketMq</a></li></ul></aside> <main class="page"> <div class="theme-antdocs-content content__default"><h2 id="redis"><a href="#redis" class="header-anchor">#</a> Redis</h2> <p><a href="https://www.zhihu.com/answer/2036972744" target="_blank" rel="noopener noreferrer">阿里云开发者-知乎回复（你真的了解Redis吗？）<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="redis的单线程"><a href="#redis的单线程" class="header-anchor">#</a> Redis的单线程</h3> <div class="language- extra-class"><pre class="language-text"><code>Redis采用单线程的设计思想，主要是因为Redis的瓶颈是内存和IO，而不是CPU
+单线程编程容易，也容易维护
+多线程会存在死锁、线程上下文切换，甚至会影响性能
+
+Redis6.0引入多线程是为了提高网络IO读写性能
+</code></pre></div><h4 id="redis单线程如何处理那么多的并发客户端连接"><a href="#redis单线程如何处理那么多的并发客户端连接" class="header-anchor">#</a> Redis单线程如何处理那么多的并发客户端连接？</h4> <p>Redis通过IO多路复用实现并发请求的处理，用epoll实现；</p> <p><img src="https://pic1.zhimg.com/80/v2-0d27ec3add9b96947aeac78ec4fa2c7f_720w.jpg?source=1940ef5c" alt="img"></p> <h5 id="reactor模式-反应堆模式"><a href="#reactor模式-反应堆模式" class="header-anchor">#</a> Reactor模式：反应堆模式</h5> <p>redis用Reactor模式开发了自己的网络模型，考虑两个问题；</p> <p>1.为什么使用Reactor模型</p> <p>通常epoll/kqueue可以支持单机数万的并发，性能上没有问题，但是关联到具体设计上仍然存在一些差异；</p> <p>首先epoll采集事件，放入队列中等待业务线程的处理，实际业务中可能存在多种请求类型，每个工作线程拿到任务事件后都需要进行相应的处理，当请求线程庞大后，工作线程每次都要多不同请求类型做不同处理，实在太难为它了；</p> <p>Reactor通过类型的不同来确定使用哪个事件处理器，这样每种处理函数只处理一种业务，符合OO思想；</p> <p><img src="https://pic3.zhimg.com/80/v2-4e93e8efb5e3d1bb3d6b5150fda4bd58_720w.jpg?source=1940ef5c" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>handle：读写事件，可以注册到Reactor进行监控
+Synchronous Event Demultiplexer：select/kqueue/epoll等I/O事件采集器
+Dispatcher：对事件进行分发
+Handler：事件处理器，完成具体事件的回调
+Concrete Event Handler：具体的事件函数处理程序
+</code></pre></div><p><img src="https://pic3.zhimg.com/80/v2-0122f3916f25c5b13c5852d9449688bc_720w.jpg?source=1940ef5c" alt="img"></p> <p>2.Redis如何实现自己的Reactor模型</p> <p>Redis通过I/O复用模型处理请求，客户端发起请求、连接、读写事件后，Redis将其放入队列TaskQueue中，队列中数据有序进出，接着通过事件分发器将事件分发为客户端读数据、客户端写数据 关闭连接 新连接到达，接着通过不同的事件处理器执行函数。</p> <p><img src="https://pic1.zhimg.com/80/v2-93bc1b12bf85c567c9a58309b126f685_720w.jpg?source=1940ef5c" alt="img"></p> <h3 id="数据结构"><a href="#数据结构" class="header-anchor">#</a> 数据结构</h3> <p><img src="https://pica.zhimg.com/80/v2-6edfc089d75c54b1c4897e85cf2a76aa_720w.jpg?source=1940ef5c" alt="img"></p> <h4 id="基本数据类型"><a href="#基本数据类型" class="header-anchor">#</a> 基本数据类型</h4> <h5 id="string"><a href="#string" class="header-anchor">#</a> String</h5> <p>Redis中并没有采用C中传统的字符串，而是通过simple dynamic string（SDS），可以动态扩容，包含：长度、字符数组、未使用的字节数量</p> <div class="language- extra-class"><pre class="language-text"><code>struct sdshdr{
+    //记录buf数组中已使用字节的数量
+    int len;
+    // 记录buf数组中未使用字节的数量
+    int free;
+    // 字节数组，用于保存字符串
+    char buf[]
+};
+</code></pre></div><p>SDS的优势：</p> <ul><li>获取长度时间复杂度O(1)</li> <li>防止缓冲区溢出bufferoverflow</li> <li>有效降低内存分配次数</li> <li>二进制安全：C只能存ascii码，而sds内部是字节数组，可以存图片、音频等，存什么取什么，不会过滤和限制</li></ul> <p><img src="https://pic3.zhimg.com/80/v2-cc708b02a3e5c96eaa5e7d32377a8f94_720w.jpg?source=1940ef5c" alt="img"></p> <h5 id="list"><a href="#list" class="header-anchor">#</a> List</h5> <p>ziplist</p> <p>​	1.所有字符串元素的长度都小于64个字节</p> <p>​	2.元素数量小于512个</p> <p>linkedlist</p> <p><img src="https://pic1.zhimg.com/80/v2-bd8b141d55a9b72d15e98a9833615151_720w.jpg?source=1940ef5c" alt="img"></p> <h5 id="hash"><a href="#hash" class="header-anchor">#</a> Hash</h5> <p>ziplist</p> <p>​	所有键值对的字符串长度都小于64个字节</p> <p>​	键值对数量小于512</p> <p>hashtable</p> <div class="language- extra-class"><pre class="language-text"><code>dict {
+	dictht ht[2]
+}
+dictht {
+	dictEntry entry
+}
+dictentry {
+	key
+	value
+	next
+}
+</code></pre></div><p><img src="https://pic1.zhimg.com/80/v2-008f1b6f4c852c6914b20e854113f80f_720w.jpg?source=1940ef5c" alt="img"></p> <p><img src="https://pic1.zhimg.com/80/v2-5cabe29ab218b3191bfbb583e1f09d7f_720w.jpg?source=1940ef5c" alt="img"></p> <h6 id="hash算法"><a href="#hash算法" class="header-anchor">#</a> Hash算法</h6> <p>Redis使用MurmurHash2算法计算键的哈希值</p> <h6 id="hash冲突"><a href="#hash冲突" class="header-anchor">#</a> Hash冲突</h6> <p>解决hash冲突的方法，有以下几种</p> <ul><li>冲突后，寻找下一个空的散列地址，只要够大，就一定能找到空闲</li> <li>一次哈希冲突，就再一次哈希，总有不冲突的时候</li> <li>链地址法，每个索引都有一个next链表，冲突都放next，就像Java HashMap一样</li> <li>将链表分为基本表和公共溢出区，只要冲突都放溢出区里</li></ul> <h6 id="rehash扩容收缩过程"><a href="#rehash扩容收缩过程" class="header-anchor">#</a> rehash扩容收缩过程</h6> <p>渐进式过程，扩容会double，收缩：离已使用的最近的2的次幂数字</p> <p>1.计算空间</p> <p>2.数据迁移</p> <p>3.将原表清空</p> <blockquote><p>渐进式过程：在rehash期间，如果有增删改查进来，则也需要同步一份数据到新表中，并将rehashidx+1，这种思想将rehash整个表空间所需要的工作分解为具体的增删改查，避免阻塞问题</p></blockquote> <h5 id="set"><a href="#set" class="header-anchor">#</a> Set</h5> <p>intset</p> <p>​	1.所有元素都是整数</p> <p>​	2.元素个数小于等于512个</p> <p>hashtable</p> <h5 id="zset-sorted-set"><a href="#zset-sorted-set" class="header-anchor">#</a> Zset（Sorted Set）</h5> <p>ziplist</p> <p>skiplist</p> <blockquote><p>跳跃表：Redis只有两处使用到了跳跃表，一个是实现有序集合键（sorted set）,另一个是在集群节点中用作内部数据结构。</p></blockquote> <p><img src="https://pica.zhimg.com/80/v2-95d19508487a3b6e6add71b3ca62e32b_720w.jpg?source=1940ef5c" alt="img"></p> <h3 id="redis内存回收机制"><a href="#redis内存回收机制" class="header-anchor">#</a> Redis内存回收机制</h3> <h4 id="过期键删除"><a href="#过期键删除" class="header-anchor">#</a> 过期键删除</h4> <p>过期表，通过定期删除、惰性删除（查的时候再删）</p> <h4 id="内存淘汰机制"><a href="#内存淘汰机制" class="header-anchor">#</a> 内存淘汰机制</h4> <h3 id="持久化"><a href="#持久化" class="header-anchor">#</a> 持久化</h3> <h4 id="快照rdb"><a href="#快照rdb" class="header-anchor">#</a> 快照RDB</h4> <p>存储某个时间点的副本</p> <h4 id="aof"><a href="#aof" class="header-anchor">#</a> AOF</h4> <p>持久化每一条更改redis中的数据的命令</p> <div class="language- extra-class"><pre class="language-text"><code>appendonly yes
+</code></pre></div><h3 id="redis集群"><a href="#redis集群" class="header-anchor">#</a> Redis集群</h3> <h4 id="单实例redis架构"><a href="#单实例redis架构" class="header-anchor">#</a> 单实例Redis架构</h4> <p><img src="https://pic2.zhimg.com/80/v2-26e79e0e74a4c9024c857c9aa4871c0c_720w.jpg?source=1940ef5c" alt="img"></p> <h4 id="集群架构"><a href="#集群架构" class="header-anchor">#</a> 集群架构</h4> <p>客户端分片</p> <p>中间层分片</p> <p>服务端分片（官方集群版本）</p> <p><img src="https://pic1.zhimg.com/80/v2-66165745b4d33b432a1b723c7cd47d77_720w.jpg?source=1940ef5c" alt="img"></p> <h3 id="同步机制"><a href="#同步机制" class="header-anchor">#</a> 同步机制</h3> <h4 id="cap理论"><a href="#cap理论" class="header-anchor">#</a> CAP理论</h4> <p>C:一致性</p> <p>A:可用性</p> <p>P：分区容错性</p> <p><img src="https://pic1.zhimg.com/80/v2-fc403028db49a8f415c33870c6950f4f_720w.jpg?source=1940ef5c" alt="img"></p> <h4 id="redis采用异步复制-保持数据最终一致性"><a href="#redis采用异步复制-保持数据最终一致性" class="header-anchor">#</a> Redis采用异步复制，保持数据最终一致性；</h4> <blockquote><p>假如：Redis集群分布为一主四从，如果都从主节点复制到所有从节点，浪费耗时；为了释放主节点压力，采用从从复制策略</p></blockquote> <h3 id="缓存击穿、缓存穿透、缓存雪崩"><a href="#缓存击穿、缓存穿透、缓存雪崩" class="header-anchor">#</a> 缓存击穿、缓存穿透、缓存雪崩</h3> <p>缓存击穿：缓存失效，并发请求过来，数据还没缓存完，可能造成DB宕机</p> <p>缓存穿透：没有这个key，使用克隆器</p> <p>缓存雪崩：一瞬间缓存都失效了。</p> <p>​	设置随机的失效时间</p> <p>​	缓存永远不失效</p> <h2 id="mysql"><a href="#mysql" class="header-anchor">#</a> MySql</h2> <blockquote><p>海豚：Sakila</p></blockquote> <h3 id="sql执行"><a href="#sql执行" class="header-anchor">#</a> sql执行</h3> <ol><li><p><strong>建立连接</strong></p> <p>通讯机制</p> <ol><li>全双工：能同时发送和接收数据</li> <li>半双工：某一时刻要么发送数据，要么接收数据</li> <li>单工：只能发送数据或只能接收数据</li></ol> <p>线程状态，show processlist；查看用户正在运行的线程信息；</p> <ol><li>id：线程id，可以使用kill xx</li> <li>user：启动这个线程的用户</li> <li>host：发送请求客户端的ip和端口</li> <li>db：当前命令执行的数据库</li> <li>command：该线程正在执行的操作命令
+<ol><li>create DB</li> <li>Drop DB</li> <li>Execute：正在执行一个PreparedStatement</li> <li>Close Stmt：关闭一个PreparedStatement</li> <li>Query：执行一个语句</li> <li>Sleep：正在等待客户端发送语句</li> <li>Quit：正在退出</li> <li>ShutDown：正在关闭服务器</li></ol></li> <li>time：表示处于当前状态的时间，单位是秒</li> <li>state：线程状态</li> <li>info：一般记录线程执行的语句，show full processlist查看完整的sql</li></ol></li> <li><p><strong>查询缓存</strong></p> <p>会缓存查询的sql语句和查询结果</p> <p>缓存的sql语句是含参数的，必须完全相同才可以查询到</p> <p>即时设置开启查询缓存：以下sql也不能保存</p> <ul><li>sql中包含sql_no_cache的</li> <li>查询结果大于query_cache_limit的：SELECT @@query_cache_limit/1024/1024;</li> <li>查询中有一些不确定的参数，比如函数now()</li></ul> <p>查询缓存是否启用：SHOW VARIABLES LIKE '%query_cache%';</p> <p>查询缓存详细的配置：show status like 'Qcache%';	// 查看详细的缓存参数，可用缓存空间，缓存快，缓存多少等。</p></li> <li><p><strong>解析和优化</strong></p> <p>两类：编译时优化，执行时优化</p> <p>等价变换策略：</p> <p>​	where 1=1 and a=b				where a=b</p> <p>​	a&lt;b and a=5							5&lt;b and a=5</p> <p>​	基于联合索引，调整条件位置</p> <p>对max、min、count函数的优化</p> <p>​	innoDB	max：找最右边的</p> <p>​	innoDB	min：找最左边的</p> <p>​	MyISAM	count：不许返回，直接返回结果</p> <p>提前终止查询</p> <p>​	limit 1，就不会再继续遍历了</p> <p>in查询优化</p> <p>​	例如 where id in (2, 4, 1, 5)，先会进行排序where id in (1, 2, 4, 5)，再通过二分法查找是否在in中</p></li> <li><p><strong>执行引擎</strong></p> <p>通过API接口跟存储引擎交互；</p> <p>先查询缓存，有的存到缓存中；返回数据过多，采用增量模式返回。</p></li></ol> <h3 id="innodb与myisam对比"><a href="#innodb与myisam对比" class="header-anchor">#</a> InnoDB与MyISAM对比</h3> <div class="language- extra-class"><pre class="language-text"><code>InnoDB支持事务和外键
+InnoDB支持行锁、表锁；MyISAM支持表锁
+InnoDB是聚簇索引结构；MyISAM是非聚簇索引结构
+InnoDB通过MVCC支持并发处理
+存储文件格式不同：InnoDB frm表结构文件、ibd表数据文件、ibdata1  MyISAM frm、MYD表数据、MYI索引文件
+</code></pre></div><h3 id="innodb内存结构、磁盘结构"><a href="#innodb内存结构、磁盘结构" class="header-anchor">#</a> InnoDB内存结构、磁盘结构</h3> <p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9kZXYubXlzcWwuY29tL2RvYy9yZWZtYW4vNS43L2VuL2ltYWdlcy9pbm5vZGItYXJjaGl0ZWN0dXJlLnBuZw?x-oss-process=image/format,png" alt="img"></p> <p>Buffer Pool</p> <p>Change Pool</p> <p>Log Buffer		redo log、undo</p> <p>Tablespace</p> <p>​	系统表空间</p> <h3 id="innodb的后台线程"><a href="#innodb的后台线程" class="header-anchor">#</a> InnoDB的后台线程</h3> <p>IO线程</p> <p>··线程</p> <p>RollBack线程</p> <p>Master线程</p> <h3 id="innodb的存储结构"><a href="#innodb的存储结构" class="header-anchor">#</a> InnoDB的存储结构</h3> <h4 id="数据存储结构"><a href="#数据存储结构" class="header-anchor">#</a> 数据存储结构</h4> <p>TableSpace =&gt; 段	=&gt;	区	=&gt;	页	=&gt;	行</p> <p>TableSpace：初始化两个区，①结构区、②数据和索引区；每创建一个索引就会创建两个区</p> <p>区：一个区多个页，空间不够的时候重新分配一个区而不是一个页；有好几种页</p> <p>页：页头、页尾、多个行</p> <p>行：存具体的数据，事务id、回滚的记录</p> <h3 id="mysql性能优化"><a href="#mysql性能优化" class="header-anchor">#</a> MySql性能优化</h3> <p>硬件升级、系统配置、表结构设计、sql语句及索引</p> <h4 id="系统配置"><a href="#系统配置" class="header-anchor">#</a> 系统配置</h4> <ol><li><p>尽量在缓存中获取数据</p> <p>SHOW GLOBAL status like 'innodb_buffer_pool_pages%';</p></li> <li><p>数据预热</p></li> <li><p>降低磁盘写入次数</p> <p>加大redo_log，减少了磁盘次数</p></li> <li><p>通用查询日志，慢查询日志可以不开，bin-log必须要开</p></li> <li><p>TODO</p></li></ol> <h2 id="i-o"><a href="#i-o" class="header-anchor">#</a> <a href="https://snailclimb.gitee.io/javaguide/#/docs/java/basis/IO%E6%A8%A1%E5%9E%8B?id=io" target="_blank" rel="noopener noreferrer">I/O<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h2> <p>I/O（<strong>I</strong>nput/<strong>O</strong>utpu） 即<strong>输入／输出</strong> 。</p> <p><strong>我们先从计算机结构的角度来解读一下 I/O。</strong></p> <p>根据冯.诺依曼结构，计算机结构分为 5 大部分：运算器、控制器、存储器、输入设备、输出设备。</p> <p><img src="https://img-blog.csdnimg.cn/20190624122126398.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9pcy1jbG91ZC5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70" alt="冯诺依曼体系结构"></p> <h3 id="有哪些常见的-io-模型"><a href="#有哪些常见的-io-模型" class="header-anchor">#</a> 有哪些常见的 IO 模型?</h3> <p>UNIX 系统下， IO 模型一共有 5 种： <strong>同步阻塞 I/O</strong>、<strong>同步非阻塞 I/O</strong>、<strong>I/O 多路复用</strong>、<strong>信号驱动 I/O</strong> 和<strong>异步 I/O</strong>。</p> <p>这也是我们经常提到的 5 种 IO 模型。</p> <h3 id="java中常见的io模型"><a href="#java中常见的io模型" class="header-anchor">#</a> Java中常见的IO模型</h3> <h4 id="bio-blocking-i-o"><a href="#bio-blocking-i-o" class="header-anchor">#</a> BIO（Blocking I/O）</h4> <p><strong>BIO 属于同步阻塞 IO 模型</strong> 。</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6a9e704af49b4380bb686f0c96d33b81~tplv-k3u1fbpfcp-watermark.image" alt="图源：《深入拆解Tomcat &amp; Jetty》"></p> <h4 id="nio-no-blocking-new-i-o"><a href="#nio-no-blocking-new-i-o" class="header-anchor">#</a> NIO（No-Blocking/New I/O）</h4> <p>Java 中的 NIO 可以看作是 <strong>I/O 多路复用模型</strong>。也有很多人认为，Java 中的 NIO 属于同步非阻塞 IO 模型。</p> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bb174e22dbe04bb79fe3fc126aed0c61~tplv-k3u1fbpfcp-watermark.image" alt="图源：《深入拆解Tomcat &amp; Jetty》"></p> <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88ff862764024c3b8567367df11df6ab~tplv-k3u1fbpfcp-watermark.image" alt="img"></p> <h4 id="aio-asynchronous-i-o"><a href="#aio-asynchronous-i-o" class="header-anchor">#</a> AIO (Asynchronous I/O)</h4> <p>AIO 也就是 NIO 2。Java 7 中引入了 NIO 的改进版 NIO 2,它是异步 IO 模型。</p> <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3077e72a1af049559e81d18205b56fd7~tplv-k3u1fbpfcp-watermark.image" alt="img"></p> <p><strong>总结：BIO、NIO、AIO</strong></p> <p><img src="https://images.xiaozhuanlan.com/photo/2020/33b193457c928ae02217480f994814b6.png" alt="img"></p> <h2 id="设计模式"><a href="#设计模式" class="header-anchor">#</a> 设计模式</h2> <p><img src="https://yh-sun.github.io/note-cloud/1627626380694.png" alt="设计模式"></p> <hr> <h3 id="工厂方法"><a href="#工厂方法" class="header-anchor">#</a> 工厂方法</h3> <p><strong>工厂方法模式</strong>是一种创建型设计模式， 其在父类中提供一个创建对象的方法， 允许子类决定实例化对象的类型。</p> <p><img src="https://refactoringguru.cn/images/patterns/diagrams/factory-method/structure.png" alt="工厂方法模式结构"></p> <h3 id="抽象工厂"><a href="#抽象工厂" class="header-anchor">#</a> 抽象工厂</h3> <p><strong>抽象工厂模式</strong>是一种创建型设计模式， 它能创建一系列相关的对象， 而无需指定其具体类。</p> <p><img src="https://refactoringguru.cn/images/patterns/diagrams/abstract-factory/problem-zh.png" alt="生成不同风格的系列家具。"></p> <p><img src="https://refactoringguru.cn/images/patterns/diagrams/abstract-factory/solution2.png" alt="工厂类的层次结构"></p> <div class="language- extra-class"><pre class="language-text"><code>接口升级时，有多个接口，将version存入yml中，通过同一个抽象工厂，不同环境生产出不同的Service
+</code></pre></div><h3 id="生成器"><a href="#生成器" class="header-anchor">#</a> 生成器</h3> <p><strong>生成器模式</strong>是一种创建型设计模式， 使你能够分步骤创建复杂对象。 该模式允许你使用相同的创建代码生成不同类型和形式的对象。</p> <p><img src="https://refactoringguru.cn/images/patterns/diagrams/builder/example-zh.png" alt="生成器模式结构示例"></p> <h3 id="原型"><a href="#原型" class="header-anchor">#</a> 原型</h3> <p><strong>原型模式</strong>是一种创建型设计模式， 使你能够复制已有对象， 而又无需使代码依赖它们所属的类。</p> <h4 id="基本实现"><a href="#基本实现" class="header-anchor">#</a> 基本实现</h4> <p><img src="https://refactoringguru.cn/images/patterns/diagrams/prototype/structure.png" alt="原型设计模式的结构"></p> <h4 id="原型注册表实现"><a href="#原型注册表实现" class="header-anchor">#</a> 原型注册表实现</h4> <p><img src="https://refactoringguru.cn/images/patterns/diagrams/prototype/structure-prototype-cache.png" alt="原型注册表"></p> <h3 id="单例"><a href="#单例" class="header-anchor">#</a> 单例</h3> <p><strong>单例模式</strong>是一种创建型设计模式， 让你能够保证一个类只有一个实例， 并提供一个访问该实例的全局节点。</p> <p><img src="C:/Users/sun/AppData/Roaming/Typora/typora-user-images/image-20210730164556284.png" alt="image-20210730164556284"></p> <p><img src="https://refactoringguru.cn/images/patterns/diagrams/singleton/structure-zh.png" alt="单例模式结构"></p> <p><img src="https://yh-sun.github.io/note-cloud/1627635587453.png" alt="多线程单例实现"></p> <hr> <h3 id="适配器"><a href="#适配器" class="header-anchor">#</a> 适配器</h3> <p><strong>适配器模式</strong>是一种结构型设计模式， 它能使接口不兼容的对象能够相互合作。</p> <p><img src="https://refactoringguru.cn/images/patterns/diagrams/adapter/structure-object-adapter.png" alt="适配器设计模式的结构（对象适配器）"></p> <p>java中Arrays.asList(E[] e)：</p> <p><img src="https://yh-sun.github.io/note-cloud/1627891136303.png" alt="main"></p> <p><img src="https://yh-sun.github.io/note-cloud/1627891208603.png" alt="数组=&gt;集合的适配器"></p> <h3 id="桥接"><a href="#桥接" class="header-anchor">#</a> 桥接</h3> <p><strong>桥接模式</strong>是一种结构型设计模式， 可将一个大类或一系列紧密相关的类拆分为抽象和实现两个独立的层次结构， 从而能在开发时分别使用。</p> <p><img src="https://refactoringguru.cn/images/patterns/content/bridge/bridge.png" alt="桥接设计模式"></p> <p><img src="https://refactoringguru.cn/images/patterns/diagrams/bridge/example-zh.png" alt="桥接模式示例的结构"></p> <h3 id="组合"><a href="#组合" class="header-anchor">#</a> 组合</h3> <p><strong>组合模式</strong>是一种结构型设计模式， 你可以使用它将对象组合成树状结构， 并且能像使用独立对象一样使用它们。</p> <p><img src="https://refactoringguru.cn/images/patterns/diagrams/composite/live-example.png" alt="部队结构的例子"></p> <p><img src="https://refactoringguru.cn/images/patterns/diagrams/composite/structure-zh.png" alt="组合设计模式的结构"></p> <p><img src="C:/Users/sun/AppData/Roaming/Typora/typora-user-images/image-20210802163246345.png" alt="image-20210802163246345"></p> <h3 id="装饰"><a href="#装饰" class="header-anchor">#</a> 装饰</h3> <p><strong>装饰模式</strong>是一种结构型设计模式， 允许你通过将对象放入包含行为的特殊封装对象中来为原对象绑定新的行为。</p> <p><img src="https://refactoringguru.cn/images/patterns/diagrams/decorator/solution2-zh.png" alt="装饰模式解决方案"></p> <p><img src="https://refactoringguru.cn/images/patterns/diagrams/decorator/structure.png" alt="装饰设计模式的结构"></p> <blockquote><p>https://blog.csdn.net/hqing159/article/details/76827873</p></blockquote> <h3 id="外观"><a href="#外观" class="header-anchor">#</a> 外观</h3> <p>例如，生成二维码，需要很多工具类、import很多类、可以将这些封装成一个类的工具方法，调用者完全不知道你做了啥，你只是给他看了他想看的东西。PS：其实里面乱七八糟的。</p> <p><img src="https://refactoringguru.cn/images/patterns/diagrams/facade/structure.png" alt="外观设计模式的结构"></p> <h3 id="享元"><a href="#享元" class="header-anchor">#</a> 享元</h3> <h3 id="代理"><a href="#代理" class="header-anchor">#</a> 代理</h3> <hr> <h3 id="责任链"><a href="#责任链" class="header-anchor">#</a> 责任链</h3> <h3 id="命令"><a href="#命令" class="header-anchor">#</a> 命令</h3> <h3 id="迭代器"><a href="#迭代器" class="header-anchor">#</a> 迭代器</h3> <h3 id="中介者"><a href="#中介者" class="header-anchor">#</a> 中介者</h3> <h3 id="备忘录"><a href="#备忘录" class="header-anchor">#</a> 备忘录</h3> <h3 id="观察者"><a href="#观察者" class="header-anchor">#</a> 观察者</h3> <div class="language- extra-class"><pre class="language-text"><code>场景：订单有3种状态 1 2 3
+状态1：发邮件、打印日志、发微信
+状态2：发邮件
+状态3：打印日志
+
+维护一个基础的发布者Map&lt;状态，List&lt;Listener&gt;&gt;，不同的状态塞不同的观察者，具体的观察者执行自己具体的update()逻辑
+</code></pre></div><p><img src="https://refactoringguru.cn/images/patterns/diagrams/observer/example.png" alt="观察者模式示例的结构"></p> <p>Spring : 定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。
+spring中Observer模式常用的地方是listener的实现。如ApplicationListener。</p> <h3 id="状态"><a href="#状态" class="header-anchor">#</a> 状态</h3> <h3 id="策略"><a href="#策略" class="header-anchor">#</a> 策略</h3> <p>实现一种策略，应用：可以简化代码繁多的if else</p> <h3 id="模板方法"><a href="#模板方法" class="header-anchor">#</a> 模板方法</h3> <p>顶级接口确定了某些方法的逻辑，已经定义了骨架，你可以继承实现某些特定的功能；</p> <p><img src="https://refactoringguru.cn/images/patterns/diagrams/template-method/structure.png" alt="模板方法设计模式的结构"></p> <h2 id="多线程并发"><a href="#多线程并发" class="header-anchor">#</a> 多线程并发</h2> <h3 id="线程创建方式"><a href="#线程创建方式" class="header-anchor">#</a> 线程创建方式</h3> <div class="language- extra-class"><pre class="language-text"><code>1.new Thread().start()：通过本地方法native start0()执行；
+2.实现Runnable接口：由于Thread需要继承，如果已经继承了其他类，就无法使用，此时可采用实现Runnable接口的形式；
+3.实现Callable接口：执行Callable任务后，可以获得一个Future对象，搭配ExecutorService线程池接口使用；
+4.线程池创建线程：线程和数据库连接都是非常宝贵的资源，如果每次都在需要的时候创建，不需要的时候销毁，是十分浪费的，此时可以使用线程池让线程缓存。
+</code></pre></div><h3 id="线程池-newworkstealingpool"><a href="#线程池-newworkstealingpool" class="header-anchor">#</a> 线程池(newWorkStealingPool)</h3> <p><img src="https://gitee.com/TheSunnn/note-cloud/raw/master/1626663270051.png" alt="创建线程池的5种方式"></p> <blockquote><p>无论哪种创建方式，归根结底都是new ThreadPoolExecutor()/new ForkJoinPool()，顶级接口都是ExecutorService</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>ThreadPoolExecutor(
+	int corePoolSize,	// 即使是空闲状态，线程池也要保持的线程数
+	int maximumPoolSize,	// 线程池中允许的最大线程数
+	long keepAliveTime,	// maximumPoolSize - corePoolSize = x；x这类线程空闲的时间达到设置的阈值，将关闭此类线程
+	TimeUnit unit,	// keepAliveTime的单位
+	BlockingQueue&lt;Runnable&gt; workQueue,	// 等待线程池执行的任务队列
+	ThreadFactory threadFactory)	// 执行器创建新线程时，使用到的工厂
+</code></pre></div><ul><li>线程池工作流程
+<ul><li>当一个线程进入后，我们不会马上执行他，先判断线程池中的线程数是否&gt;核心线程数
+<ul><li>小于：【执行】</li> <li>大于：放入队列
+<ul><li>放入队列成功，等待</li> <li>队列满，判断是否大于线程池中最大线程数
+<ul><li>大于：异常RejectExecutionException</li> <li>小于则创建非核心线程【执行】</li></ul></li></ul></li></ul></li> <li>如果一段时间后依旧没有线程调用线程池，如果此时存在非核心线程，则销毁</li></ul></li></ul> <h3 id="线程生命周期"><a href="#线程生命周期" class="header-anchor">#</a> 线程生命周期</h3> <div class="language- extra-class"><pre class="language-text"><code>New：新建
+Runnable：就绪
+Running：运行
+Blocked：阻塞
+Dead：死亡
+</code></pre></div><p><img src="https://gitee.com/TheSunnn/note-cloud/raw/master/1626679780420.png" alt="线程声明周期"></p> <div class="language- extra-class"><pre class="language-text"><code>阻塞的几种情况：
+1.等待阻塞await()：运行的线程触发了object.await()方法，JVM会把线程放入等待队列；
+2.锁池lock()：运行的线程获取同步锁时，如果该同步锁被别的线程占用，那么JVM会将该线程放入锁池(lock pool)中；
+3.sleep() join()：线程触发休眠、以及线程将别的线程加入时都会造成线程阻塞。
+</code></pre></div><h3 id="终止线程的4种方式"><a href="#终止线程的4种方式" class="header-anchor">#</a> 终止线程的4种方式</h3> <div class="language-lsl extra-class"><pre class="language-text"><code>1.正常运行结束
+2.interrupt()
+3.stop
+4.设置退出标志：while(flag) {}
+</code></pre></div><p><img src="https://gitee.com/TheSunnn/note-cloud/raw/master/1626680028499.png" alt="终止线程：interrupt"></p> <h3 id="阻塞队列"><a href="#阻塞队列" class="header-anchor">#</a> 阻塞队列</h3> <p>有几种不同类型的阻塞队列，常用的是基于数组的ArrayBlockQueue和基于链表的LinkedBlockQueue</p> <blockquote><p>手写的ArrayBlockQueue，采用ReentrantLock Condition</p> <blockquote><p>Condition：假设线程中对接空了，需要唤醒生产者生产消息，如果使用传统的notifyAll()也会唤醒消费者，而Condition可以更加细粒度的控制线程的休眠与唤醒。</p></blockquote></blockquote> <p><img src="https://yh-sun.github.io/note-cloud/1626681235851.png" alt="手写ArrayBlockQueue代码"></p> <ol><li>ArrayBlockingQueue：数组、有界</li> <li>LinkedBlockingQueue：链表、有界</li> <li>PriorityBlockingQueue：支持优先级排序、无界</li> <li>DelayQueue：优先级队列实现的无界阻塞队列</li> <li>SynchronousQueue：不存储元素的阻塞队列</li> <li>LinkedTransferQueue：链表、无界</li> <li>LinkedBlockingDeque：链表、双向阻塞队列
+<img src="https://yh-sun.github.io/note-cloud/1626682017059.png" alt="阻塞队列家族"></li></ol> <h3 id="synchronized同步锁"><a href="#synchronized同步锁" class="header-anchor">#</a> Synchronized同步锁</h3> <p><img src="https://yh-sun.github.io/note-cloud/1626686073557.png" alt="synchronized"></p> <ol><li>JVM每次会从竞争者队列（ContentionList）的尾部选出一个竞争候选者（OnDeck），但是在并发情况下，这么做会导致大量线程进行CAS访问，为了减少队列尾部的压力，JVM会将一部分竞争者放入EntryList作为候选竞争线程；</li> <li>Owner线程执行unlock时，会将ContentionList一部分转移至EntryList中，并从中选出一个OnDeck；</li> <li>但是Owner并不是直接将锁交给OnDeck，而是通过竞争的方式，让OnDeck、EntryList共同竞争锁；“竞争切换”；</li> <li>如果Owner线程被Wait()阻塞，则转移至WaitSet队列中，某个时刻通过notify、notifyAll唤醒，重新进入EntryList。</li> <li>Synchronized是非公平锁：Synchronized在线程进入ContentionList时，会尝试自旋，如果获取到就会直接拿到锁，这样对已经进入ContentionList的线程时不公平的。</li> <li>每个对象都有monitor，加锁就是在竞争monitor对象；Synchronized锁代码块：通过monitorenter和monitorexit指令来实现的；锁方法是通过标记为来判断的。</li> <li>Synchronized是重量级锁，各个jdk版本都持续的进行优化，目前为止Synchronized拥有：适应自旋、锁消除、锁粗话、偏向锁、轻量级锁、重量级锁；</li> <li>锁可以同偏向锁 =&gt; 轻量级锁 =&gt; 重量级锁；锁膨胀。</li></ol> <h3 id="reentrantlock、读写锁、读写锁降级"><a href="#reentrantlock、读写锁、读写锁降级" class="header-anchor">#</a> ReentrantLock、读写锁、读写锁降级</h3> <ol><li>ReentrantLock实现Lock接口，可响应中断、可重入锁</li> <li>主要方法：
+<ol><li>lock()</li> <li>unLock()</li> <li>tryLock()</li> <li>lockInterruptibly()：如果当前线程并未中断，可获取锁；PS：如果两个线程分别调用lock()、lockInterruptibly()，此时中断这两个线程，lock()不会异常，lockInterruptibly()会异常。</li> <li>isLock()</li> <li>newConditon()：条件组件</li></ol></li> <li>几个lock()方法的区别</li> <li>公平锁、非公平锁</li> <li>Condition
+<ol><li>awiat()方法与Object.wait()方法等效</li> <li>signal()方法与Object.notify()方法等效</li> <li>signalAll()方法与Object.notifyAll()方法等效</li> <li>ReentrantLock可以唤醒执行线程，而Synchronized唤醒所有等待的线程</li></ol></li> <li>ReentrantLock与Synchronized的区别和联系
+<ol><li>两者都是可重入锁，不过ReentrantLock的加锁与释放锁是通过Java API由编程人员控制，Synchronized是Java虚拟机通过monitorenter、monitorexit指令内部控制；</li> <li>ReentrantLock是可中断锁、手动设置是否公平锁、多个锁；</li> <li>Synchronized采用同步阻塞，是悲观并发策略；ReentrantLock采用同步非阻塞，是乐观并发策略。</li></ol></li></ol> <h3 id="condition-awiat-singal-singalall、object-wait-notify-notifyall"><a href="#condition-awiat-singal-singalall、object-wait-notify-notifyall" class="header-anchor">#</a> Condition awiat singal singalAll、Object wait notify notifyAll</h3> <blockquote><p>上面说过的，等效</p></blockquote> <h3 id="countdownlatch、cyclicbarrier、phaser、semaphore"><a href="#countdownlatch、cyclicbarrier、phaser、semaphore" class="header-anchor">#</a> CountDownLatch、Cyclicbarrier、Phaser、Semaphore</h3> <ol><li>CountDownLatch：计时器</li> <li>Cyclicbarrier：栅栏</li> <li>Phaser：1 2的结合体、多阶段，每个阶段可以自定义逻辑、可动态增加删除节点</li> <li>Semaphore：信号量，虽然可以实现线程技术器的功能，但更可以做类似ReentrantLock的事情，设定信号量为1，那就代表所有线程都需要获取信号量后才能操作，操作完成释放信号量，下一个线程继续获取。形如锁，常用作流量控制</li></ol> <h3 id="volatile"><a href="#volatile" class="header-anchor">#</a> volatile</h3> <ul><li>全局可见：volatile修饰的关键字，在变化后的新值对其他线程来说是立即可见的，并且一致的；但是由于i++等运算操作符不是原子的，可能会造成正在运算时其他线程已经修改了volatile变量的值；
+<ul><li>内存语义：执行volatile变量写操作时，会执行lock指令，执行一次store和write操作，该指令只做了两件事，①将线程内存刷新至主内存；②将其他线程内存设置为无效。</li></ul></li> <li>禁止指令重排序：java在编译时会将指令重新排序，提高性能，但是volatile修饰的变量不能重排序，主要体现在以下几个方面；
+<ul><li>第一个操作-读：禁止将第二个操作重排序到读之前，确保读到的数据是没有被修改过的；</li> <li>第一个操作-写：第二个操作-读禁止重排序；</li> <li>第二个操作-写：不管第一个操作是什么都不能重排序，确保写之前的操作不会重排序到写之后；</li></ul></li></ul> <h3 id="atomicinteger、longadder、atomicstampedreference"><a href="#atomicinteger、longadder、atomicstampedreference" class="header-anchor">#</a> AtomicInteger、LongAdder、AtomicStampedReference</h3> <blockquote><p>原子性操作CAS，但存在ABA问题，而AtomicStampedReference采用增加版本号/时间戳解决此问题</p></blockquote> <h3 id="乐观锁、悲观锁、自旋锁"><a href="#乐观锁、悲观锁、自旋锁" class="header-anchor">#</a> 乐观锁、悲观锁、自旋锁</h3> <ul><li>乐观锁：很乐观的认为读多写少，读的时候不上锁，写的时候去查一下数据是否修改过，如果没有修改过直接修改、如果数据被修改，重新读写，java中常用的思想就是CAS；</li> <li>悲观锁：悲观的认为读少写多，每次读的时候怕被修改直接锁住，Synchronized就是典型的悲观锁；AQS中会使用乐观锁尝试获取锁，获取不到再转换为悲观锁，入ReentrantLock；</li> <li>自旋锁：一个新线程进来，阻塞，唤醒竞争锁，成功执行；线程的阻塞和唤醒十分耗费性能（线程的阻塞需要从用户态 =&gt; 内核态），在线程执行时间短且频繁切换线程的场景下，可使用自旋锁；原理是线程先尝试获取锁，获取不到while(true) for(;😉（理解粗糙，哈哈哈哈哈）自旋一下，再重新尝试获取，这样牺牲了CPU但是节省了内核的消耗
+<ul><li>优点：减少用户态 =&gt; 内核态的消耗</li> <li>缺点：浪费CPU</li> <li>自旋的时间：JDK1.5固定配置自旋锁的时间、JDK1.6引入适应自旋锁、JDK1.7后交由JVM自己控制</li> <li>适应自旋锁：意味着每次自旋的时间不再是固定的死值，而是变化的，一般遵循几个方面
+<ul><li>根据上一个相同对象锁的自旋时间和锁拥有者的状态来确定，一般是系统一次上下文切换的时间</li> <li>平均负载小于CPUs则一直自旋，如果有超过CPUs/2个线程正在自旋则阻塞；</li> <li>如果自旋时发现Owner发生变化则延迟自旋(自旋计数)或阻塞</li> <li>如果CPU处于节电模式则停止自旋</li> <li>自旋时间的最坏时间是CPU的存储延迟（CPU A存储的数据，CPU B得知A存储了数据的时间差）</li> <li>自旋会适当放弃线程优先级之间的差异</li></ul></li></ul></li></ul> <h3 id="可重入锁-广义上"><a href="#可重入锁-广义上" class="header-anchor">#</a> 可重入锁（广义上）</h3> <p>并不是单纯的指ReentrantLock，是一种广义上的可重复锁，当一个线程获取到锁后，他的内部函数还可以获取该锁的其他代码，不受影响，java中常用的可重入锁为ReentrantLock、Synchronized</p> <h3 id="公平锁、非公平锁"><a href="#公平锁、非公平锁" class="header-anchor">#</a> 公平锁、非公平锁</h3> <p>公平锁：需要维护一个锁队列，先进入队列中的线程可以优先获取锁；
+非公平锁：直接尝试获取锁，获取不到去队尾等待</p> <ol><li>非公平锁性能比公平锁高5~ 10倍，因为公平锁需要在多核的情况下维护一个队列；</li> <li>Java中Synchronized是非公平锁，ReentrantLock通过lock()设置是否公平，isPair();</li></ol> <h3 id="共享锁、独占锁"><a href="#共享锁、独占锁" class="header-anchor">#</a> 共享锁、独占锁</h3> <ul><li>独占锁：完全霸占整个锁，是一种悲观的加锁策略，他避免读/读冲突，如果一个读线程获取锁，其他读线程只能等待，JUC中的ReentrantLock就是如此；</li> <li>共享锁：是一种读/读共享的乐观锁，JUC中的ReadWriteLock就是如此；</li> <li>AQS中提供两个常量SHARED 和 EXCLUSIVE用来识别锁获取方式；</li> <li>ReadWriteLock：读读共享、读写互斥、写写互斥；写锁中获取读锁出现锁降级。</li></ul> <h3 id="无锁、偏向锁、轻量级锁、重量级锁"><a href="#无锁、偏向锁、轻量级锁、重量级锁" class="header-anchor">#</a> 无锁、偏向锁、轻量级锁、重量级锁</h3> <ul><li>偏向锁：为了适应多线程的场景，某些代码会加锁来解决，但通常情况下，这类代码并不会被多个线程同时竞争锁的情况，比如某个时间段只有一个线程请求，但是还有获取锁、释放锁这些额外的开销，所以偏向锁就此而生；
+<ul><li>偏向锁只需要在置换ThreadID的时候执行一次CAS指令，而轻量级锁需要多个CAS原子指令</li> <li>只有一个线程执行同步代码时才会使用偏向锁，进一步提高性能</li> <li>如果存在&gt;1个线程，则膨胀为轻量级锁</li></ul></li> <li>轻量级锁：
+<ul><li>线程在执行代码块时，如果没有其他线程竞争，虚拟机会在当前线程生成一个栈帧，用于存储锁对象的Mark Word拷贝，虚拟机再通过CAS将Mark Word的指针指向锁记录（lock record），lock record指向锁对象的Mark Word；
+<ul><li>CAS替换成功：持有锁、并执行锁内代码
+<ul><li>释放锁monitor exit时，虚拟机执行CAS，如果锁对象的object mark word依旧指向lock record，并且拷贝的mark word与object mark word中的对象相同，则将拷贝对象替换回mark word
+<ul><li>替换成功：结束</li> <li>失败：释放锁，并唤醒挂起的线程</li></ul></li></ul></li> <li>替换失败：挂起当前线程，等待被唤醒</li></ul></li> <li>轻量级锁用于两个线程交替执行同步代码快的情况，如果同一时间访问同一锁，将膨胀为重量级锁</li> <li><img src="https://yh-sun.github.io/note-cloud/1627546916140.png" alt="img"></li> <li>重构：轻量级锁的加/释放锁过程
+<ul><li>1.某个线程执行同步代码块时，检查当前线程状态是否为（线程标志位：01、偏向锁标志：0），如果是虚拟机会在当前线程的栈帧中创建一个锁记录区（Lock Record）；</li> <li>2.首先执行CAS操作获取锁，
+<ul><li>将object mark word拷贝到Lock Record中，我们叫他Displaced Mark Lock</li> <li>将object mark word的指针指向Lock Record中，将Lock Record Owner的指针指向Object Mark Word
+<ul><li>成功：获取到锁，执行同步代码</li> <li>失败：首先检测mark word是否指向当前线程的栈帧：
+<ul><li>是，说明已经获取到了锁，执行同步代码</li> <li>否，存在多个线程竞争，升级为重量级锁，锁标志位：10，Mark Word中存储的就是指向重量级锁（互斥量）的指针，后面的线程阻塞，当前的线程尝试自旋来获取锁，自旋不到挂起阻塞</li></ul></li></ul></li></ul></li> <li>3.释放锁的目的就是为了将Dis Mark Word复制回object mark word中
+<ul><li>首先检查object mark word是否依旧指向当前线程的栈帧中，并且object mark word与拷贝的Displaced Mark Word是否一致；
+<ul><li>是：CAS</li> <li>否：证明多个线程竞争，此时已经有别的线程获取了锁，已经膨胀为重量级锁，所以释放锁的同时，要唤醒这段时间阻塞的线程。</li></ul></li></ul></li></ul></li></ul></li> <li>重量级锁：
+<ul><li>Synchronized本质上是通过竞争monitor对象，又叫做对象监视器，而监视器锁本质上是依赖于底层的操作系统的Mutex Lock来实现的，而操作系统实现线程之间的切换需要从用户态切换到核心态，这个成本是非常高的，状态之间的切换需要相对比较长的时间，这也是Synchronized效率低的原因。</li></ul></li></ul> <h3 id="分段锁"><a href="#分段锁" class="header-anchor">#</a> 分段锁</h3> <p>分段锁是一种思想，将一个大锁拆分长多个小锁，常见的为ConcurrentHashMap</p> <h3 id="锁优化"><a href="#锁优化" class="header-anchor">#</a> 锁优化</h3> <ul><li>减少锁持有时间</li> <li>锁细粒度</li> <li>锁分离</li> <li>锁粗化</li> <li>锁消除：编译级别，将绝对不可能发生竞争锁的代码消除锁；多数为编程人员不规范导致的</li></ul> <h3 id="threadlocal"><a href="#threadlocal" class="header-anchor">#</a> ThreadLocal</h3> <p>线程共享变量，每个线程都保存一个ThreadLocalMap对象，提供操作方法set、get、remove。</p> <h3 id="concurrenthashmap"><a href="#concurrenthashmap" class="header-anchor">#</a> ConcurrentHashMap</h3> <h3 id="线程调度算法、进程调度算法"><a href="#线程调度算法、进程调度算法" class="header-anchor">#</a> 线程调度算法、进程调度算法</h3> <ul><li>线程调度算法：
+<ul><li>抢占式：JVM采用此种方法</li> <li>协调式</li></ul></li></ul> <h3 id="cas"><a href="#cas" class="header-anchor">#</a> CAS</h3> <h3 id="aqs"><a href="#aqs" class="header-anchor">#</a> AQS</h3> <h3 id="jmm"><a href="#jmm" class="header-anchor">#</a> JMM</h3> <p>是一种java内存模型，线程间的共享变量存在主内存，私有变量存在本地内存，操作私有变量时，先更新到本地内存，再更新到主内存，在并发的场景下可能出现1+1+1 = 2的情况，这也是多线程开发要解决的问题；
+​	指令重排序：
+​		as-if-serial：不管是什么重排序，单线程的程序执行结果不能变
+​		happens-before：多线程情况下要求不能改变执行结果，但是对于不改变结果的重排序，JVM不做限制</p> <h3 id="原子性、可见性、有序性"><a href="#原子性、可见性、有序性" class="header-anchor">#</a> 原子性、可见性、有序性</h3> <p>原子性：基本的数据类型都具有原子性，long和double除外；
+可见性：一个线程修改了共享变量时，其他线程立即得知修改；
+有序性：禁止指令重排序</p> <h3 id="final可以保证可见性吗"><a href="#final可以保证可见性吗" class="header-anchor">#</a> final可以保证可见性吗？</h3> <p>可见</p> <h3 id="锁消除是什么"><a href="#锁消除是什么" class="header-anchor">#</a> 锁消除是什么？</h3> <p>锁消除指的是，编译器在对检测到不可能存在共享数据竞争的锁进行消除；</p> <h3 id="锁粗化是什么"><a href="#锁粗化是什么" class="header-anchor">#</a> 锁粗化是什么？</h3> <p>原则是将同步块的作用范围尽量小，但是频繁的释放锁、获取锁，即使没有线程竞争也会很有损耗；</p> <h3 id="什么是守护线程"><a href="#什么是守护线程" class="header-anchor">#</a> 什么是守护线程</h3> <p>setDaemon(true)，启动线程前设置，用于支持性工作。JVM中如果只剩下守护线程，那么都将立即终止。</p> <h3 id="分布式锁"><a href="#分布式锁" class="header-anchor">#</a> 分布式锁</h3> <h4 id="redis分布式锁"><a href="#redis分布式锁" class="header-anchor">#</a> Redis分布式锁</h4> <h2 id="talk-is-cheap-show-me-the-code"><a href="#talk-is-cheap-show-me-the-code" class="header-anchor">#</a> Talk is cheap. Show me the code.</h2> <h3 id="java-8"><a href="#java-8" class="header-anchor">#</a> Java 8</h3> <blockquote><p>对行为参数化的理解</p> <p>现在有一筐苹果；我想把所有的红色苹果挑出来，我想把所有大于100g的苹果挑出来，我或许还想把没红的和小于100g的苹果挑出来，我还可能把生虫子的挑出来。</p> <p>如果是Java7：当然可以实现</p> <div class="language- extra-class"><pre class="language-text"><code>for (Apple a : appleList) {
+if(&quot;红色&quot;.equals(a.getColor)){
+  newAppleList.add(a);
+}
+}
+for (Apple a : appleList) {
+	if(a.getWeight &gt; 100g){
+		newAppleList.add(a);
+	}
+}
+for (Apple a : appleList) {
+	if(a.getWeight &gt; 100g &amp;&amp; &quot;红色&quot;.equals(a.getColor)){
+		newAppleList.add(a);
+	}
+}
+</code></pre></div><p>那么问题来了，累不累...那我们开始做梦，如果变成下面这种形式 如何</p> <div class="language- extra-class"><pre class="language-text"><code>public List&lt;Apple&gt; find各种各样Apple(?我是参数?){
+List&lt;Apple&gt; newAppleList = Lists.newArrayList();
+for (Apple a : appleList) {
+  if(？我是参数？){
+      newAppleList.add(a);
+  }
+}
+return newAppleList;
+}
+// 调用
+List&lt;Apple&gt; newAppleList = this.find各种各样Apple(&quot;红色&quot;.equals(a.getColor));
+</code></pre></div><p>我们用某一段代码 作为一个参数，来将一些共性很大的代码简化。</p> <p>可 这又如何实现呢，难点又有哪些呢？</p> <p>1.这个行为到底是干啥的，是判断是否Boolean，还是判断大小，还是返回一个字符串，还是返回其他的对象。如果不声明 返回值，编译器无法识别，也无法控制。</p> <p>​	boolean b = ？我是参数？;</p> <p>​	String s = ？我是参数？;</p> <p>上面这个问题简单，匿名内部类 可以实现，虽然代码比较繁重。</p> <p>如果 有一天，我有给了你一筐 梨，Apple和Li还是需要写两套方法。那如果我们在声明模板的时候 不需要定义参数的类型，请求的时候 我再声明 我是苹果还是梨。可否？</p> <p>可</p> <p>请求类型：Apple/Li a</p> <p>我是参数：&quot;红色&quot;.equals(a.getColor);</p> <p>返回类型：true/false;</p> <p>所以 总结来看，我们需要知道 这个？我是参数？ -&gt; 声明的类型、返回的类型</p> <p>是/不是 = 我有一个苹果 -&gt; 看一看这个苹果是否是红色</p> <p>是/不是 = 我有一个苹果 -&gt; 看一看这个苹果是否是绿色</p> <p>是/不是 = 我有一个鸭梨 -&gt; 看一看这个苹果是否是绿色</p> <p>int 100g = 我有一个鸭梨 -&gt; 看一看这个苹果是多重</p> <p>String 红富士 = 我有一个苹果 -&gt; 看一看这个苹果的品牌</p></blockquote> <h4 id="常用函数式接口"><a href="#常用函数式接口" class="header-anchor">#</a> 常用函数式接口</h4> <table><thead><tr><th>函数式接口</th> <th>函数描述符</th></tr></thead> <tbody><tr><td>Predicate&lt;T&gt;</td> <td>T -&gt; boolean</td></tr> <tr><td>Consumer&lt;T&gt;</td> <td>T -&gt; void</td></tr> <tr><td>Function&lt;T,R&gt;</td> <td>T -&gt; R</td></tr> <tr><td>Supplier&lt;T&gt;</td> <td>( ) -&gt; T</td></tr> <tr><td>UnaryOperator&lt;T&gt;</td> <td>T -&gt; T</td></tr> <tr><td>BinaryOperator&lt;T&gt;</td> <td>( T, T ) -&gt; T</td></tr> <tr><td>BiPredicate&lt;L,R&gt;</td> <td>( L, R ) -&gt; boolean</td></tr> <tr><td>BiConsumer&lt;T,U&gt;</td> <td>( T, U ) -&gt; void</td></tr> <tr><td>BiFunction&lt;T,U,R&gt;</td> <td>( T, U ) -&gt; R</td></tr></tbody></table> <h4 id="常用lambda表达式"><a href="#常用lambda表达式" class="header-anchor">#</a> 常用Lambda表达式</h4> <table><thead><tr><th>Lambda</th> <th>等效的方法引用</th></tr></thead> <tbody><tr><td>(Apple a) -&gt; a.getWeight()</td> <td>Apple::getWeight</td></tr> <tr><td>() -&gt; Thread.currentThread().dumpStack()</td> <td>Thread.currentThread()::dumpStack</td></tr> <tr><td>(str, i) -&gt; str.substring(i)</td> <td>String::substring</td></tr> <tr><td>(String s) -&gt; System.out.println(s)</td> <td>System.out::println</td></tr></tbody></table> <h3 id="代码规范"><a href="#代码规范" class="header-anchor">#</a> 代码规范</h3> <h4 id="angel"><a href="#angel" class="header-anchor">#</a> Angel</h4> <ul><li><p>类名或方法名迭代：</p> <p>Angel</p> <p>Brixton</p> <p>Camden</p> <p>Dalston</p> <p>Edgware</p> <p>Finchley</p></li> <li><p>对某些数据做加工处理的：</p> <p>Process RequestUtils</p></li> <li><p>是否正确</p> <p>IsCorrect</p></li> <li><p>是否存在</p> <p>isExists</p></li> <li><p>是否有效</p> <p>isValid</p></li> <li><p>在常量与变量的命名时，表示类型的名词放在词尾，以提升辨识度</p> <p>正例： startTime / workQueue / nameList / TERMINATED_THREAD_COUNT
+反例： startedAt / QueueOfWork / listName / COUNT_TERMINATED_THREAD</p></li></ul> <h4 id="新式命名规范"><a href="#新式命名规范" class="header-anchor">#</a> 新式命名规范</h4> <ol><li><strong>加工：process</strong></li> <li><strong>校验：check</strong></li> <li><strong>查询：query</strong></li> <li><strong>选择：select</strong></li> <li><strong>保存：save</strong></li></ol> <h3 id="java开发规范、笔记"><a href="#java开发规范、笔记" class="header-anchor">#</a> java开发规范、笔记</h3> <h4 id="不要使用一个常量类维护所有常量-要按常量功能进行归类-分开维护。"><a href="#不要使用一个常量类维护所有常量-要按常量功能进行归类-分开维护。" class="header-anchor">#</a> 不要使用一个常量类维护所有常量， 要按常量功能进行归类，分开维护。</h4> <div class="language- extra-class"><pre class="language-text"><code>说明： 大而全的常量类， 杂乱无章， 使用查找功能才能定位到修改的常量，不利于理解和维护。
+正例： 缓存相关常量放在类 CacheConsts 下；系统配置相关常量放在类 ConfigConsts 下。 
+</code></pre></div><h3 id="各层命名规约"><a href="#各层命名规约" class="header-anchor">#</a> 各层命名规约：</h3> <p>A) Service/DAO 层方法命名规约</p> <p>1） 获取单个对象的方法用 get 做前缀。</p> <p>2） 获取多个对象的方法用 list 做前缀，复数形式结尾如： listObjects。</p> <p>3） 获取统计值的方法用 count 做前缀。</p> <p>4） 插入的方法用 save/insert 做前缀。</p> <p>5） 删除的方法用 remove/delete 做前缀。</p> <p>6） 修改的方法用 update 做前缀。</p> <p>B) 领域模型命名规约</p> <p>1） 数据对象： xxxDO， xxx 即为数据表名。</p> <p>2） 数据传输对象： xxxDTO， xxx 为业务领域相关的名称。</p> <p>3） 展示对象： xxxVO， xxx 一般为网页名称。</p> <p>4） POJO 是 DO/DTO/BO/VO 的统称，禁止命名成 xxxPOJO。</p> <h3 id="红花和绿叶-个性和共性"><a href="#红花和绿叶-个性和共性" class="header-anchor">#</a> 红花和绿叶，个性和共性</h3> <h4 id="使用集合转数组的方法-必须使用集合的-toarray-t-array-传入的是类型完全一致、长度为-0-的空数组。"><a href="#使用集合转数组的方法-必须使用集合的-toarray-t-array-传入的是类型完全一致、长度为-0-的空数组。" class="header-anchor">#</a> 使用集合转数组的方法，必须使用集合的 toArray(T[] array)，传入的是类型完全一致、长度为 0 的空数组。</h4> <div class="language- extra-class"><pre class="language-text"><code>反例： 直接使用 toArray 无参方法存在问题，此方法返回值只能是 Object[]类，若强转其它类型数组将出
+现 ClassCastException 错误。
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>正例：
+List&lt;String&gt; list = new ArrayList&lt;&gt;(2);
+list.add(&quot;guan&quot;);
+list.add(&quot;bao&quot;);
+String[] array = list.toArray(new String[0]);
+说明： 使用 toArray 带参方法，数组空间大小的 length：
+1） 等于 0，动态创建与 size 相同的数组，性能最好。
+2） 大于 0 但小于 size，重新创建大小等于 size 的数组，增加 GC 负担。
+Java 开发手册
+12/44
+3） 等于 size，在高并发情况下，数组创建完成之后， size 正在变大的情况下，负面影响与上相同。
+4） 大于 size，空间浪费，且在 size 处插入 null 值，存在 NPE 隐患。 
+</code></pre></div><h4 id="_5-在循环里对集合进行remove-add操作"><a href="#_5-在循环里对集合进行remove-add操作" class="header-anchor">#</a> 5.在循环里对集合进行remove/add操作</h4> <div class="language- extra-class"><pre class="language-text"><code>public static void main(String[] args) throws Throwable {
+    ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+    list.add(&quot;1&quot;);
+    list.add(&quot;2&quot;);
+    list.add(&quot;3&quot;);
+    list.add(&quot;4&quot;);
+    list.add(&quot;5&quot;);
+	// false，删除3元素后，下次循环list(4) == '5'
+    for (int i = 0; i &lt; list.size(); i++) {
+        if (&quot;3&quot;.equals(list.get(i))) {
+            list.remove(i);
+        }
+    }
+	// 若待remove的数字是list最后一顺位，foreach报错java.util.ConcurrentModificationException
+    for (String item : list) {
+        if (&quot;3&quot;.equals(item)) {
+            list.remove(item);
+        }
+    }
+
+	// perfect
+    Iterator&lt;String&gt; iterator = list.iterator();
+    while (iterator.hasNext()) {
+        String next = iterator.next();
+        if(&quot;2&quot;.equals(next)) {
+          iterator.remove();
+        }
+    }
+
+    System.out.println(list);
+}
+</code></pre></div><h4 id="jdk1-8遍历map"><a href="#jdk1-8遍历map" class="header-anchor">#</a> JDK1.8遍历Map</h4> <div class="language- extra-class"><pre class="language-text"><code>// 创建一个Map
+Map&lt;String, Object&gt; infoMap = new HashMap&lt;&gt;();
+infoMap.put(&quot;name&quot;, &quot;sun&quot;);
+infoMap.put(&quot;site&quot;, &quot;www.github.com&quot;);
+infoMap.put(&quot;email&quot;, &quot;sunyuanhe_i@163.com&quot;);
+// 传统的Map迭代方式
+for (Map.Entry&lt;String, Object&gt; entry : infoMap.entrySet()) {
+    System.out.println(entry.getKey() + &quot;：&quot; + entry.getValue());
+}
+// JDK8的迭代方式
+infoMap.forEach((key, value) -&gt; {
+    System.out.println(key + &quot;：&quot; + value);
+
+});
+</code></pre></div><h3 id="五笔常用"><a href="#五笔常用" class="header-anchor">#</a> 五笔常用：</h3> <p>tewq=我爱你
+smu vkeg vkeg tewq=我爱你
+qwet=鉁
+wtbb=傻子</p> <h3 id="反射"><a href="#反射" class="header-anchor">#</a> 反射：</h3> <div class="language- extra-class"><pre class="language-text"><code>public static void main(String[] args) throws Exception {     Class&lt;StatusEnum&gt; clazz = StatusEnum.class;     StatusEnum[] enumConstants = clazz.getEnumConstants();      Method targetMethod = clazz.getDeclaredMethod(&quot;getCode&quot;);      StatusEnum result = null;     String typeCodeVal = null;     for(StatusEnum entity:enumConstants){         typeCodeVal = targetMethod.invoke(entity).toString();         if(typeCodeVal.equals(&quot;5002&quot;)){             result = entity;             break;         }     }      System.out.println(result);     System.out.println(typeCodeVal); }
+</code></pre></div><h3 id="javabean-xml"><a href="#javabean-xml" class="header-anchor">#</a> JavaBean -&gt; XML：</h3> <p><a href="http://huatonghh.com/bbw_b2b/coreintf/services/wsController?wsdl" target="_blank" rel="noopener noreferrer">http://huatonghh.com/bbw_b2b/coreintf/services/wsController?wsdl<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language- extra-class"><pre class="language-text"><code>_generatorFactory.createGenerator(bb, JsonEncoding.UTF8), value);
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>createGenerator
+</code></pre></div><h3 id="方便快速切换bookmark"><a href="#方便快速切换bookmark" class="header-anchor">#</a> 方便快速切换bookmark：</h3> <h3 id="apimodel-value不能重复"><a href="#apimodel-value不能重复" class="header-anchor">#</a> @ApiModel value不能重复：</h3> <h3 id="不规则时间转date转规则字符串"><a href="#不规则时间转date转规则字符串" class="header-anchor">#</a> 不规则时间转Date转规则字符串：</h3> <div class="language- extra-class"><pre class="language-text"><code>public static void main(String[] args) throws Exception {
+    String date = &quot;2019-9-19 9:20:33&quot;;
+    SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);
+    Date parse = sdf.parse(date);
+    System.out.println(parse);
+
+    System.out.println(DateFormatUtils.format(parse, &quot;yyyy-MM-dd HH:mm:ss&quot;));
+    System.out.println(DateFormatUtils.format(parse, &quot;yyyy-MM-dd&quot;));
+    System.out.println(DateFormatUtils.format(parse, &quot;HH:mm:ss&quot;));
+}
+</code></pre></div><h3 id="一个索引通常会划分多个type-逻辑上对index有些许不同的几类数据进行分类"><a href="#一个索引通常会划分多个type-逻辑上对index有些许不同的几类数据进行分类" class="header-anchor">#</a> 一个索引通常会划分多个type，逻辑上对index有些许不同的几类数据进行分类：</h3> <h3 id="es6以后不再支持mapping下多个type-7-0后更会删除type"><a href="#es6以后不再支持mapping下多个type-7-0后更会删除type" class="header-anchor">#</a> es6以后不再支持mapping下多个type，7.0后更会删除type：</h3> <h3 id="详解logback-xml与logback-spring-xml的区别及联系"><a href="#详解logback-xml与logback-spring-xml的区别及联系" class="header-anchor">#</a> 详解logback.xml与logback-spring.xml的区别及联系</h3> <p>By SnoWalker 发表于 2018-11-02
+文章目录
+logback和logback-spring.xml都可以用来配置logback，但是2者的加载顺序是不一样的。</p> <p>加载优先级为：</p> <p>logback.xml---&gt;application.properties---&gt;logback-spring.xml.
+logback.xml加载早于application.properties，</p> <p>所以如果你在logback.xml使用了变量时，而恰好这个变量是写在application.properties时，那么就会获取不到，只要改成logback-spring.xml就可以解决。</p> <p>官网的说明如下：
+<img src="https://yh-sun.github.io/note-cloud/1617783751438.png" alt=""></p> <h3 id="取消idea保存文件-默认删除行尾空格"><a href="#取消idea保存文件-默认删除行尾空格" class="header-anchor">#</a> 取消IDEA保存文件，默认删除行尾空格</h3> <p>IDEA保存文件，默认删除行尾空格，对于代码规范是件好事；
+但是，对于Git版本控制，有时弊大于利，保存文件容易保存不必要的更改；
+<img src="https://yh-sun.github.io/note-cloud/1619056259772.png" alt="enter description here"></p> <h3 id="lombok-accessors用法"><a href="#lombok-accessors用法" class="header-anchor">#</a> lombok @Accessors用法</h3> <blockquote><p>@Accessors
+Accessor的中文含义是存取器，@Accessors用于配置getter和setter方法的生成结果，下面介绍三个属性</p></blockquote> <div class="language-java extra-class"><pre class="language-java"><code>fluent
+fluent的中文含义是流畅的，设置为<span class="token boolean">true</span>，则getter和setter方法的方法名都是基础属性名，且setter方法返回当前对象。如下
+
+<span class="token annotation punctuation">@Data</span>
+<span class="token annotation punctuation">@Accessors</span><span class="token punctuation">(</span>fluent <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    
+    <span class="token comment">// 生成的getter和setter方法如下，方法体略</span>
+    <span class="token keyword">public</span> <span class="token class-name">Long</span> <span class="token function">id</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">id</span><span class="token punctuation">(</span><span class="token class-name">Long</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code>chain
+chain的中文含义是链式的，设置为<span class="token boolean">true</span>，则setter方法返回当前对象。如下
+
+<span class="token annotation punctuation">@Data</span>
+<span class="token annotation punctuation">@Accessors</span><span class="token punctuation">(</span>chain <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    
+    <span class="token comment">// 生成的setter方法如下，方法体略</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">setId</span><span class="token punctuation">(</span><span class="token class-name">Long</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code>prefix
+prefix的中文含义是前缀，用于生成getter和setter方法的字段名会忽视指定前缀（遵守驼峰命名）。如下
+
+<span class="token annotation punctuation">@Data</span>
+<span class="token annotation punctuation">@Accessors</span><span class="token punctuation">(</span>prefix <span class="token operator">=</span> <span class="token string">&quot;p&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+	<span class="token keyword">private</span> <span class="token class-name">Long</span> pId<span class="token punctuation">;</span>
+	<span class="token keyword">private</span> <span class="token class-name">String</span> pName<span class="token punctuation">;</span>
+	
+	<span class="token comment">// 生成的getter和setter方法如下，方法体略</span>
+	<span class="token keyword">public</span> <span class="token class-name">Long</span> <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setId</span><span class="token punctuation">(</span><span class="token class-name">Long</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+	<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>官网文档 https://projectlombok.org/features/experimental/Accessors</p></blockquote> <hr> <h3 id="java知识点"><a href="#java知识点" class="header-anchor">#</a> JAVA知识点：</h3> <p>基础：</p> <ol><li>list、set、map。直接从存储内容来说 循环map几种方法</li> <li>hashmap hashtable。 直接从源码上说 table有synchronized，所以慢</li> <li>静态变量、成员变量、静态方法、构造方法、普通方法 区别：执行顺序</li> <li>类的加载顺序，类的加载器：AppClassLoader ExtClassLoader BootstrpClassLoader</li> <li>设计模式：单利设计模式 静态内部类</li> <li>说一说排序算法，稳定性，复杂度</li></ol> <p>架构：
+1.Spring MVC：源码解读 https://www.cnblogs.com/lzeffort/p/7858439.html
+dispathcerservlet 继承 farmemakrsetvlet 继承httpServlet</p> <div class="language- extra-class"><pre class="language-text"><code>Dispatcherservlet 两部分，一部分初始化 一部分 doservice
+1.initservletbean();
+2.initwebapplicationcontext();
+3.onrefresh();
+4.inithaddermappting ,inithanderadapter, initview
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>1.doservice ,doDispatch 里
+handermapping handeradapter modelview view 
+</code></pre></div><p>2.mybatis 和 HQL区别、Struts2 和 SPringMVC区别
+3.多线程</p> <p>多线程效率：</p> <p>多线程 new Thread 、Runnable  （run 方法下都是 native的 start0());</p> <p>线程池: 个数 = cpu核数 * 线程堵塞时间 + 线程执行时间 / 线程执行时间</p> <div class="language- extra-class"><pre class="language-text"><code>多线程安全：
+synchronized 单利设计模式：静态内部类
+日期类    SimpleDateFormat线程不安全； 
+DateFormatUtils 线程安全 ：synchronized FastDateFormat；
+ArrayList：Collections.synchronizedList();
+HashMap：ConcurrentHashMap ---  lock()，unlock()
+对账时的写文件。BufferedWriter 效率高 线程安全
+StringBuffer ：线程安全synchronized 
+
+死锁的处理：
+检测死锁并恢复
+鸵鸟算法忽略
+仔细对资源进行动态分配，以避免死锁。△
+</code></pre></div><p>4.高并发
+系统架构SOA思想、
+多台服务器多个节点负载均衡、
+消息中间件MQ缓解压力、
+如果涉及页面就 用电商项目的 静态资源、缓存等等、</p> <div class="language- extra-class"><pre class="language-text"><code>微服务实现形式
+
+多线程可以解决高并发、
+
+高并发带来的大量数据问题：读写分离、分库分表 最好查一下 如何分库 读写分离的
+
+紧急情况：有时候的高并发并不是可以预料到的，举例：
+1 增加web服务器数量，也就是做集群，做负载均衡。既然一台服务器无法完成任务，那就多用几台
+2 redis增加容量。设置有效期。
+3 减少数据库的操作。
+</code></pre></div><p>5.数据库
+常用 sql。左关联 右关联、常用函数decode val 平均值 去重等等</p> <div class="language- extra-class"><pre class="language-text"><code>sql事务的问题：
+	1.一个事务下 先进行插入 再查询这条数据，是否能查出来
+	2.a表id = 001, b表id是001的 有三条， a left join b on a=b 一共几条数据
+</code></pre></div><p>6.开发中的问题：
+SPring的注解
+jdk版本差异，jdk12优化switch以及GC
+Spring版本、linux版本
+服务器崩掉了怎么办
+除了synchronized关键字之外，你是怎么来保障线程安全的？
+AQS
+Tomcat本身的参数你一般会怎么调整
+如果一个接口有2个不同的实现, 那么怎么来Autowire一个指定的实现
+和上一个问题一样，mybatis配置两个相同ID如何区分。
+如何自定义一个类加载器
+简述三次握手，如果c端发起握手请求，s端无法立刻建立连接应该回应什么？
+jvm内存结构。
+方法区里什么样的对象有可能被回收。
+线程池创建有几种，为什么创建定长的线程池个数最好是5，10，15这样的数字。
+linux命令。常用部署 以及 内存溢出看down文件</p> <h3 id="mysql-java实体互转"><a href="#mysql-java实体互转" class="header-anchor">#</a> MySql =&gt; Java实体互转：</h3> <table><thead><tr><th>类型名称</th> <th>显示长度</th> <th>数据库类型</th> <th>java类型</th></tr></thead> <tbody><tr><td>varchar</td> <td>L+N</td> <td>varchar</td> <td>String</td></tr> <tr><td>integer</td> <td>4</td> <td>integer unsigned</td> <td>Long</td></tr> <tr><td>tinyint</td> <td>3</td> <td>tinyint unsigned</td> <td>integer</td></tr> <tr><td>bigint</td> <td>20</td> <td>bigint unsigned</td> <td>BigInteger</td></tr></tbody></table> <h3 id="white-jotter"><a href="#white-jotter" class="header-anchor">#</a> <strong>White Jotter</strong></h3> <ol><li>查看node版本：</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code>node <span class="token operator">-</span>v
+</code></pre></div><ol start="2"><li>查看npm版本：</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code>npm <span class="token operator">-</span>v
+</code></pre></div><ol start="3"><li>将 npm 更新至最新版本</li></ol> <div class="language- extra-class"><pre class="language-text"><code>npm -g install npm
+</code></pre></div><ol start="4"><li>安装 cnpm，即 npm 的国内镜像</li></ol> <div class="language- extra-class"><pre class="language-text"><code>安装 cnpm 的命令为 ：
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+完成后就可以使用 cnpm 替代 npm 了，我不太喜欢用 cnpm，喜欢用的小伙伴注意一点，cnpm 不要与 npm 混合使用，一个项目用 cnpm 就从头用到底，不要中途敲错命令，否则就会出现混乱。不过万一遇到这种情况也不用慌，把项目的 node_modules 文件夹删了重新执行 npm/cnpm install 就行了，只是比较浪费时间。
+</code></pre></div><ol start="5"><li>安装脚手架</li></ol> <div class="language- extra-class"><pre class="language-text"><code>npm install -g vue-cli
+</code></pre></div><h3 id="idea注释快捷键"><a href="#idea注释快捷键" class="header-anchor">#</a> IDEA注释快捷键：</h3> <p>return</p> <p>groovyScript(&quot;def returnType = &quot;${_1}&quot;; def result ='';if(returnType=='null'||returnType=='void'){return;}else{result += '\n * @return	' + returnType; return result;}&quot;, methodReturnType());</p> <p>return方法空值：groovyScript(&quot;def returnType = &quot;${_1}&quot;; def result ='';if(returnType=='null'||returnType=='void'){return;}else{result += '\n * @return	' + returnType; return result;}&quot;, &quot;&quot;);</p> <p>params</p> <p>groovyScript(&quot;if(&quot;${_1}&quot;.length() == 2) {return '';} else {def result=''; def params=&quot;${_1}&quot;.replaceAll('[\\[|\\]|\\s]', '').split(',').toList();for(i = 0; i &lt; params.size(); i++) {if(params[i]=='null'){return;}else{result+='\n' + ' * @param	' + params[i] + ': '}}; return result;}&quot;, methodParameters());</p> <p>time
+time()</p> <p>date
+date()</p> <h3 id="idea打开类结构图"><a href="#idea打开类结构图" class="header-anchor">#</a> idea打开类结构图</h3> <div class="language-stata extra-class"><pre class="language-text"><code> 鼠标选中实例对象或者类，上方菜单工具栏：Navigate——》Type Hierarchy
+</code></pre></div><div class="language-less extra-class"><pre class="language-less"><code>&lt;?xml version=<span class="token string">&quot;1.0&quot;</span> encoding=<span class="token string">&quot;UTF-8&quot;</span>?&gt;
+&lt;beans xmlns=<span class="token string">&quot;http://www.springframework.org/schema/beans&quot;</span>
+       <span class="token property">xmlns</span><span class="token punctuation">:</span>xsi=<span class="token string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+       <span class="token property">xmlns</span><span class="token punctuation">:</span>util=<span class="token string">&quot;http://www.springframework.org/schema/util&quot;</span>
+       <span class="token property">xmlns</span><span class="token punctuation">:</span>p=<span class="token string">&quot;http://www.springframework.org/schema/p&quot;</span>
+       <span class="token property">xsi</span><span class="token punctuation">:</span>schemaLocation=&quot;<span class="token property">http</span><span class="token punctuation">:</span><span class="token comment">//www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd</span>
+        <span class="token property">http</span><span class="token punctuation">:</span><span class="token comment">//www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd&quot;&gt;</span>
+
+    &lt;bean id=<span class="token string">&quot;myTestBean&quot;</span> class=<span class="token string">&quot;MyTestBean&quot;</span><span class="token operator">/</span>&gt;
+
+&lt;<span class="token operator">/</span>beans&gt;
+
+
+
+SuppressWarnings<span class="token selector">( &quot; deprecation ” ）
+public class BeanFactoryTest</span> <span class="token punctuation">{</span>
+
+	<span class="token atrule">@Test
+	public void testSirnpleLoad<span class="token punctuation">(</span><span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+		BeanFactory bf = new XrnlBeanFactory <span class="token punctuation">(</span>new ClassPathResource <span class="token punctuation">(</span>”beanFactoryTest.xml”））；
+		MyTestBean bea n=<span class="token punctuation">(</span>MyTestBean <span class="token punctuation">)</span> bf.getBean （” rnyTestBean ”）；
+		assertEquals <span class="token punctuation">(</span>”testSt r ”<span class="token punctuation">,</span> bean <span class="token function">getTestStr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="java自定义注解-interface"><a href="#java自定义注解-interface" class="header-anchor">#</a> Java自定义注解@interface</h3> <div class="language- extra-class"><pre class="language-text"><code>https://blog.csdn.net/qq_35625303/article/details/79403820
+https://www.jianshu.com/p/e6b44d8cec5a
+</code></pre></div><p><strong>@Import</strong>：可以理解为 和@Bean、@Configuration一个意思</p> <h3 id="git更换仓库-保留分支"><a href="#git更换仓库-保留分支" class="header-anchor">#</a> git更换仓库，保留分支</h3> <p>git更换仓库，保留分支，保留提交记录及开发权限
+别人推荐的方法都很复杂，这个步骤自己亲自尝试过，非常简单好用。</p> <p>1、从原地址克隆一份裸版本库，比如原本托管于 GitHub。
+git clone --bare https://github....(原始仓库地址)
+git clone --bare https://git.huatonghh.com/car_b2b/taishan/backend.git</p> <p>2、进入克隆下来的目录
+cd project.git（project即为你的项目名称）</p> <p>3、以镜像推送的方式上传代码到新的仓库地址。
+git push --mirror http：//...(目标仓库地址)
+git push --mirror http://10.1.5.5/kscd/backend.git</p> <h3 id="spring-security-oauth2-登录过程详解"><a href="#spring-security-oauth2-登录过程详解" class="header-anchor">#</a> spring security oauth2 登录过程详解</h3> <p><a href="https://blog.csdn.net/weixin_34245082/article/details/88022652" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/weixin_34245082/article/details/88022652<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="oauth实现验证码登录-项目地址"><a href="#oauth实现验证码登录-项目地址" class="header-anchor">#</a> oauth实现验证码登录：项目地址：</h3> <p><a href="https://gitee.com/lvhaibao/spring-lhbauth/blob/34a4e781abeb9f1115b7a2e53141e0fed2915757/spring-lhbauth-jwt/src/main/java/com/lhb/lhbauth/jwt/demo/web/controller/AuthPageController.java" target="_blank" rel="noopener noreferrer">https://gitee.com/lvhaibao/spring-lhbauth/blob/34a4e781abeb9f1115b7a2e53141e0fed2915757/spring-lhbauth-jwt/src/main/java/com/lhb/lhbauth/jwt/demo/web/controller/AuthPageController.java<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="服务器常见目录"><a href="#服务器常见目录" class="header-anchor">#</a> 服务器常见目录</h2> <h3 id="jenkins工作空间"><a href="#jenkins工作空间" class="header-anchor">#</a> jenkins工作空间</h3> <div class="language-crystal extra-class"><pre class="language-crystal"><code>cd <span class="token operator">/</span>var<span class="token operator">/</span><span class="token keyword">lib</span><span class="token operator">/</span>jenkins<span class="token operator">/</span>workspace
+</code></pre></div><h3 id="nginx配置"><a href="#nginx配置" class="header-anchor">#</a> nginx配置</h3> <div class="language-stata extra-class"><pre class="language-text"><code>cd /etc/nginx/conf.d
+</code></pre></div><h3 id="前端部署的路径"><a href="#前端部署的路径" class="header-anchor">#</a> 前端部署的路径</h3> <div class="language-groovy extra-class"><pre class="language-groovy"><code>cd <span class="token string regex">/usr/</span>share<span class="token string regex">/nginx/</span>
+</code></pre></div><h3 id="后端部署的路径"><a href="#后端部署的路径" class="header-anchor">#</a> 后端部署的路径</h3> <div class="language-haskell extra-class"><pre class="language-haskell"><code><span class="token hvariable">cd</span> <span class="token operator">/</span><span class="token keyword">data</span><span class="token operator">/</span><span class="token hvariable">java_app</span><span class="token operator">/</span><span class="token hvariable">uat_bbw_b2bserver_8108</span>
+</code></pre></div><h2 id="常用linux命令"><a href="#常用linux命令" class="header-anchor">#</a> 常用linux命令</h2> <h3 id="netstat-lntp"><a href="#netstat-lntp" class="header-anchor">#</a> netstat -lntp</h3> <div class="language-tap extra-class"><pre class="language-tap"><code>[root@localhost /]<span class="token directive"># netstat -lntp</span>
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      1/systemd           
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1261/sshd           
+tcp6       0      0 :::111                  :::*                    LISTEN      1/systemd           
+tcp6       0      0 :::22                   :::*                    LISTEN      1261/sshd
+</code></pre></div><h3 id="日志检索"><a href="#日志检索" class="header-anchor">#</a> 日志检索</h3> <ul><li><p>从大文件日志中快速搜索指定内容
+grep -n -e &quot;msg&quot; -e &quot;msg&quot; ***.log | tail -n 5</p></li> <li><p>跳转到指定日志行数处
+vim +3443 ***.log</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>从文件内容查找匹配指定字符串的行：
+
+$ grep &quot;被查找的字符串&quot; 文件名
+例子：在当前目录里第一级文件夹中寻找包含指定字符串的.in文件
+grep &quot;thermcontact&quot; */*.in
+
+从文件内容查找与正则表达式匹配的行：
+$ grep –e “正则表达式” 文件名
+
+查找时不区分大小写：
+$ grep –i &quot;被查找的字符串&quot; 文件名
+
+查找匹配的行数：
+$ grep -c &quot;被查找的字符串&quot; 文件名
+
+
+从文件内容查找不匹配指定字符串的行：
+$ grep –v &quot;被查找的字符串&quot; 文件名
+</code></pre></div><ul><li>检索指定内容，并输出行数，截取行数展示</li></ul> <div class="language- extra-class"><pre class="language-text"><code>grep -n -e &quot;60ee60b2e4b074b9b078ea01-1&quot; 20210714115618.log | tail -n 1 |awk -F: '{print $1}'
+</code></pre></div><ul><li>获取redis-server这个进程的pid</li></ul> <div class="language- extra-class"><pre class="language-text"><code>ps -ef | grep redis-server | grep -v grep | awk '{print $2}'   
+
+grep -v grep 去除包含grep的进程行 ，避免影响最终数据的正确性
+</code></pre></div><h3 id="开通端口、关闭防火墙-百度即可"><a href="#开通端口、关闭防火墙-百度即可" class="header-anchor">#</a> 开通端口、关闭防火墙（百度即可）</h3> <div class="language- extra-class"><pre class="language-text"><code># 由于泰山服务器还需要暴露这两个端口：9876、8080
+
+# 查看已开放的端口
+firewall-cmd --list-ports
+
+# 开放端口（开放后需要要重启防火墙才生效）
+firewall-cmd --zone=public --add-port=9876/tcp --permanent
+
+# 重启防火墙
+firewall-cmd --reload
+
+# 关闭端口（关闭后需要要重启防火墙才生效）
+firewall-cmd --zone=public --remove-port=9876/tcp --permanent
+
+# 开机启动防火墙
+systemctl enable firewalld
+
+# 开启防火墙
+systemctl start firewalld
+
+# 禁止防火墙开机启动
+systemctl disable firewalld
+
+# 停止防火墙
+systemctl stop firewalld
+</code></pre></div><h3 id="查看软件是否安装"><a href="#查看软件是否安装" class="header-anchor">#</a> 查看软件是否安装</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">rpm</span> -qa<span class="token operator">|</span><span class="token function">grep</span> xx
+</code></pre></div><h3 id="列出软件安装包安装的文件"><a href="#列出软件安装包安装的文件" class="header-anchor">#</a> 列出软件安装包安装的文件</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">rpm</span> -ql
+</code></pre></div><h3 id="查看mysql所有安装包的文件存储位置"><a href="#查看mysql所有安装包的文件存储位置" class="header-anchor">#</a> 查看mysql所有安装包的文件存储位置</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">rpm</span> -qal <span class="token operator">|</span><span class="token function">grep</span> mysql
+
+-i：可获取详细的安装目录
+<span class="token function">rpm</span> -qa<span class="token operator">|</span><span class="token function">grep</span> -i mysql
+</code></pre></div><h3 id="通过find去查找某个文件"><a href="#通过find去查找某个文件" class="header-anchor">#</a> 通过find去查找某个文件</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">find</span> / -name mysql
+</code></pre></div><h3 id="which查找命令"><a href="#which查找命令" class="header-anchor">#</a> which查找命令</h3> <blockquote><p>通过path环境变量查找执行的文件路径</p></blockquote> <h3 id="创建文件的引用"><a href="#创建文件的引用" class="header-anchor">#</a> 创建文件的引用</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">ln</span> -s /home/kscd/mysql/mysql.sock /tmp
+</code></pre></div><blockquote><p>在非root用户离线安装mysql时，需要将mysql.scok创建到/tmp下，以便于启动。</p></blockquote> <h3 id="查找一个符合搜索条件的文件"><a href="#查找一个符合搜索条件的文件" class="header-anchor">#</a> 查找一个符合搜索条件的文件</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>kscd@localhost mysql<span class="token punctuation">]</span>$ <span class="token function">cat</span> error.log <span class="token operator">|</span> <span class="token function">grep</span> root@localhost
+<span class="token number">2020</span>-09-14T03:44:13.306713Z <span class="token number">1</span> <span class="token punctuation">[</span>Note<span class="token punctuation">]</span> A temporary password is generated <span class="token keyword">for</span> root@localhost: 5dpc498ad5,X
+</code></pre></div><h3 id="查看占用端口的进程id"><a href="#查看占用端口的进程id" class="header-anchor">#</a> 查看占用端口的进程id</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">lsof</span> -i:9100
+</code></pre></div><h3 id="上传文件"><a href="#上传文件" class="header-anchor">#</a> 上传文件</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">scp</span> jdk-8u251-linux-x64.tar.gz kscd@10.1.4.193:~/deploy/jdk
+</code></pre></div><h3 id="kibana重启"><a href="#kibana重启" class="header-anchor">#</a> kibana重启</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">ps</span> -ef<span class="token operator">|</span><span class="token function">grep</span> kibana
+<span class="token function">ps</span> -ef<span class="token operator">|</span><span class="token function">grep</span> <span class="token number">5601</span>
+都找不到
+
+ 
+尝试 使用 <span class="token function">fuser</span> -n tcp <span class="token number">5601</span>
+<span class="token function">kill</span> -9 端口
+ <span class="token function">ps</span> -ef<span class="token operator">|</span><span class="token function">grep</span> node   或 <span class="token function">netstat</span> -anltp<span class="token operator">|</span><span class="token function">grep</span> <span class="token number">5601</span>
+启动即可 ./kibana
+后台启动：nohup <span class="token punctuation">..</span>/bin/kibana <span class="token operator">&amp;</span>
+
+</code></pre></div><h3 id="git仓库间推送"><a href="#git仓库间推送" class="header-anchor">#</a> git仓库间推送</h3> <hr> <div class="language-jboss-cli extra-class"><pre class="language-text"><code>1、从原地址克隆一份裸版本库，比如原本托管于 GitHub。
+
+git clone --bare https://github....(原始仓库地址)
+
+git clone --bare https://git.huatonghh.com/car_b2b/taishan/backend.git
+
+2、进入克隆下来的目录
+
+cd project.git（project即为你的项目名称）
+
+3、以镜像推送的方式上传代码到新的仓库地址。
+
+git push --mirror http：//...(目标仓库地址)
+
+git push --mirror http://10.1.5.5/kscd/backend.git
+</code></pre></div><h3 id="【git教程】如何清除git仓库的所有提交记录-成为一个新的干净仓库"><a href="#【git教程】如何清除git仓库的所有提交记录-成为一个新的干净仓库" class="header-anchor">#</a> 【Git教程】如何清除git仓库的所有提交记录，成为一个新的干净仓库</h3> <div class="language-sql extra-class"><pre class="language-sql"><code>https:<span class="token comment">//www.cnblogs.com/msxh/p/11082246.html</span>
+阅读目录
+
+一、引言
+二、操作步骤
+回到顶部
+一、引言
+　　马三也算Github的忠实用户了，经常会把一些练手的项目传到Github上面进行备份。其中有一个名为ColaFramework的Unity框架项目，马三开发了一年多了，期间提交代码的时候在Log中上传了一些比较敏感的信息，这些信息都可以在Github上面搜索到，马三想把这些Log信息清除掉，使其变成一个没有提交记录的“新仓库”。于是我在网上一搜，步骤还挺简单的，直接按照下面一步步操作就可以了。
+
+回到顶部
+二、操作步骤
+　　<span class="token number">1.</span>切换到新的分支
+
+git checkout <span class="token comment">--orphan latest_branch</span>
+　　<span class="token number">2.</span>缓存所有文件（除了<span class="token punctuation">.</span>gitignore中声明排除的）
+
+ git <span class="token keyword">add</span> <span class="token operator">-</span>A
+　　<span class="token number">3.</span>提交跟踪过的文件（<span class="token keyword">Commit</span> the changes）
+
+ git <span class="token keyword">commit</span> <span class="token operator">-</span>am <span class="token string">&quot;commit message&quot;</span>
+　　<span class="token number">4.</span>删除master分支（<span class="token keyword">Delete</span> the branch）
+
+git branch <span class="token operator">-</span>D master
+　　<span class="token number">5.</span>重命名当前分支为master（<span class="token keyword">Rename</span> the <span class="token keyword">current</span> branch <span class="token keyword">to</span> master）
+
+ git branch <span class="token operator">-</span>m master
+　　<span class="token number">6.</span>提交到远程master分支 （Finally<span class="token punctuation">,</span> <span class="token keyword">force</span> <span class="token keyword">update</span> your repository）
+
+ git push <span class="token operator">-</span>f origin master
+　　通过以上几步就可以简单地把一个Git仓库的历史提交记录清除掉了，不过最好还是在平时的开发中严格要求一下提交日志的规范，尽量避免在里面输入一些敏感信息进来。
+</code></pre></div><h3 id="查看linux是x86还是x64"><a href="#查看linux是x86还是x64" class="header-anchor">#</a> 查看Linux是x86还是x64</h3> <div class="language-php+HTML extra-class"><pre class="language-text"><code>在终端输入： getconf LONG_BIT
+
+输出：64 or 32
+</code></pre></div><h3 id="查看环境变量"><a href="#查看环境变量" class="header-anchor">#</a> 查看环境变量</h3> <div class="language-php+HTML extra-class"><pre class="language-text"><code>echo $PATH
+</code></pre></div><h3 id="rpm-qa-grep-xxxx"><a href="#rpm-qa-grep-xxxx" class="header-anchor">#</a> rpm -qa | grep xxxx</h3> <div class="language-php+HTML extra-class"><pre class="language-text"><code>RPM是RedHat Package Manger（RedHat软件管理工具),是一种用于打包及安装工具
+
+-qa代表query，a代表all
+
+grep(global search rgular expression(RE) and print out the line):是一种强大的文本搜索工具
+</code></pre></div><h3 id="查看linux操作系统是centos还是red-hat"><a href="#查看linux操作系统是centos还是red-hat" class="header-anchor">#</a> 查看linux操作系统是centos还是red hat</h3> <div class="language- extra-class"><pre class="language-text"><code>cat /etc/issue
+cat /etc/redhat-release 
+cat /etc/centos-release
+</code></pre></div><h3 id="tar常用命令"><a href="#tar常用命令" class="header-anchor">#</a> tar常用命令</h3> <div class="language-vala extra-class"><pre class="language-vala"><code>打包成tar<span class="token punctuation">.</span>gz格式压缩包
+# tar <span class="token operator">-</span>zcvf renwolesshel<span class="token punctuation">.</span>tar<span class="token punctuation">.</span>gz <span class="token operator">/</span>renwolesshel
+
+解压tar<span class="token punctuation">.</span>gz格式压缩包
+# tar zxvf renwolesshel<span class="token punctuation">.</span>tar<span class="token punctuation">.</span>gz
+
+打包成tar<span class="token punctuation">.</span>bz2格式压缩包
+# tar <span class="token operator">-</span>jcvf renwolesshel<span class="token punctuation">.</span>tar<span class="token punctuation">.</span>bz2 <span class="token operator">/</span>renwolesshel
+
+解压tar<span class="token punctuation">.</span>bz2格式的压缩包
+# tar jxvf renwolesshel<span class="token punctuation">.</span>tar<span class="token punctuation">.</span>bz2
+
+压缩成zip格式
+# zip <span class="token operator">-</span>q <span class="token operator">-</span>r renwolesshel<span class="token punctuation">.</span>zip renwolesshel<span class="token operator">/</span>
+
+解压zip格式的压缩包
+# unzip renwolesshel<span class="token punctuation">.</span>zip
+</code></pre></div><h3 id="linux查看redis安装目录"><a href="#linux查看redis安装目录" class="header-anchor">#</a> linux查看redis安装目录</h3> <div class="language-vim extra-class"><pre class="language-vim"><code><span class="token number">1</span><span class="token operator">.</span>在redis下查看安装目录
+
+如果命令 which 和whereis 都找不到安装目录，可使用以下办法
+
+<span class="token keyword">ps</span> <span class="token operator">-</span><span class="token builtin">ef</span>|<span class="token keyword">grep</span> redis
+得到了进程号 xxxx
+
+ 然后 <span class="token keyword">ls</span> <span class="token operator">-</span><span class="token keyword">l</span> <span class="token operator">/</span>proc<span class="token operator">/</span>xxxx<span class="token operator">/</span>cwd
+</code></pre></div><p><img src="https://yh-sun.github.io/note-cloud/1605700356252.png" alt="enter description here"></p> <h2 id="spring"><a href="#spring" class="header-anchor">#</a> Spring</h2> <div class="language- extra-class"><pre class="language-text"><code>AOP:Aspect Programming 面向切面编程
+
+</code></pre></div><h2 id="spring-cloud-alibaba搭建保司微服务项目时使用的相关组件"><a href="#spring-cloud-alibaba搭建保司微服务项目时使用的相关组件" class="header-anchor">#</a> spring cloud alibaba搭建保司微服务项目时使用的相关组件</h2> <h3 id="_1-nacos"><a href="#_1-nacos" class="header-anchor">#</a> 1.Nacos</h3> <div class="language- extra-class"><pre><code>本地Nacos地址：127.0.0.1:8848/nacos
+账号：nacos
+密码：nacos
+</code></pre></div><h3 id="_2-spring-cloud-alibaba-sentinel-网关流量控制台"><a href="#_2-spring-cloud-alibaba-sentinel-网关流量控制台" class="header-anchor">#</a> 2.Spring Cloud Alibaba Sentinel 网关流量控制台</h3> <div class="language- extra-class"><pre><code>sentinel-dashboard.jar包(1.7.1版本，与系统引入包版本相同)
+
+启动脚本：
+java -Dserver.port=8888 -Dcsp.sentinel.dashboard.server=localhost:8888 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard.jar
+
+登录控制台：
+地址：localhost:8888
+账户：sentinel
+密码：sentinel
+</code></pre></div><h3 id="_3-关于spring-cloud-gateway的现阶段配置"><a href="#_3-关于spring-cloud-gateway的现阶段配置" class="header-anchor">#</a> 3.关于Spring Cloud GateWay的现阶段配置</h3> <h4 id="_3-1-gateway-discovery"><a href="#_3-1-gateway-discovery" class="header-anchor">#</a> 3.1 gateway.discovery：</h4> <div class="language- extra-class"><pre><code>集成nacos注册中心后，加入此配置遍可通过注册的服务名来进行路由的控制，比如：http://localhost:8180/auth、sys
+但默认的前面还有个taishan简直是太丑了，所以加了...
+</code></pre></div><h4 id="_3-2-gateway-routes"><a href="#_3-2-gateway-routes" class="header-anchor">#</a> 3.2 gateway.routes：</h4> <div class="language- extra-class"><pre><code>- id: insurance
+  uri: lb://insurance
+  predicates:
+    - Path=/ins/**
+  filters:
+    - StripPrefix=1
+∴自定义的路由配置：
+    例如请求：http://localhost:8180/ins/api/test
+        -&gt;  通过insurance找到/ins/**对应的lb://insurance，lb代表从注册中心找这个&lt;insurance&gt;服务
+        -&gt;  找到服务后：http://localhost:8182/ins/api/test
+        -&gt;  filters- StripPrefix=1，将url头部断掉（断头台）
+        -&gt;  http://localhost:8182/api/test
+</code></pre></div><h4 id="_3-3-globalcors跨域设置"><a href="#_3-3-globalcors跨域设置" class="header-anchor">#</a> 3.3 globalcors跨域设置</h4> <div class="language- extra-class"><pre><code>TODO: 尚未确定是否生效
+</code></pre></div><h4 id="_3-4-sentinel配置-注-请参考spring-cloud-alibaba-sentinel-网关流量控制台"><a href="#_3-4-sentinel配置-注-请参考spring-cloud-alibaba-sentinel-网关流量控制台" class="header-anchor">#</a> 3.4 sentinel配置（注：请参考Spring Cloud Alibaba Sentinel 网关流量控制台）</h4> <div class="language- extra-class"><pre><code>4.1 集成的是gateway的sentinel，还没确定transport.port的真实意义，显意上不配置不影响流程；
+4.2 transport.dashboard即为本地搭建的sentinel.1.7.1.jar包启动地址；
+4.3 目前【降级】没有问题，但【熔断】在低版本的sentinel包中有效，本版本配置页面变动，配置后不生效，问题待解决。
+</code></pre></div><h3 id="_4-关于鉴权"><a href="#_4-关于鉴权" class="header-anchor">#</a> 4.关于鉴权：</h3> <div class="language- extra-class"><pre><code>由于想保留项目长期使用的spring security，包含自定义的&lt;登录自定义校验&gt;、&lt;多种登录逻辑&gt;，现阶段如果采用Oauth2.0风险较大（主要是整不出来0=0），
+但由于spring security一直都使用单体的形式，所以这次将【请求权限校验】与【登录授权】拆开；
+    1.网关不做认证授权：开始想做，但是spring cloud gateway与spring security不兼容，关于配置、注解都要改变；
+        前者使用：WebFlux，后者使用：WebSecurity；
+        如果配置WebSecurity在GateWay里不生效，如果配置WebFlux，不特么知道咋写，大爷的，好气；
+        
+        集成好处：网关完全管理鉴权，并且配置方便；
+        集成劣势：其他服务的鉴权无法保证，并且做不出来的都属于缺陷，嘿嘿。
+    2.权限校验：
+        b2b-auth-api    +   SecurityConfiguration.java
+        需要校验的服务配置一个SecurityConfiguration.java，上面写上需要忽略拦截的地址，以及不需要拦截的地址；
+        .antMatchers(&quot;/system-test&quot;).permitAll()
+        .antMatchers(&quot;/api/**&quot;).authenticated()
+    3.登录授权：
+        b2b-auth-service
+        POST：http://localhost:8180/auth/api/authenticate（地址后续会变动，具体看接口实际地址）
+        REQUEST:
+            {
+            	&quot;username&quot;: &quot;0000&quot;,
+            	&quot;password&quot;: &quot;我是假的密码，防止源码报错&quot;,
+            	&quot;rememberMe&quot;: true,
+            	&quot;imgId&quot;: &quot;我是没用的验证码图片&quot;,
+            	&quot;checkCode&quot;: &quot;ceshidizhi&quot;
+            }
+        
+        RESPONSE：
+        {
+            &quot;code&quot;: &quot;200&quot;,
+            &quot;message&quot;: &quot;OK&quot;,
+            &quot;result&quot;: {
+                &quot;id_token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwMDAwIiwiYXV0aCI6IjEsMiIsImV4cCI6MTU5NDQ2Mjc3NH0.m64W2p4j9NKap0p02C054o5kMceXWXJ4JIjAG78FkFnE-hINHe_iVRyE5VxpIBgOWyuU54PWIZzOcGOz7ADYEA&quot;
+            }
+        }
+</code></pre></div><h3 id="_5-rocketmq"><a href="#_5-rocketmq" class="header-anchor">#</a> 5.RocketMQ：</h3> <h4 id="_5-1-部署、运行"><a href="#_5-1-部署、运行" class="header-anchor">#</a> 5.1 部署、运行</h4> <blockquote><p>本次采用在10.1.4.194，部署RocketMQ，想适用的小伙伴请自行链接VPN</p></blockquote> <ul><li>下载RocketMQ</li></ul> <div class="language-ruby extra-class"><pre class="language-ruby"><code>rocketMQ执行包（二进制文件即可，不用再次编译）：
+	直接去apache rocketmq官网下即可，本次选择：rocketmq<span class="token operator">-</span>all<span class="token operator">-</span><span class="token number">4.7</span><span class="token number">.1</span><span class="token operator">-</span>bin<span class="token operator">-</span>release<span class="token punctuation">.</span>zip
+rocketMQ控制台：
+	git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>apache<span class="token operator">/</span>rocketmq<span class="token operator">-</span>externals
+</code></pre></div><ul><li>运行RocketMQ程序：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>cd bin
+
+vim runserver.sh 、vim runbroker.sh
+
+# 找到如下配置
+JAVA_OPT=&quot;${JAVA_OPT} -server -Xms8g -Xmx8g -Xmn4g&quot;
+# 修改成你可以接受的范围
+JAVA_OPT=&quot;${JAVA_OPT} -server -Xms512m -Xmx521m -Xmn256m -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=320m&quot;
+
+# 由于kscd账户配置的环境变量在~/.bash_profile，默认无法识别，所以需要手动指定jdk路径
+1.首先注释掉，以下三行
+# [ ! -e &quot;$JAVA_HOME/bin/java&quot; ] &amp;&amp; JAVA_HOME=$HOME/jdk/java
+# [ ! -e &quot;$JAVA_HOME/bin/java&quot; ] &amp;&amp; JAVA_HOME=/usr/java
+# [ ! -e &quot;$JAVA_HOME/bin/java&quot; ] &amp;&amp; error_exit &quot;Please set the JAVA_HOME variable in your environment, We need java(x64)!&quot;
+2.手动配置JDK路径
+export JAVA_HOME=/home/kscd/jdk1.8
+</code></pre></div><ul><li>配置环境变量</li></ul> <div class="language- extra-class"><pre class="language-text"><code>vi ~/.bash_profile
+
+# 将如下配置加到最后一行
+export NAMESRV_ADDR=127.0.0.1:9876
+
+source ~/.bash_profile
+</code></pre></div><ul><li>启动Name Server</li></ul> <div class="language-ruby extra-class"><pre class="language-ruby"><code>cd <span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span><span class="token constant">RocketMQ</span><span class="token operator">/</span>rocketmq<span class="token operator">/</span>bin
+
+nohup sh mqnamesrv <span class="token operator">&gt;</span> <span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span><span class="token constant">RocketMQ</span><span class="token operator">/</span>logs<span class="token operator">/</span>server<span class="token punctuation">.</span>log <span class="token operator">&amp;</span>
+
+<span class="token comment"># 检测是否启动成功</span>
+<span class="token punctuation">[</span>kscd<span class="token variable">@localhost</span> bin<span class="token punctuation">]</span>$ tail <span class="token operator">-</span>f <span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span><span class="token constant">RocketMQ</span><span class="token operator">/</span>logs<span class="token operator">/</span>server<span class="token punctuation">.</span>log
+<span class="token constant">Java</span> <span class="token constant">HotSpot</span><span class="token punctuation">(</span><span class="token constant">TM</span><span class="token punctuation">)</span> <span class="token number">64</span><span class="token operator">-</span><span class="token constant">Bit</span> <span class="token constant">Server</span> <span class="token constant">VM</span> warning<span class="token punctuation">:</span> <span class="token constant">Using</span> the <span class="token constant">DefNew</span> young collector with the <span class="token constant">CMS</span> collector is deprecated <span class="token keyword">and</span> will likely be removed <span class="token keyword">in</span> a future release
+<span class="token constant">Java</span> <span class="token constant">HotSpot</span><span class="token punctuation">(</span><span class="token constant">TM</span><span class="token punctuation">)</span> <span class="token number">64</span><span class="token operator">-</span><span class="token constant">Bit</span> <span class="token constant">Server</span> <span class="token constant">VM</span> warning<span class="token punctuation">:</span> <span class="token constant">UseCMSCompactAtFullCollection</span> is deprecated <span class="token keyword">and</span> will likely be removed <span class="token keyword">in</span> a future release<span class="token punctuation">.</span>
+<span class="token constant">The</span> <span class="token constant">Name</span> <span class="token constant">Server</span> boot success<span class="token punctuation">.</span> serializeType<span class="token operator">=</span><span class="token constant">JSON</span>
+
+
+
+<span class="token comment"># 顺便说下停止命令</span>
+<span class="token punctuation">[</span>kscd<span class="token variable">@localhost</span> bin<span class="token punctuation">]</span>$ sh mqshutdown namesrv
+<span class="token constant">The</span> mqnamesrv<span class="token punctuation">(</span><span class="token number">36838</span><span class="token punctuation">)</span> is running<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token constant">Send</span> shutdown request to mqnamesrv<span class="token punctuation">(</span><span class="token number">36838</span><span class="token punctuation">)</span> <span class="token constant">OK</span>
+</code></pre></div><ul><li>启动Broker</li></ul> <div class="language-ruby extra-class"><pre class="language-ruby"><code>cd <span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span><span class="token constant">RocketMQ</span><span class="token operator">/</span>rocketmq<span class="token operator">/</span>bin
+
+nohup sh mqbroker <span class="token operator">-</span>n localhost<span class="token punctuation">:</span><span class="token number">9876</span> autoCreateTopicEnable<span class="token operator">=</span><span class="token boolean">true</span> <span class="token operator">&gt;</span><span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span><span class="token constant">RocketMQ</span><span class="token operator">/</span>logs<span class="token operator">/</span>broker<span class="token punctuation">.</span>log <span class="token operator">&amp;</span>
+
+<span class="token comment"># 检测是否启动成功</span>
+<span class="token punctuation">[</span>kscd<span class="token variable">@localhost</span> bin<span class="token punctuation">]</span>$ tail <span class="token operator">-</span>f <span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span><span class="token constant">RocketMQ</span><span class="token operator">/</span>logs<span class="token operator">/</span>broker<span class="token punctuation">.</span>log
+<span class="token constant">The</span> broker<span class="token punctuation">[</span>localhost<span class="token punctuation">.</span>localdomain<span class="token punctuation">,</span> <span class="token number">10.1</span><span class="token number">.4</span><span class="token number">.194</span><span class="token punctuation">:</span><span class="token number">10911</span><span class="token punctuation">]</span> boot success<span class="token punctuation">.</span> serializeType<span class="token operator">=</span><span class="token constant">JSON</span> <span class="token keyword">and</span> name server is localhost<span class="token punctuation">:</span><span class="token number">9876</span>
+
+
+
+<span class="token comment"># 顺便说下停止命令</span>
+<span class="token punctuation">[</span>kscd<span class="token variable">@localhost</span> bin<span class="token punctuation">]</span>$ sh mqshutdown broker
+</code></pre></div><ul><li>启动控制台</li></ul> <div class="language-ruby extra-class"><pre class="language-ruby"><code><span class="token comment"># 由于本次采用的是git clone打包的启动方式，还是要啰嗦一句：“修改的两处配置文件”</span>
+cd <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>rocketmq<span class="token operator">/</span>rocketmq<span class="token operator">-</span>externals<span class="token operator">/</span>rocketmq<span class="token operator">-</span>console<span class="token operator">/</span>src<span class="token operator">/</span>main<span class="token operator">/</span>resources
+
+vim application<span class="token punctuation">.</span>properties
+
+<span class="token comment"># 修改如下配置</span>
+server<span class="token punctuation">.</span>port<span class="token operator">=</span><span class="token number">8080</span> <span class="token operator">/</span><span class="token operator">/</span> 服务端口号
+rocketmq<span class="token punctuation">.</span>config<span class="token punctuation">.</span>namesrvAddr<span class="token operator">=</span><span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">:</span><span class="token number">9876</span> <span class="token operator">/</span><span class="token operator">/</span> 配置服务地址
+
+rocketmq<span class="token punctuation">.</span>config<span class="token punctuation">.</span>dataPath<span class="token operator">=</span><span class="token operator">/</span>tmp<span class="token operator">/</span>rocketmq<span class="token operator">-</span>console<span class="token operator">/</span>data <span class="token operator">/</span><span class="token operator">/</span> mq数据路径，可以自己修改
+
+cd <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>rocketmq<span class="token operator">/</span>rocketmq<span class="token operator">-</span>externals<span class="token operator">/</span>rocketmq<span class="token operator">-</span>console
+
+mvn clean package <span class="token operator">-</span><span class="token constant">Dmaven</span><span class="token punctuation">.</span>test<span class="token punctuation">.</span>skip<span class="token operator">=</span><span class="token boolean">true</span>
+
+nohup java <span class="token operator">-</span>jar rocketmq<span class="token operator">-</span>console<span class="token operator">-</span>ng<span class="token operator">-</span><span class="token number">1.0</span><span class="token number">.1</span><span class="token punctuation">.</span>jar <span class="token operator">--</span>server<span class="token punctuation">.</span>port<span class="token operator">=</span><span class="token number">8080</span> <span class="token operator">--</span>rocketmq<span class="token punctuation">.</span>config<span class="token punctuation">.</span>namesrvAddr<span class="token operator">=</span><span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">:</span><span class="token number">9876</span> <span class="token operator">&amp;</span>
+
+<span class="token comment"># 日志默认位置：</span>
+<span class="token operator">/</span>home<span class="token operator">/</span>kscd<span class="token operator">/</span><span class="token constant">RocketMQ</span><span class="token operator">/</span>nohup<span class="token punctuation">.</span>out
+</code></pre></div><ul><li>开通端口、关闭防火墙（百度即可）</li></ul> <div class="language- extra-class"><pre class="language-text"><code># 由于泰山服务器还需要暴露这两个端口：9876、8080
+
+# 查看已开放的端口
+firewall-cmd --list-ports
+
+# 开放端口（开放后需要要重启防火墙才生效）
+firewall-cmd --zone=public --add-port=9876/tcp --permanent
+
+# 重启防火墙
+firewall-cmd --reload
+
+# 关闭端口（关闭后需要要重启防火墙才生效）
+firewall-cmd --zone=public --remove-port=9876/tcp --permanent
+
+# 开机启动防火墙
+systemctl enable firewalld
+
+# 开启防火墙
+systemctl start firewalld
+
+# 禁止防火墙开机启动
+systemctl disable firewalld
+
+# 停止防火墙
+systemctl stop firewalld
+</code></pre></div><h4 id="_5-2-使用"><a href="#_5-2-使用" class="header-anchor">#</a> 5.2 使用</h4> <blockquote><p>控制台：http://10.1.4.194:8080/</p></blockquote> <blockquote><p>兄弟姐妹们，欢迎一起踩坑：<a href="https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/rocketmq-example/readme-zh.md" target="_blank" rel="noopener noreferrer">RocketMQ Example<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <hr> <div class="language- extra-class"><pre class="language-text"><code>rocketmq-producer:
+    output1:
+    	destination: test-topic1
+    # java(MessageBuilder.setHeader(TAGS, &quot;tabObj&quot;))
+rocketmq-consumer:
+	rocketmq.bindings:
+		input3: {consumer.tags: tagObj}   #订阅 带tag值为tabObj的字符串
+	bindings:
+		destination: test-topic1
+</code></pre></div><h2 id="时间复杂度"><a href="#时间复杂度" class="header-anchor">#</a> 时间复杂度</h2> <ol><li>O(1) 常数阶</li> <li>O(logn) 对数阶</li> <li>O(n) 线性阶</li> <li>O(n的平方) 平方阶</li> <li>O(n的立方) 立方阶</li> <li>O(2的n次方) (指数阶)</li></ol> <p>二插查找树：查询平均复杂度O(log n)；实在不平衡，变成链表O(n)</p> <p>平衡二叉树：查找、插入、删除：O(log n)</p> <p>红黑树：红黑树同时引入了颜色，当插入或删除数据时，只需要进行O(1)次数的旋转以及变色就能保证基本的平衡，不需要像AVL树进行O(lgn)次数的旋转。总的来说，红黑树的统计性能高于AVL</p> <p>递归：</p> <p>​	master公式：T(N) = a * T(N/b) + O(N^d)</p> <p>​	时间复杂度：</p> <p>​		log(b, a) &lt; d		BigO(N^d)</p> <p>​		log(b, a) &gt; d		BigO(N^log(b, a))</p> <p>​		log(b, a) = d		BigO(N^(d * logN))</p> <h2 id="socket"><a href="#socket" class="header-anchor">#</a> Socket</h2> <p>1.流程</p> <p><img src="https://images.cnblogs.com/cnblogs_com/goodcandle/socket3.jpg" alt="img"></p> <p>服务端：</p> <p>​	①通过socket()函数创建socket连接；</p> <p>​	②调用bind()函数绑定地址，ipv4 ipv6等格式</p> <p>​	③调用listen()函数监听</p> <p>​	③调用accept()函数阻塞，等待接收客户端的连接请求</p> <p>​	④read()、write()函数</p> <p>客户端：</p> <p>​	①通过socket()函数创建socket连接；</p> <p>​	②调用connect()函数像服务器发送连接请求；</p> <p>​	③调用close()函数结束连接</p> <p>2.三次握手</p> <p>​	①客户端向服务端发起连接请求：SYN = a</p> <p>​	②服务器响应①的请求：SYN = b, ACK = a+1</p> <p>​	③客户端告诉服务端，我已经知道你响应了，我们开始传输吧：ACK = b+1</p> <p><img src="https://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157476286.png" alt="image"></p> <p>3.四次挥手</p> <p>​	①客户端向服务端发起结束连接请求：FIN = x</p> <p>​	②服务端响应①的请求：FIN = y，ACK = x+1，服务端响应后接着处理没有write完的任务</p> <p>​	③服务端执行完成后，通知客户端我完成了所有的任务，可以关闭了：FIN = z</p> <p>​	④客户端响应③的通知，说我知道你完事了，那我们分手吧：ACK = z+1</p> <p><img src="https://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157494693.png" alt="image"></p> <h2 id="学习计划"><a href="#学习计划" class="header-anchor">#</a> 学习计划</h2> <ul><li>[ ] 日志打印：logback-spring.xml
+<ul><li>[x] https://blog.csdn.net/xu_san_duo/article/details/80364600</li> <li>[x] https://www.cnblogs.com/xiang--liu/p/9710209.html</li></ul></li> <li>[x] p6spy</li> <li>[x] github.io</li> <li>[ ] mybatis.plus
+<ul><li>[ ] https://mybatis.plus/guide/quick-start.html</li> <li>[ ] MyBatis-plus 源码解析  https://blog.csdn.net/weixin_45505313/article/details/104855453</li></ul></li> <li>[ ] 链路监控
+<ul><li>[ ] Pinpoint
+<ul><li>[ ] https://www.cnblogs.com/yyhh/p/6106472.html</li> <li>[ ] https://github.com/pinpoint-apm/pinpoint</li> <li>[ ] https://blog.csdn.net/sanyaoxu_2/article/details/88671043</li></ul></li></ul></li> <li>[ ] https://gitee.com/zuihou111/lamp-cloud 等等spring cloud项目</li> <li>[ ] github spring cloud项目
+<ul><li>[ ] https://github.com/spring-cloud/spring-cloud-gateway</li> <li>[ ] https://github.com/sqshq/piggymetrics</li> <li>[ ] https://github.com/paascloud/paascloud-master</li> <li>[ ] https://github.com/zhoutaoo/SpringCloud</li> <li>[ ] https://github.com/ityouknow/spring-cloud-examples</li> <li>[ ] https://github.com/chillzhuang/SpringBlade</li></ul></li> <li>[ ] 监控</li></ul> <ol><li>3123</li> <li>312321312</li> <li>213321</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/blog/Vue.html" class="prev"><i aria-label="icon: left" class="anticon anticon-left"><svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></i>
+        Vue
+      </a></span> <span class="next"><a href="/blog/Salt.html">
+        Salt
+        <i aria-label="icon: right" class="anticon anticon-right"><svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path></svg></i></a></span></p></div> </main> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7a41048e.js" defer></script><script src="/assets/js/2.07b944df.js" defer></script><script src="/assets/js/20.75bb07f3.js" defer></script>
+  </body>
+</html>
